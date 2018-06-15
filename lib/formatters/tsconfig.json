@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "lib": ["es2015", "es2015.collection"],
+        "strict": true
+    },
+    "include": ["*.ts"]
+}

@@ -1,0 +1,66 @@
+{
+    "name": "typescript-node-scripts",
+    "version": "0.2.0",
+    "description": "Create Node.js apps based on TypeScript with zero-configuration.",
+    "main": "bin/typescript-node-scripts.js",
+    "scripts": {
+        "test": "node bin/typescript-node-scripts.js test",
+        "start": "node bin/typescript-node-scripts.js start",
+        "build": "node bin/typescript-node-scripts.js build",
+        "initApp": "node bin/typescript-node-scripts.js create",
+        "precommit": "lint-staged"
+    },
+    "bin": {
+        "typescript-node-scripts": "./bin/typescript-node-scripts.js"
+    },
+    "keywords": [],
+    "author": "Liang Chun Wong",
+    "repository": "https://github.com/liangchunn/typescript-node-scripts",
+    "license": "MIT",
+    "dependencies": {
+        "chalk": "2.4.1",
+        "fs-extra": "6.0.1",
+        "jest": "23.1.0",
+        "strip-ansi": "4.0.0",
+        "text-table": "0.2.0",
+        "ts-jest": "22.4.6",
+        "ts-loader": "4.4.1",
+        "tsconfig-paths-webpack-plugin": "3.2.0",
+        "tslint": "^5.10.0",
+        "tslint-config-prettier": "1.13.0",
+        "tslint-loader": "3.6.0",
+        "webpack": "4.12.0",
+        "webpack-node-externals": "1.7.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^23.1.0",
+        "@types/node": "^10.3.3",
+        "@types/text-table": "0.2.0",
+        "eslint": "4.19.1",
+        "eslint-plugin-prettier": "^2.6.0",
+        "husky": "0.14.3",
+        "lint-staged": "7.2.0",
+        "prettier": "1.13.5",
+        "typescript": "^2.9.2"
+    },
+    "peerDependencies": {
+        "typescript": "2.x"
+    },
+    "engines": {
+        "node": ">=6"
+    },
+    "lint-staged": {
+        "ignore": [
+            "lib/formatters/*.js",
+            "bin/*",
+            "node_modules/**/*"
+        ],
+        "linters": {
+            "*.js": [
+                "prettier --fix",
+                "eslint --fix",
+                "git add"
+            ]
+        }
+    }
+}
