@@ -1,9 +1,14 @@
 # typescript-node-scripts
 Create Node.js applications based on TypeScript with zero-configuration.
+<p align="center">
+    <img src="https://cdn.rawgit.com/liangchunn/typescript-node-scripts/12e1600/.resources/term.svg"/>
+</p>
 
 Inspired by `create-react-app` and Dan Abramov's [The Melting Pot of JavaScript](https://increment.com/development/the-melting-pot-of-javascript/).
 - Supports testing, building, and development in watch mode
-- Supports custom TypeScript path mappings, aka `compilerOptions.path`
+- Supports custom TypeScript path mappings, aka 
+
+`compilerOptions.path`
 
 ## Quick Start Guide
 ```sh
