@@ -1,4 +1,6 @@
 # typescript-node-scripts
+![npm](https://img.shields.io/npm/v/typescript-node-scripts.svg) ![npm](https://img.shields.io/npm/dt/typescript-node-scripts.svg)
+
 Create Node.js applications based on TypeScript with zero-configuration.
 <p align="center">
     <img 
@@ -7,9 +9,7 @@ Create Node.js applications based on TypeScript with zero-configuration.
 
 Inspired by `create-react-app` and Dan Abramov's [The Melting Pot of JavaScript](https://increment.com/development/the-melting-pot-of-javascript/).
 - Supports testing, building, and development in watch mode
-- Supports custom TypeScript path mappings, aka 
-
-`compilerOptions.path`
+- Supports custom TypeScript path mappings, aka `compilerOptions.path`
 
 ## Quick Start Guide
 ```sh
