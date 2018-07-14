@@ -1,5 +1,5 @@
 # typescript-node-scripts
-![npm](https://img.shields.io/npm/v/typescript-node-scripts.svg) ![npm](https://img.shields.io/npm/dt/typescript-node-scripts.svg)
+![npm](https://img.shields.io/npm/v/typescript-node-scripts.svg) ![npm](https://img.shields.io/npm/dt/typescript-node-scripts.svg) [![install size](https://packagephobia.now.sh/badge?p=typescript-node-scripts@0.2.3)](https://packagephobia.now.sh/result?p=typescript-node-scripts@0.2.3)
 
 Create Node.js applications based on TypeScript with zero-configuration.
 <p align="center">
