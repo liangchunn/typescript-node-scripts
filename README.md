@@ -74,7 +74,12 @@ Everything that matches the globs below will be passed to Jest as a test file:
 You can use `setupTests.ts` in your project root to set up the testing framework before each test.
 
 ### Overriding Jest configuration
-Currently, overriding Jest configuration is not supported. This will be coming soon.
+You can override the Jest configuration in your `package.json` with the key `jest`.
+
+The following options can be overriden:
+- `collectCoverageFrom`
+- `coverageReporters`
+- `coverageThreshold`
 
 ## Custom Module Paths
 TNS supports custom module path mappings. A default custom path mapping is provided in `tsconfig.json`

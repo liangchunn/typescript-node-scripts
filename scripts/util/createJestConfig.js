@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const chalk = require('chalk')
 const paths = require('../../lib/paths')
 const tsconfig = require(paths.appTsConfig)
 
@@ -60,6 +61,41 @@ module.exports = (rootDir, srcRoots) => {
 
     if (rootDir) {
         config.rootDir = rootDir
+    }
+
+    const overrides = { ...require(paths.appPackageJson).jest }
+    const supportedOverrides = [
+        'collectCoverageFrom',
+        'coverageReporters',
+        'coverageThreshold',
+    ]
+
+    if (overrides) {
+        supportedOverrides.forEach(key => {
+            if (overrides.hasOwnProperty(key)) {
+                config[key] = overrides[key]
+                delete overrides[key]
+            }
+        })
+        const leftoverOverrides = Object.keys(overrides)
+        if (leftoverOverrides.length) {
+            console.error(
+                chalk.red(
+                    '\n' +
+                        'typescript-node-scripts only supports overriding these Jest options: \n\n' +
+                        supportedOverrides
+                            .map(key => '  ' + chalk.bold(key))
+                            .join('\n') +
+                        '\n\n' +
+                        'These Jest options in your package.json are not supported: \n\n' +
+                        leftoverOverrides
+                            .map(key => '  ' + chalk.bold(key))
+                            .join('\n') +
+                        '\n\n'
+                )
+            )
+            process.exit(1)
+        }
     }
     return config
 }
