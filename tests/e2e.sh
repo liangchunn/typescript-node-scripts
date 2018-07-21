@@ -56,7 +56,7 @@ exists template/dist/*.js
 CI=true yarn test
 
 # bump version
-npm version patch
+npm version patch --force
 # publish to verdaccio
 npm publish
 
