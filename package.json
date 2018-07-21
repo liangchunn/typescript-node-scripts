@@ -18,7 +18,9 @@
     "repository": "https://github.com/liangchunn/typescript-node-scripts",
     "license": "MIT",
     "dependencies": {
+        "babel-code-frame": "6.26.0",
         "chalk": "2.4.1",
+        "fork-ts-checker-webpack-plugin": "0.4.3",
         "fs-extra": "6.0.1",
         "jest": "23.1.0",
         "strip-ansi": "4.0.0",

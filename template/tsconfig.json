@@ -18,5 +18,5 @@
             "~/*": ["src/*"]
         }
     },
-    "exclude": ["node_modules", "build", "coverage", "dist", "setupTests.ts"]
+    "exclude": ["node_modules", "build", "coverage", "dist", "setupTests.ts", "**/__tests__/*"]
 }
