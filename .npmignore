@@ -1,5 +1,8 @@
+tests
 lib/formatters/tsconfig.json
 lib/formatters/*.ts
+Dockerfile
 .eslintrc.json
 .prettierrc
 .resources
+.dockerignore

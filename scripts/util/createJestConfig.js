@@ -63,7 +63,7 @@ module.exports = (rootDir, srcRoots) => {
         config.rootDir = rootDir
     }
 
-    const overrides = { ...require(paths.appPackageJson).jest }
+    const overrides = Object.assign({}, require(paths.appPackageJson).jest)
     const supportedOverrides = [
         'collectCoverageFrom',
         'coverageReporters',
