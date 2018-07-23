@@ -49,6 +49,8 @@ yarn config set registry "$VERDACCIO_REGISTRY_URL"
 # login to custom registy
 (cd && npx npm-auth-to-token@1.0.0 -u user -p password -e user@example.com -r "$VERDACCIO_REGISTRY_URL")
 
+# lint project
+yarn lint
 # test templates
 yarn build
 # check for local build files
@@ -66,6 +68,10 @@ npx typescript-node-scripts create test-app
 
 cd test-app
 exists node_modules/typescript-node-scripts
+
+# run tslint on generated project
+yarn lint
+# build
 yarn build
 # check for build files
 exists dist/*.js
