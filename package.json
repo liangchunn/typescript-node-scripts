@@ -34,7 +34,7 @@
         "tslint": "^5.10.0",
         "tslint-config-prettier": "1.14.0",
         "tslint-loader": "3.6.0",
-        "webpack": "4.16.1",
+        "webpack": "4.16.2",
         "webpack-node-externals": "1.7.2"
     },
     "devDependencies": {
