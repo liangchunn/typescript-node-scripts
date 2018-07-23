@@ -17,12 +17,3 @@ before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 script:
 - "./tests/e2e.sh"
-deploy:
-  provider: npm
-  email: liangchunn@me.com
-  api_key:
-    secure: buP65KPyp/dv5IaUd1ggCNuEq75kDanJkK8RaoqsCMWC2HyfxkaA/4fjUy7PPfLxzeC7p3ocE6ugnG+JJS31ryz6WAPVuuRU6QbG4Wkqnp0yb2KmR77zXLiSyXTK8hnHOkE/66GJq+DsBonmF7LxeO67Eg2JAqkrxer/NW0F9yLpWVWqg5r3D6s9Ls9X3KmxUl37aXHWc/KuCK4CnTC1Rsl0FOMLcJ9mTt2fpXEu1T4X0UUzARjc6TdPZLfuRP/6kUWckiEZl8tg34Ky4mZqe6YVhYj5idnnK5Zz55EVzBgS1ENNXLoGPkloW3C46r2CVn7Lsgpm0wH2Cx1Q1RZrnuCSRQl0TZ6c3jUGfZ+1alMuZwz6W17DICPH7s8Ertn9/ipAfFSqyGVPCbZzQxEMpXHroMT5vmJdZoW/35+ycKbgPJaCMfhAd0VCUXbxDAy9/TFPhEtpwzndPnPQCLRel2IuHGdMlWHlFveHdsXXPPMuTvL5ZzPNfqlg14nGfPuAyvl0yY/Trk/zTYHI/hQxZvQZtueczU8mfT3n7TWse/RGCQH8sAOErpgyVppfMo+J1FlhqrhzxI/3LyiKHSiuH1XcpHWU8L5pffFyb0+Usn06dXJEVbOUK22VvbcCxsFsWtjVKRdswVnpldQtAoN+raTe4JUD9xr++ggf3kGdW4A=
-  on:
-    tags: true
-    branch: master
-    repo: liangchunn/typescript-node-scripts
