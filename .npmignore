@@ -3,6 +3,7 @@ lib/formatters/tsconfig.json
 lib/formatters/*.ts
 Dockerfile
 .eslintrc.json
+.eslintignore
 .prettierrc
 .resources
 .dockerignore

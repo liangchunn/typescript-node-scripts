@@ -1,3 +1,6 @@
+## 0.4.2
+  * Reintroduce `ts-loader` error fomatters
+
 ## 0.4.1
   * Improve tests
   * Remove object spread syntax which is not supported in `node6`
