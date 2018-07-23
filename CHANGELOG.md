@@ -1,3 +1,7 @@
+## 0.4.1
+  * Improve tests
+  * Remove object spread syntax which is not supported in `node6`
+
 ## 0.4.0
   * Fix issue where ambient TypeScript files (with only type definitions) being persisted across incremental builds
     * Use `fork-ts-checker-webpack-plugin` for checking
