@@ -7,3 +7,4 @@ Dockerfile
 .prettierrc
 .resources
 .dockerignore
+commitlint.config.js

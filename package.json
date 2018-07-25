@@ -11,6 +11,8 @@
         "e2e:ci": "./tests/e2e.sh",
         "e2e:local": "docker build -t tns-docker . && docker run tns-docker",
         "lint": "eslint .",
+        "commit": "git-cz",
+        "commitmsg": "commitlint -e",
         "precommit": "lint-staged"
     },
     "bin": {
@@ -38,9 +40,13 @@
         "webpack-node-externals": "1.7.2"
     },
     "devDependencies": {
+        "@commitlint/cli": "^7.0.0",
+        "@commitlint/config-angular": "^7.0.1",
         "@types/jest": "^23.1.0",
         "@types/node": "^10.3.3",
         "@types/text-table": "0.2.0",
+        "commitizen": "^2.10.1",
+        "cz-conventional-changelog": "^2.1.0",
         "eslint": "5.2.0",
         "eslint-plugin-prettier": "2.6.2",
         "husky": "0.14.3",
@@ -66,6 +72,11 @@
                 "eslint --fix",
                 "git add"
             ]
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
         }
     }
 }
