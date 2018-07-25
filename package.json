@@ -1,82 +1,86 @@
 {
-    "name": "typescript-node-scripts",
-    "version": "0.4.3",
-    "description": "Create Node.js apps based on TypeScript with zero-configuration.",
-    "main": "bin/typescript-node-scripts.js",
-    "scripts": {
-        "test": "node bin/typescript-node-scripts.js test",
-        "start": "node bin/typescript-node-scripts.js start",
-        "build": "node bin/typescript-node-scripts.js build",
-        "initApp": "node bin/typescript-node-scripts.js create",
-        "e2e:ci": "./tests/e2e.sh",
-        "e2e:local": "docker build -t tns-docker . && docker run tns-docker",
-        "lint": "eslint .",
-        "cz": "git-cz",
-        "commitmsg": "commitlint -e",
-        "precommit": "lint-staged"
-    },
-    "bin": {
-        "typescript-node-scripts": "./bin/typescript-node-scripts.js"
-    },
-    "keywords": [],
-    "author": "Liang Chun Wong",
-    "repository": "https://github.com/liangchunn/typescript-node-scripts",
-    "license": "MIT",
-    "dependencies": {
-        "babel-code-frame": "6.26.0",
-        "chalk": "2.4.1",
-        "fork-ts-checker-webpack-plugin": "0.4.3",
-        "fs-extra": "7.0.0",
-        "jest": "23.4.1",
-        "strip-ansi": "4.0.0",
-        "text-table": "0.2.0",
-        "ts-jest": "23.0.1",
-        "ts-loader": "4.4.2",
-        "tsconfig-paths-webpack-plugin": "3.2.0",
-        "tslint": "^5.10.0",
-        "tslint-config-prettier": "1.14.0",
-        "tslint-loader": "3.6.0",
-        "webpack": "4.16.2",
-        "webpack-node-externals": "1.7.2"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^7.0.0",
-        "@commitlint/config-conventional": "^7.0.1",
-        "@types/jest": "^23.1.0",
-        "@types/node": "^10.3.3",
-        "@types/text-table": "0.2.0",
-        "commitizen": "^2.10.1",
-        "cz-conventional-changelog": "^2.1.0",
-        "eslint": "5.2.0",
-        "eslint-plugin-prettier": "2.6.2",
-        "husky": "^1.0.0-rc.13",
-        "lint-staged": "7.2.0",
-        "prettier": "1.13.7",
-        "typescript": "^2.9.2"
-    },
-    "peerDependencies": {
-        "typescript": "2.x"
-    },
-    "engines": {
-        "node": ">=6"
-    },
-    "lint-staged": {
-        "ignore": [
-            "lib/formatters/*.js",
-            "bin/*",
-            "node_modules/**/*"
-        ],
-        "linters": {
-            "*.js": [
-                "prettier --write",
-                "eslint --fix",
-                "git add"
-            ]
-        }
-    },
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog"
-        }
+  "name": "typescript-node-scripts",
+  "version": "0.4.3",
+  "description": "Create Node.js apps based on TypeScript with zero-configuration.",
+  "main": "bin/typescript-node-scripts.js",
+  "scripts": {
+    "test": "node bin/typescript-node-scripts.js test",
+    "start": "node bin/typescript-node-scripts.js start",
+    "build": "node bin/typescript-node-scripts.js build",
+    "initApp": "node bin/typescript-node-scripts.js create",
+    "e2e:ci": "./tests/e2e.sh",
+    "e2e:local": "docker build -t tns-docker . && docker run tns-docker",
+    "lint": "eslint .",
+    "commit": "git-cz"
+  },
+  "bin": {
+    "typescript-node-scripts": "./bin/typescript-node-scripts.js"
+  },
+  "keywords": [],
+  "author": "Liang Chun Wong",
+  "repository": "https://github.com/liangchunn/typescript-node-scripts",
+  "license": "MIT",
+  "dependencies": {
+    "babel-code-frame": "6.26.0",
+    "chalk": "2.4.1",
+    "fork-ts-checker-webpack-plugin": "0.4.3",
+    "fs-extra": "7.0.0",
+    "jest": "23.4.1",
+    "strip-ansi": "4.0.0",
+    "text-table": "0.2.0",
+    "ts-jest": "23.0.1",
+    "ts-loader": "4.4.2",
+    "tsconfig-paths-webpack-plugin": "3.2.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "1.14.0",
+    "tslint-loader": "3.6.0",
+    "webpack": "4.16.2",
+    "webpack-node-externals": "1.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "@types/jest": "^23.1.0",
+    "@types/node": "^10.3.3",
+    "@types/text-table": "0.2.0",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "5.2.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "7.2.0",
+    "prettier": "1.13.7",
+    "typescript": "^2.9.2"
+  },
+  "peerDependencies": {
+    "typescript": "2.x"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "lint-staged": {
+    "ignore": [
+      "lib/formatters/*.js",
+      "bin/*",
+      "node_modules/**/*"
+    ],
+    "linters": {
+      "*.js": [
+        "prettier --write",
+        "eslint --fix",
+        "git add"
+      ]
     }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e",
+      "pre-commit": "lint-staged"
+    }
+  }
 }
