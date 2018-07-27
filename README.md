@@ -1,5 +1,5 @@
 # typescript-node-scripts
-[![Build Status](https://travis-ci.com/liangchunn/typescript-node-scripts.svg?branch=master)](https://travis-ci.com/liangchunn/typescript-node-scripts) ![npm](https://img.shields.io/npm/v/typescript-node-scripts.svg) ![npm](https://img.shields.io/npm/dt/typescript-node-scripts.svg) [![install size](https://packagephobia.now.sh/badge?p=typescript-node-scripts@0.4.0)](https://packagephobia.now.sh/result?p=typescript-node-scripts@0.4.0) [![Greenkeeper badge](https://badges.greenkeeper.io/liangchunn/typescript-node-scripts.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.com/liangchunn/typescript-node-scripts.svg?branch=master)](https://travis-ci.com/liangchunn/typescript-node-scripts) [![npm](https://img.shields.io/npm/v/typescript-node-scripts.svg)](https://www.npmjs.com/package/typescript-node-scripts) [![npm](https://img.shields.io/npm/dt/typescript-node-scripts.svg)](https://www.npmjs.com/package/typescript-node-scripts) [![install size](https://packagephobia.now.sh/badge?p=typescript-node-scripts)](https://packagephobia.now.sh/result?p=typescript-node-scripts) [![Greenkeeper badge](https://badges.greenkeeper.io/liangchunn/typescript-node-scripts.svg)](https://greenkeeper.io/)
 
 Create Node.js applications based on TypeScript with zero-configuration.
 <p align="center">
@@ -119,7 +119,7 @@ npm i -S source-map-support
 
 Then, in `src/index.ts`, add:
 ```ts
-import 'source-map-support'
+import 'source-map-support/register'
 ```
 
 ## TODO
