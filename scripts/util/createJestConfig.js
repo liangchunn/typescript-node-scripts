@@ -53,7 +53,7 @@ module.exports = (rootDir, srcRoots) => {
         moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
         globals: {
             'ts-jest': {
-                tsConfigFile: paths.appTsTestConfig,
+                tsConfigFile: paths.appTsConfig,
             },
         },
         moduleNameMapper: transformTsPathsToJestPaths(tsconfig),
