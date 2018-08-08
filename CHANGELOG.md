@@ -1,30 +1,31 @@
-## 0.4.2
-  * Reintroduce `ts-loader` error fomatters
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.4...v0.5.0) (2018-08-08)
 
-## 0.4.1
-  * Improve tests
-  * Remove object spread syntax which is not supported in `node6`
 
-## 0.4.0
-  * Fix issue where ambient TypeScript files (with only type definitions) being persisted across incremental builds
-    * Use `fork-ts-checker-webpack-plugin` for checking
-    * Use `babel-code-frame` for displaying source in terminal
-  * Ignore test files in tsconfig.json template
+### Bug Fixes
 
-## 0.3.0
-  * Support Jest configuration overrides for keys
-    * `collectCoverageFrom`
-    * `coverageReporters`
-    * `coverageThreshold`
+* **package:** update fork-ts-checker-webpack-plugin to version 0.4.4 ([1a0d5fc](https://github.com/liangchunn/typescript-node-scripts/commit/1a0d5fc))
+* **package:** update ts-jest to version 23.1.3 ([08fe6f5](https://github.com/liangchunn/typescript-node-scripts/commit/08fe6f5)), closes [#12](https://github.com/liangchunn/typescript-node-scripts/issues/12)
+* **package:** update webpack to version 4.16.5 ([164efcc](https://github.com/liangchunn/typescript-node-scripts/commit/164efcc)), closes [#10](https://github.com/liangchunn/typescript-node-scripts/issues/10)
 
-## 0.2.4
-  * Added meaningful defaults for tslint
 
-## 0.2.3
-  * Add missing support for code and signal handling in child process
+### Features
 
-## 0.2.2
-  * (lib) Fix case sensitive imports
+* **typescript:** v3 + use experimentalWatchApi in webpack ([83a9ad2](https://github.com/liangchunn/typescript-node-scripts/commit/83a9ad2))
 
-## 0.2.1
-  * Initial version
+
+
+<a name="0.4.4"></a>
+## [0.4.4](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.2...v0.4.4) (2018-08-01)
+
+
+### Bug Fixes
+
+* **package:** update webpack to version 4.16.2 ([fe44509](https://github.com/liangchunn/typescript-node-scripts/commit/fe44509))
+
+
+### Features
+
+* **jest:** target only commonjs ([930f5ca](https://github.com/liangchunn/typescript-node-scripts/commit/930f5ca))
+
+
