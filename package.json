@@ -1,6 +1,6 @@
 {
   "name": "typescript-node-scripts",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Create Node.js apps based on TypeScript with zero-configuration.",
   "main": "bin/typescript-node-scripts.js",
   "scripts": {
@@ -48,7 +48,7 @@
     "eslint": "5.2.0",
     "eslint-plugin-prettier": "2.6.2",
     "husky": "^1.0.0-rc.13",
-    "lint-staged": "7.2.0",
+    "lint-staged": "7.2.1",
     "prettier": "1.13.7",
     "typescript": "3.0.1"
   },
