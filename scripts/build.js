@@ -1,8 +1,10 @@
 const webpack = require('webpack')
 const chalk = require('chalk')
+const path = require('path')
+const typescript = require('typescript')
 const config = require('../lib/webpack.config.prod')
 const formatWebpackMessages = require('../lib/formatWebpackMessages')
-const getBundleSize = require('../lib/getBundleSize')
+const { getBundleSize, diffFileSize } = require('./util/fileSizeReporter')
 const paths = require('../lib/paths')
 
 const { argv } = process
@@ -13,8 +15,12 @@ const isCi =
     (typeof process.env.CI !== 'string' ||
         process.env.CI.toLowerCase() !== 'false')
 
+const prodBundlePath = path.join(paths.appBuild, paths.prodBundle)
+const sizeBeforeBuild = getBundleSize(prodBundlePath)
+
 const build = () => {
     console.log(chalk.cyan('Creating an optimized production build...'))
+    console.log(chalk.cyan('Using TypeScript v' + typescript.version))
     const compiler = webpack(config)
     return new Promise((resolve, reject) => {
         compiler.run((err, stats) => {
@@ -80,9 +86,12 @@ build()
         }
     )
     .then(() => {
-        const bundleSize = getBundleSize(paths.appBuild + '/bundle.prod.js')
+        const sizeAfterBuild = getBundleSize(prodBundlePath)
+        console.log()
         console.log(chalk.greenBright('Successfully built bundle.prod.js!'))
-        console.log(chalk.green('Bundle size: ' + bundleSize + 'kB'))
+        console.log(
+            'Bundle size: ' + diffFileSize(sizeBeforeBuild, sizeAfterBuild)
+        )
         console.log()
     })
     .catch(err => {
