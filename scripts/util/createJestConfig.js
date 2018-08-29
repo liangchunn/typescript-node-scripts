@@ -31,7 +31,7 @@ const transformTsPathsToJestPaths = tsconfig => {
     )
 }
 
-module.exports = (rootDir, srcRoots) => {
+module.exports = (rootDir, srcRoots, resolve) => {
     const toRelRootDir = r => '<rootDir>/' + path.relative(rootDir || '', r)
 
     const setupTests = fs.existsSync(paths.testsSetup)
@@ -45,13 +45,15 @@ module.exports = (rootDir, srcRoots) => {
             '<rootDir>/src/**/?(*.)(spec|test|t).(j|t)s?(x)',
         ],
         transform: {
-            '^.+\\.(t|j)sx?$': 'ts-jest',
+            '^.+\\.jsx?$': resolve('lib/jest/babelPreprocessor.js'),
+            '^.+\\.tsx?$': 'ts-jest',
         },
         setupTestFrameworkScriptFile: setupTests,
         roots: srcRoots.map(toRelRootDir),
         testEnvironment: 'node',
         moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
         globals: {
+            NODE_ENV: 'test',
             'ts-jest': {
                 tsConfigFile: paths.appTsConfig,
             },
