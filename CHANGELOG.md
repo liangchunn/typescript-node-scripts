@@ -1,3 +1,14 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.5.0...v1.0.0) (2018-08-29)
+
+
+### Features
+
+* **babel:** full support, sink tests, fix warnings ([069a7ff](https://github.com/liangchunn/typescript-node-scripts/commit/069a7ff))
+* **babel:** use babel for js files ([838a12c](https://github.com/liangchunn/typescript-node-scripts/commit/838a12c))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.4...v0.5.0) (2018-08-08)
 
@@ -27,5 +38,41 @@
 ### Features
 
 * **jest:** target only commonjs ([930f5ca](https://github.com/liangchunn/typescript-node-scripts/commit/930f5ca))
+
+
+
+<a name="0.4.2"></a>
+## [0.4.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.1...v0.4.2) (2018-07-23)
+
+
+
+<a name="0.4.1"></a>
+## [0.4.1](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.0...v0.4.1) (2018-07-23)
+
+
+
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.3.0...v0.4.0) (2018-07-21)
+
+
+
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.4...v0.3.0) (2018-07-20)
+
+
+
+<a name="0.2.4"></a>
+## [0.2.4](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.2...v0.2.4) (2018-07-17)
+
+
+
+<a name="0.2.2"></a>
+## [0.2.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.1...v0.2.2) (2018-06-15)
+
+
+
+<a name="0.2.1"></a>
+## 0.2.1 (2018-06-15)
+
 
 

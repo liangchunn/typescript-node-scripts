@@ -21,7 +21,11 @@ const paths = require('../lib/paths')
 argv.push(
     '--config',
     JSON.stringify(
-        createJestConfig(path.resolve(paths.appSrc, '..'), [paths.appSrc])
+        createJestConfig(
+            path.resolve(paths.appSrc, '..'),
+            [paths.appSrc],
+            relativePath => path.resolve(__dirname, '..', relativePath)
+        )
     )
 )
 
