@@ -19,9 +19,9 @@ auth:
 # a list of other known repositories we can talk to
 uplinks:
   npmjs:
-    url: https://registry.yarnpkg.com/
+    url: https://registry.npmjs.org/
     max_fails: 100
-    timeout: 20s
+    timeout: 60s
 
 packages:
   '@*/*':
