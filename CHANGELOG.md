@@ -1,11 +1,26 @@
-<a name="1.0.2"></a>
-## [1.0.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.5.0...v1.0.2) (2018-09-16)
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.1...v1.0.3) (2018-09-25)
+
+
+### Bug Fixes
+
+* **ts-jest:** use node module resolution ([531d8fd](https://github.com/liangchunn/typescript-node-scripts/commit/531d8fd))
+* **tslint:** do not check js files with tslint ([f41b01f](https://github.com/liangchunn/typescript-node-scripts/commit/f41b01f))
+
+
+
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.0...v1.0.1) (2018-09-04)
 
 
 ### Bug Fixes
 
 * **codeframe:** use default export ([4aad562](https://github.com/liangchunn/typescript-node-scripts/commit/4aad562))
-* **ts-jest:** use node module resolution ([531d8fd](https://github.com/liangchunn/typescript-node-scripts/commit/531d8fd))
+
+
+
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.5.0...v1.0.0) (2018-08-29)
 
 
 ### Features
