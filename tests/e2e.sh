@@ -3,7 +3,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 # test if in docker environment
 # this script should only be running in docker!
-if [ -f /.dockerenv ] || [ -z "${TRAVIS}" ] ; then
+if [ -f /.dockerenv ] || [ -n "${TRAVIS}" ] ; then
   echo "Detected script running in Docker or Travis CI."
 else
   echo "ERR! This script is intended to be used inside Docker only."
