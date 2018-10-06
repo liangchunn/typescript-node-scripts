@@ -1,6 +1,6 @@
 {
   "name": "typescript-node-scripts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create Node.js apps based on TypeScript with zero-configuration.",
   "main": "bin/typescript-node-scripts.js",
   "scripts": {
@@ -30,10 +30,10 @@
     "babel-loader": "8.0.0",
     "chalk": "2.4.1",
     "filesize": "3.6.1",
-    "fork-ts-checker-webpack-plugin": "0.4.9",
+    "fork-ts-checker-webpack-plugin": "0.4.10",
     "fs-extra": "7.0.0",
     "jest": "23.5.0",
-    "strip-ansi": "4.0.0",
+    "strip-ansi": "5.0.0",
     "text-table": "0.2.0",
     "ts-jest": "23.1.4",
     "ts-loader": "4.5.0",
@@ -50,14 +50,14 @@
     "@types/jest": "^23.1.0",
     "@types/node": "^10.3.3",
     "@types/text-table": "0.2.0",
-    "commitizen": "^2.10.1",
+    "commitizen": "^3.0.0",
     "conventional-changelog-cli": "^2.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "eslint": "5.4.0",
     "eslint-plugin-prettier": "2.6.2",
     "husky": "^1.0.0-rc.13",
-    "lint-staged": "7.2.2",
     "prettier": "1.14.3",
+    "lint-staged": "7.3.0",
     "typescript": "3.0.1"
   },
   "peerDependencies": {
