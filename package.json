@@ -31,7 +31,7 @@
     "chalk": "2.4.1",
     "filesize": "3.6.1",
     "fork-ts-checker-webpack-plugin": "0.4.10",
-    "fs-extra": "7.0.0",
+    "fs-extra": "7.0.1",
     "jest": "23.5.0",
     "strip-ansi": "5.0.0",
     "text-table": "0.2.0",
