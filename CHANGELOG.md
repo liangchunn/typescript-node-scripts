@@ -1,3 +1,13 @@
+<a name="1.0.5"></a>
+## [1.0.5](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.4...v1.0.5) (2018-12-01)
+
+
+### Bug Fixes
+
+* **codeframe:** use new API for [@babel](https://github.com/babel)/code-frame ([1c93c74](https://github.com/liangchunn/typescript-node-scripts/commit/1c93c74))
+
+
+
 <a name="1.0.4"></a>
 ## [1.0.4](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.3...v1.0.4) (2018-12-01)
 
