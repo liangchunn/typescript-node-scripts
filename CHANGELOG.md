@@ -1,26 +1,39 @@
-<a name="1.0.3"></a>
-## [1.0.3](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.1...v1.0.3) (2018-09-25)
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.3...v1.0.4) (2018-12-01)
 
 
 ### Bug Fixes
 
-* **ts-jest:** use node module resolution ([531d8fd](https://github.com/liangchunn/typescript-node-scripts/commit/531d8fd))
+* **e2e:** fix env detection for travis ([c501d96](https://github.com/liangchunn/typescript-node-scripts/commit/c501d96))
+* **package:** update [@babel](https://github.com/babel)/core to version 7.1.2 ([53f832e](https://github.com/liangchunn/typescript-node-scripts/commit/53f832e)), closes [#25](https://github.com/liangchunn/typescript-node-scripts/issues/25)
+* **package:** update [@babel](https://github.com/babel)/preset-env to version 7.1.0 ([07a38d4](https://github.com/liangchunn/typescript-node-scripts/commit/07a38d4)), closes [#25](https://github.com/liangchunn/typescript-node-scripts/issues/25)
+* **package:** update babel-loader to version 8.0.4 ([e4950e0](https://github.com/liangchunn/typescript-node-scripts/commit/e4950e0)), closes [#23](https://github.com/liangchunn/typescript-node-scripts/issues/23)
+* **package:** update fork-ts-checker-webpack-plugin to version 0.4.10 ([c4f956c](https://github.com/liangchunn/typescript-node-scripts/commit/c4f956c))
+* **package:** update strip-ansi to version 5.0.0 ([fc0bf57](https://github.com/liangchunn/typescript-node-scripts/commit/fc0bf57))
+* **package:** update ts-jest to version 23.10.4 ([6b7d9b6](https://github.com/liangchunn/typescript-node-scripts/commit/6b7d9b6))
+* **package:** update webpack to version 4.20.2 ([dfb06d2](https://github.com/liangchunn/typescript-node-scripts/commit/dfb06d2)), closes [#24](https://github.com/liangchunn/typescript-node-scripts/issues/24)
+* **spawn:** fix problem where kill wasnt killing subprocesses ([1cc35c0](https://github.com/liangchunn/typescript-node-scripts/commit/1cc35c0))
+
+
+
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.2...v1.0.3) (2018-09-25)
+
+
+### Bug Fixes
+
 * **tslint:** do not check js files with tslint ([f41b01f](https://github.com/liangchunn/typescript-node-scripts/commit/f41b01f))
 
 
 
-<a name="1.0.1"></a>
-## [1.0.1](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.0...v1.0.1) (2018-09-04)
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.5.0...v1.0.2) (2018-09-16)
 
 
 ### Bug Fixes
 
 * **codeframe:** use default export ([4aad562](https://github.com/liangchunn/typescript-node-scripts/commit/4aad562))
-
-
-
-<a name="1.0.0"></a>
-# [1.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.5.0...v1.0.0) (2018-08-29)
+* **ts-jest:** use node module resolution ([531d8fd](https://github.com/liangchunn/typescript-node-scripts/commit/531d8fd))
 
 
 ### Features
