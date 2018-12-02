@@ -1,4 +1,12 @@
-<a name="1.0.5"></a>
+## [1.0.6](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.5...v1.0.6) (2018-12-02)
+
+
+### Bug Fixes
+
+* **test:** use tsConfig instead of tsConfigFile for ts-jest ([0169e47](https://github.com/liangchunn/typescript-node-scripts/commit/0169e47))
+
+
+
 ## [1.0.5](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.4...v1.0.5) (2018-12-01)
 
 
@@ -8,7 +16,6 @@
 
 
 
-<a name="1.0.4"></a>
 ## [1.0.4](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.3...v1.0.4) (2018-12-01)
 
 
@@ -26,7 +33,6 @@
 
 
 
-<a name="1.0.3"></a>
 ## [1.0.3](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.2...v1.0.3) (2018-09-25)
 
 
@@ -36,7 +42,6 @@
 
 
 
-<a name="1.0.2"></a>
 ## [1.0.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.5.0...v1.0.2) (2018-09-16)
 
 
@@ -53,7 +58,6 @@
 
 
 
-<a name="0.5.0"></a>
 # [0.5.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.4...v0.5.0) (2018-08-08)
 
 
@@ -70,7 +74,6 @@
 
 
 
-<a name="0.4.4"></a>
 ## [0.4.4](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.2...v0.4.4) (2018-08-01)
 
 
@@ -85,37 +88,30 @@
 
 
 
-<a name="0.4.2"></a>
 ## [0.4.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.1...v0.4.2) (2018-07-23)
 
 
 
-<a name="0.4.1"></a>
 ## [0.4.1](https://github.com/liangchunn/typescript-node-scripts/compare/v0.4.0...v0.4.1) (2018-07-23)
 
 
 
-<a name="0.4.0"></a>
 # [0.4.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.3.0...v0.4.0) (2018-07-21)
 
 
 
-<a name="0.3.0"></a>
 # [0.3.0](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.4...v0.3.0) (2018-07-20)
 
 
 
-<a name="0.2.4"></a>
 ## [0.2.4](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.2...v0.2.4) (2018-07-17)
 
 
 
-<a name="0.2.2"></a>
 ## [0.2.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.1...v0.2.2) (2018-06-15)
 
 
 
-<a name="0.2.1"></a>
 ## 0.2.1 (2018-06-15)
 
 
