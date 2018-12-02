@@ -52,7 +52,7 @@ module.exports = (rootDir, resolve) => {
         globals: {
             NODE_ENV: 'test',
             'ts-jest': {
-                tsConfigFile: paths.appTsConfig,
+                tsConfig: paths.appTsConfig,
             },
         },
         moduleNameMapper: transformTsPathsToJestPaths(tsconfig),
