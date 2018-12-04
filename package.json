@@ -1,6 +1,6 @@
 {
   "name": "typescript-node-scripts",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Create Node.js apps based on TypeScript with zero-configuration.",
   "main": "bin/typescript-node-scripts.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "tslint": "5.11.0",
     "tslint-config-prettier": "1.17.0",
     "tslint-loader": "3.5.4",
-    "webpack": "4.26.1",
+    "webpack": "4.27.0",
     "webpack-node-externals": "1.7.2"
   },
   "devDependencies": {
