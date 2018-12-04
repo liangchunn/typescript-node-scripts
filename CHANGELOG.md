@@ -1,8 +1,9 @@
-## [1.0.6](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.5...v1.0.6) (2018-12-02)
+## [1.0.7](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.5...v1.0.7) (2018-12-04)
 
 
 ### Bug Fixes
 
+* **package:** update webpack to version 4.27.0 ([5bcee3b](https://github.com/liangchunn/typescript-node-scripts/commit/5bcee3b))
 * **test:** use tsConfig instead of tsConfigFile for ts-jest ([0169e47](https://github.com/liangchunn/typescript-node-scripts/commit/0169e47))
 
 
@@ -104,15 +105,7 @@
 
 
 
-## [0.2.4](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.2...v0.2.4) (2018-07-17)
-
-
-
-## [0.2.2](https://github.com/liangchunn/typescript-node-scripts/compare/v0.2.1...v0.2.2) (2018-06-15)
-
-
-
-## 0.2.1 (2018-06-15)
+## 0.2.4 (2018-07-17)
 
 
 
