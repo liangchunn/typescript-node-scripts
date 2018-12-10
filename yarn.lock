@@ -5480,10 +5480,10 @@ psl@^1.1.24:
   version "1.1.28"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.28.tgz#4fb6ceb08a1e2214d4fd4de0ca22dae13740bc7b"
 
-pstree.remy@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/pstree.remy/-/pstree.remy-1.1.2.tgz#4448bbeb4b2af1fed242afc8dc7416a6f504951a"
-  integrity sha512-vL6NLxNHzkNTjGJUpMm5PLC+94/0tTlC1vkP9bdU0pOHih+EujMjgMTwfZopZvHWRFbqJ5Y73OMoau50PewDDA==
+pstree.remy@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/pstree.remy/-/pstree.remy-1.1.3.tgz#0a557a6b2ab647cd782bc9f3e2b9e7ad71a9e36c"
+  integrity sha512-tGkOSvpMp0j7hskA4izvP0onujJSEAYO0SViHtjJX5a+4cqxVXiq32opahQO4HkA7bnHsRk9xgrf6LVvG/Q9UA==
 
 public-encrypt@^4.0.0:
   version "4.0.2"
