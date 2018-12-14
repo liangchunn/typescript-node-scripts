@@ -1,6 +1,6 @@
 {
   "name": "typescript-node-scripts",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Create Node.js apps based on TypeScript with zero-configuration.",
   "main": "bin/typescript-node-scripts.js",
   "scripts": {

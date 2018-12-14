@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.7...v1.1.0) (2018-12-14)
+
+
+### Bug Fixes
+
+* **package:** require typescript 3.x, fix fTCWP on 0.5.x ([24b41ce](https://github.com/liangchunn/typescript-node-scripts/commit/24b41ce))
+
+
+
 ## [1.0.7](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.6...v1.0.7) (2018-12-11)
 
 
