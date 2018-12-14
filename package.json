@@ -30,7 +30,7 @@
     "babel-loader": "8.0.4",
     "chalk": "2.4.1",
     "filesize": "3.6.1",
-    "fork-ts-checker-webpack-plugin": "0.5.1",
+    "fork-ts-checker-webpack-plugin": "0.5.2",
     "fs-extra": "7.0.1",
     "jest": "23.6.0",
     "pstree.remy": "1.1.2",
@@ -62,7 +62,7 @@
     "typescript": "^3.2.1"
   },
   "peerDependencies": {
-    "typescript": ">=2.x"
+    "typescript": ">=3.x"
   },
   "engines": {
     "node": ">=6"
