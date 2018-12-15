@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/liangchunn/typescript-node-scripts/compare/v1.1.0...v1.1.1) (2018-12-15)
+
+
+### Bug Fixes
+
+* **template:** remove build, coverage and dist from npm ([171ee66](https://github.com/liangchunn/typescript-node-scripts/commit/171ee66))
+
+
+
 # [1.1.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.0.7...v1.1.0) (2018-12-14)
 
 
