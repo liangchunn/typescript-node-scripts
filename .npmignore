@@ -8,3 +8,6 @@ Dockerfile
 .resources
 .dockerignore
 commitlint.config.js
+template/build
+template/coverage
+template/dist
