@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.1.1...v1.2.0) (2018-12-30)
+
+
+### Features
+
+* **monorepo:** add support for monorepo ([6a7384f](https://github.com/liangchunn/typescript-node-scripts/commit/6a7384f))
+
+
+
 ## [1.1.1](https://github.com/liangchunn/typescript-node-scripts/compare/v1.1.0...v1.1.1) (2018-12-15)
 
 
