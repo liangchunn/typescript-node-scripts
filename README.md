@@ -36,6 +36,7 @@ Starts the development server with watch mode and incremental builds. This comma
 | ----------------- | -------------------------------------------------------------------------------------------------- |
 | `--no-collapse`   | Expands all the collapsed errors                                                                   |
 | `--no-auto-start` | Disables auto starting and stopping of the application. By default, it executes `build/bundle.js`. |
+| `--monorepo`      | Enable support for monorepos                                                                       |
 
 ### `yarn build` or `npm run build`
 
@@ -49,6 +50,7 @@ This command does not bundle any dependencies which is `require`-d or `import`-e
 | ---------------------- | ------------------------------------------- |
 | `--no-collapse`        | Expands all the collapsed errors            |
 | `--bypass-ci-warnings` | Bypass CI warnings being treated as errors. |
+| `--monorepo`           | Enable support for monorepo                 |
 
 ### `yarn test` or `npm run test`
 
@@ -122,6 +124,8 @@ Then, in `src/index.ts`, add:
 import 'source-map-support/register'
 ```
 
-## TODO
+## Monorepo Support
+To use `typescript-node-scripts` with a monorepo like lerna + yarn workspaces, you need to add `--monorepo` to the start and build scripts.
 
--   [ ] e2e tests
+Then, you can use `lerna run <start|build> --stream` in your root `package.json`.
+
