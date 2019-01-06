@@ -28,7 +28,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
-    "chalk": "2.4.1",
+    "chalk": "2.4.2",
     "filesize": "3.6.1",
     "fork-ts-checker-webpack-plugin": "0.5.2",
     "fs-extra": "7.0.1",
