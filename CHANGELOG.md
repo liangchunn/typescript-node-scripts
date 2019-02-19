@@ -1,3 +1,24 @@
+# [1.3.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.2.0...v1.3.0) (2019-02-19)
+
+
+### Bug Fixes
+
+* **package:** update [@babel](https://github.com/babel)/core to version 7.3.3 ([28bad95](https://github.com/liangchunn/typescript-node-scripts/commit/28bad95)), closes [#64](https://github.com/liangchunn/typescript-node-scripts/issues/64)
+* **package:** update [@babel](https://github.com/babel)/preset-env to version 7.3.1 ([f7fec24](https://github.com/liangchunn/typescript-node-scripts/commit/f7fec24)), closes [#64](https://github.com/liangchunn/typescript-node-scripts/issues/64)
+* **package:** update babel-loader to version 8.0.5 ([2eefbfc](https://github.com/liangchunn/typescript-node-scripts/commit/2eefbfc))
+* **package:** update chalk to version 2.4.2 ([1c7ffd6](https://github.com/liangchunn/typescript-node-scripts/commit/1c7ffd6))
+* **package:** update filesize to version 4.1.2 ([a3f0053](https://github.com/liangchunn/typescript-node-scripts/commit/a3f0053)), closes [#68](https://github.com/liangchunn/typescript-node-scripts/issues/68)
+* **package:** update ts-jest to version 24.0.0 ([1a034c8](https://github.com/liangchunn/typescript-node-scripts/commit/1a034c8))
+* **package:** update webpack to version 4.29.4 ([c072db7](https://github.com/liangchunn/typescript-node-scripts/commit/c072db7)), closes [#65](https://github.com/liangchunn/typescript-node-scripts/issues/65)
+* **package:** update webpack to version 4.29.5 ([c299c65](https://github.com/liangchunn/typescript-node-scripts/commit/c299c65))
+
+
+### Features
+
+* **package:** upgrade jest, fix filesize, drop node 6 ([bd2e4d7](https://github.com/liangchunn/typescript-node-scripts/commit/bd2e4d7))
+
+
+
 # [1.2.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.1.1...v1.2.0) (2018-12-30)
 
 
