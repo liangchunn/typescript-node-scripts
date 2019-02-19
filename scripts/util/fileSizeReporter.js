@@ -21,28 +21,29 @@ const diffFileSize = (sizeBeforeBuild, sizeAfterBuild) => {
     })
     if (!sizeBeforeBuild) {
         return chalk.green(
-            `${afterBuildFormatted.value} ${afterBuildFormatted.suffix}`
+            `${afterBuildFormatted.value} ${afterBuildFormatted.symbol}`
         )
     }
     const diff = filesize(sizeAfterBuild - sizeBeforeBuild, {
         base: 10,
         output: 'object',
     })
+
     if (diff.value === 0) {
         return `${afterBuildFormatted.value} ${
-            afterBuildFormatted.suffix
+            afterBuildFormatted.symbol
         } (+0 B)`
     } else if (diff.value > 0) {
         return chalk.yellow(
-            `${afterBuildFormatted.value} ${afterBuildFormatted.suffix} (+${
+            `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (+${
                 diff.value
-            } ${diff.suffix})`
+            } ${diff.symbol})`
         )
     } else {
         return chalk.green(
-            `${afterBuildFormatted.value} ${afterBuildFormatted.suffix} (${
+            `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (${
                 diff.value
-            } ${diff.suffix})`
+            } ${diff.symbol})`
         )
     }
 }

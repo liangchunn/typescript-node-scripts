@@ -33,8 +33,8 @@ const transformTsPathsToJestPaths = tsconfig => {
 
 module.exports = (rootDir, resolve) => {
     const setupTests = fs.existsSync(paths.testsSetup)
-        ? '<rootDir>/setupTests.ts'
-        : undefined
+        ? ['<rootDir>/setupTests.ts']
+        : []
 
     const config = {
         collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
@@ -46,7 +46,7 @@ module.exports = (rootDir, resolve) => {
             '^.+\\.jsx?$': resolve('lib/jest/babelPreprocessor.js'),
             '^.+\\.tsx?$': resolve('lib/jest/typescriptPreprocessor.js'),
         },
-        setupTestFrameworkScriptFile: setupTests,
+        setupFilesAfterEnv: setupTests,
         testEnvironment: 'node',
         moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
         globals: {

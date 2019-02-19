@@ -26,13 +26,13 @@
     "@babel/core": "7.3.3",
     "@babel/preset-env": "7.3.1",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "23.6.0",
+    "babel-jest": "24.1.0",
     "babel-loader": "8.0.5",
     "filesize": "4.1.2",
     "chalk": "2.4.2",
     "fork-ts-checker-webpack-plugin": "0.5.2",
     "fs-extra": "7.0.1",
-    "jest": "23.6.0",
+    "jest": "24.1.0",
     "pstree.remy": "1.1.2",
     "strip-ansi": "5.0.0",
     "text-table": "0.2.0",
@@ -65,7 +65,7 @@
     "typescript": ">=3.x"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "lint-staged": {
     "ignore": [
