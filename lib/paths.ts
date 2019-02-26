@@ -1,0 +1,37 @@
+import * as path from 'path'
+import * as fs from 'fs'
+
+const appDirectory = fs.realpathSync(process.cwd())
+const useTemplate = appDirectory === fs.realpathSync(path.join(__dirname), '..')
+
+function resolveApp(relativePath: string): string {
+  return path.resolve(appDirectory, relativePath)
+}
+
+function resolveOwn(relativePath: string): string {
+  return path.resolve(__dirname, '..', relativePath)
+}
+
+export const paths = useTemplate
+  ? {
+      appPackageJson: resolveOwn('package.json'),
+      appIndexJs: resolveOwn('template/src/index.ts'),
+      appTsConfig: resolveOwn('template/tsconfig.json'),
+      appTsLint: resolveOwn('template/tslint.json'),
+      appDevBundlePath: resolveOwn('template/build'),
+      appSrc: resolveOwn('template/src'),
+      appBuild: resolveOwn('template/dist'),
+      testsSetup: resolveOwn('template/setupTests.ts'),
+      prodBundle: 'bundle.prod.js',
+    }
+  : {
+      appPackageJson: resolveApp('package.json'),
+      appIndexJs: resolveApp('src/index.ts'),
+      appTsConfig: resolveApp('tsconfig.json'),
+      appTsLint: resolveApp('tslint.json'),
+      appDevBundlePath: resolveApp('build'),
+      appSrc: resolveApp('src'),
+      appBuild: resolveApp('dist'),
+      testsSetup: resolveApp('setupTests.ts'),
+      prodBundle: 'bundle.prod.js',
+    }
