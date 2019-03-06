@@ -30,7 +30,7 @@
     "babel-loader": "8.0.5",
     "filesize": "4.1.2",
     "chalk": "2.4.2",
-    "fork-ts-checker-webpack-plugin": "0.5.2",
+    "fork-ts-checker-webpack-plugin": "1.0.0",
     "fs-extra": "7.0.1",
     "jest": "24.1.0",
     "pstree.remy": "1.1.2",
