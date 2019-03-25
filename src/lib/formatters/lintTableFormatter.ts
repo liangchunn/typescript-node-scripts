@@ -1,7 +1,7 @@
 import * as Lint from 'tslint'
 import chalk from 'chalk'
 import textTable from 'text-table'
-const stripAnsi = require('strip-ansi')
+import stripAnsi from 'strip-ansi'
 
 export class Formatter extends Lint.Formatters.AbstractFormatter {
   private formatFailure(failure: Lint.RuleFailure): string[] {
