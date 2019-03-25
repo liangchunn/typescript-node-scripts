@@ -1,10 +1,38 @@
+# [2.0.0-beta.1](https://github.com/liangchunn/typescript-node-scripts/compare/2.0.0-beta.0...2.0.0-beta.1) (2019-03-25)
+
+
+### Bug Fixes
+
+* **formatter:** use colors when tty and not ci ([5e3584f](https://github.com/liangchunn/typescript-node-scripts/commit/5e3584f))
+
+
+
+# [2.0.0-beta.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.3.0...2.0.0-beta.0) (2019-03-25)
+
+
+### Bug Fixes
+
+* **create:** install TNS as a dev dependency ([3978289](https://github.com/liangchunn/typescript-node-scripts/commit/3978289))
+* **package:** update @babel/core to version 7.3.4 ([0332dba](https://github.com/liangchunn/typescript-node-scripts/commit/0332dba))
+* **package:** update @babel/preset-env to version 7.3.4 ([3a5cd6f](https://github.com/liangchunn/typescript-node-scripts/commit/3a5cd6f))
+* **package:** update webpack to version 4.29.6 ([3f88bb8](https://github.com/liangchunn/typescript-node-scripts/commit/3f88bb8))
+* **vendor:** fix spelling ([ee2eaf8](https://github.com/liangchunn/typescript-node-scripts/commit/ee2eaf8))
+
+
+### Features
+
+* **typescript:** add typescript files ([f8854c2](https://github.com/liangchunn/typescript-node-scripts/commit/f8854c2))
+* **typescript:** finish up typescript support ([2c5512b](https://github.com/liangchunn/typescript-node-scripts/commit/2c5512b))
+
+
+
 # [1.3.0](https://github.com/liangchunn/typescript-node-scripts/compare/v1.2.0...v1.3.0) (2019-02-19)
 
 
 ### Bug Fixes
 
-* **package:** update [@babel](https://github.com/babel)/core to version 7.3.3 ([28bad95](https://github.com/liangchunn/typescript-node-scripts/commit/28bad95)), closes [#64](https://github.com/liangchunn/typescript-node-scripts/issues/64)
-* **package:** update [@babel](https://github.com/babel)/preset-env to version 7.3.1 ([f7fec24](https://github.com/liangchunn/typescript-node-scripts/commit/f7fec24)), closes [#64](https://github.com/liangchunn/typescript-node-scripts/issues/64)
+* **package:** update @babel/core to version 7.3.3 ([28bad95](https://github.com/liangchunn/typescript-node-scripts/commit/28bad95)), closes [#64](https://github.com/liangchunn/typescript-node-scripts/issues/64)
+* **package:** update @babel/preset-env to version 7.3.1 ([f7fec24](https://github.com/liangchunn/typescript-node-scripts/commit/f7fec24)), closes [#64](https://github.com/liangchunn/typescript-node-scripts/issues/64)
 * **package:** update babel-loader to version 8.0.5 ([2eefbfc](https://github.com/liangchunn/typescript-node-scripts/commit/2eefbfc))
 * **package:** update chalk to version 2.4.2 ([1c7ffd6](https://github.com/liangchunn/typescript-node-scripts/commit/1c7ffd6))
 * **package:** update filesize to version 4.1.2 ([a3f0053](https://github.com/liangchunn/typescript-node-scripts/commit/a3f0053)), closes [#68](https://github.com/liangchunn/typescript-node-scripts/issues/68)
@@ -71,7 +99,7 @@
 
 ### Bug Fixes
 
-* **codeframe:** use new API for [@babel](https://github.com/babel)/code-frame ([1c93c74](https://github.com/liangchunn/typescript-node-scripts/commit/1c93c74))
+* **codeframe:** use new API for @babel/code-frame ([1c93c74](https://github.com/liangchunn/typescript-node-scripts/commit/1c93c74))
 
 
 
@@ -81,8 +109,8 @@
 ### Bug Fixes
 
 * **e2e:** fix env detection for travis ([c501d96](https://github.com/liangchunn/typescript-node-scripts/commit/c501d96))
-* **package:** update [@babel](https://github.com/babel)/core to version 7.1.2 ([53f832e](https://github.com/liangchunn/typescript-node-scripts/commit/53f832e)), closes [#25](https://github.com/liangchunn/typescript-node-scripts/issues/25)
-* **package:** update [@babel](https://github.com/babel)/preset-env to version 7.1.0 ([07a38d4](https://github.com/liangchunn/typescript-node-scripts/commit/07a38d4)), closes [#25](https://github.com/liangchunn/typescript-node-scripts/issues/25)
+* **package:** update @babel/core to version 7.1.2 ([53f832e](https://github.com/liangchunn/typescript-node-scripts/commit/53f832e)), closes [#25](https://github.com/liangchunn/typescript-node-scripts/issues/25)
+* **package:** update @babel/preset-env to version 7.1.0 ([07a38d4](https://github.com/liangchunn/typescript-node-scripts/commit/07a38d4)), closes [#25](https://github.com/liangchunn/typescript-node-scripts/issues/25)
 * **package:** update babel-loader to version 8.0.4 ([e4950e0](https://github.com/liangchunn/typescript-node-scripts/commit/e4950e0)), closes [#23](https://github.com/liangchunn/typescript-node-scripts/issues/23)
 * **package:** update fork-ts-checker-webpack-plugin to version 0.4.10 ([c4f956c](https://github.com/liangchunn/typescript-node-scripts/commit/c4f956c))
 * **package:** update strip-ansi to version 5.0.0 ([fc0bf57](https://github.com/liangchunn/typescript-node-scripts/commit/fc0bf57))
