@@ -2,14 +2,14 @@ import * as path from 'path'
 import * as fs from 'fs'
 
 const appDirectory = fs.realpathSync(process.cwd())
-const useTemplate = appDirectory === fs.realpathSync(path.join(__dirname), '..')
+const useTemplate = appDirectory === fs.realpathSync(path.join(__dirname, '../..'))
 
 function resolveApp(relativePath: string): string {
   return path.resolve(appDirectory, relativePath)
 }
 
 function resolveOwn(relativePath: string): string {
-  return path.resolve(__dirname, '..', relativePath)
+  return path.resolve(__dirname, '../..', relativePath)
 }
 
 export const paths = useTemplate

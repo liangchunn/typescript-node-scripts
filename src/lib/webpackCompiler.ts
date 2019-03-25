@@ -7,17 +7,10 @@ import psTree, { hasPS } from 'pstree.remy'
 
 import { formatWebpackMessages } from './formatWebpackMessages'
 import { clearConsole } from './clearConsole'
-import { isWindows } from './util/platform'
+import { isWindows } from '../util/platform'
+import { TNSOptions } from '../types/TNS'
 
 const isInteractive = process.stdout.isTTY
-
-/**
- * TODO: move this out from here
- */
-interface TNSOptions {
-  noCollapse: boolean
-  noAutoStart: boolean
-}
 
 /**
  * TODO dont use too many assertion operators (!)
@@ -50,7 +43,7 @@ export function createCompiler(
     }
     console.log('Compiling...')
     if (appRunning && app) {
-      if (isWindows) {
+      if (isWindows()) {
         exec('taskkill /pid ' + pid + ' /T /F')
         appRunning = false
       } else {

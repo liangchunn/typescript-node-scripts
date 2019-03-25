@@ -1,6 +1,4 @@
-tests
-lib/formatters/tsconfig.json
-lib/formatters/*.ts
+tests/**/*
 Dockerfile
 .eslintrc.json
 .eslintignore
@@ -8,6 +6,7 @@ Dockerfile
 .resources
 .dockerignore
 commitlint.config.js
-template/build
-template/coverage
-template/dist
+template/build/**/*
+template/coverage/**/*
+template/dist/**/*
+vendor/**/*

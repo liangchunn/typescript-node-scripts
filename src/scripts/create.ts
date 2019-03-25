@@ -2,16 +2,15 @@ process.on('unhandledRejection', err => {
   throw err
 })
 
-const fs = require('fs-extra')
-const spawn = require('child_process').spawnSync
-const exec = require('child_process').execSync
-const path = require('path')
-const os = require('os')
-const chalk = require('chalk')
+import * as fs from 'fs-extra'
+import * as path from 'path'
+import * as os from 'os'
+import chalk from 'chalk'
+import { spawnSync, execSync } from 'child_process'
 
 const argv = process.argv.slice(2)
 
-const createApp = (appName, useYarn) => {
+const createApp = (appName: string, useYarn: boolean) => {
   const appPath = path.join(process.cwd(), appName)
 
   console.log('Creating application ' + chalk.cyan(appName) + '\n')
@@ -47,7 +46,7 @@ const createApp = (appName, useYarn) => {
   }
 
   // set up the template
-  fs.copySync(path.join(__dirname, '../template'), appPath)
+  fs.copySync(path.join(__dirname, '../../template'), appPath)
 
   // create the package json
   fs.writeFileSync(
@@ -56,7 +55,7 @@ const createApp = (appName, useYarn) => {
   )
   // copy gitignore
   fs.copySync(
-    path.join(__dirname, '../template/gitignore'),
+    path.join(__dirname, '../../template/gitignore'),
     path.join(appPath, '.gitignore')
   )
   fs.unlinkSync(path.join(appPath, 'gitignore'))
@@ -82,7 +81,7 @@ const createApp = (appName, useYarn) => {
   }
 
   // install dev dependencies
-  const devDependencyProc = spawn(cmd, devDependencyArgs, {
+  const devDependencyProc = spawnSync(cmd, devDependencyArgs, {
     stdio: 'inherit',
     cwd: appPath,
   })
@@ -115,15 +114,15 @@ const createApp = (appName, useYarn) => {
 
   // initialize git repo
   try {
-    exec('git init', {
+    execSync('git init', {
       cwd: appPath,
       stdio: 'ignore',
     })
-    exec('git add -A', {
+    execSync('git add -A', {
       cwd: appPath,
       stdio: 'ignore',
     })
-    exec('git commit -m "first commit by typescript-node-scripts"', {
+    execSync('git commit -m "first commit by typescript-node-scripts"', {
       cwd: appPath,
       stdio: 'ignore',
     })
@@ -159,7 +158,7 @@ const createApp = (appName, useYarn) => {
 
 const yarnAvailable = () => {
   try {
-    exec('yarnpkg --version', { stdio: 'ignore' })
+    execSync('yarnpkg --version', { stdio: 'ignore' })
     return true
   } catch (e) {
     return false
