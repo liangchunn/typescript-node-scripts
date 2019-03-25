@@ -2,6 +2,7 @@ import * as fs from 'fs'
 import * as os from 'os'
 import { Chalk } from 'chalk'
 import { codeFrameColumns } from '@babel/code-frame'
+import { IS_CI } from '../util/env'
 
 /**
  * Copied from fTCWP's NormalizedMessage.d.ts
@@ -24,12 +25,18 @@ export function formatTsLoaderMessages(
   const source = file && fs.existsSync(file) && fs.readFileSync(file, 'utf-8')
 
   if (source) {
-    const frame = codeFrameColumns(source, {
-      start: {
-        line: error.line,
-        column: error.character,
+    const frame = codeFrameColumns(
+      source,
+      {
+        start: {
+          line: error.line,
+          column: error.character,
+        },
       },
-    })
+      {
+        highlightCode: process.stdout.isTTY && !IS_CI,
+      }
+    )
     return (
       colors.dim(`${error.line}:${error.character} `) +
       error.content +
