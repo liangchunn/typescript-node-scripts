@@ -37,6 +37,9 @@ npm i -g npm@latest
 # install deps
 yarn
 
+# compile
+yarn compile
+
 # start verdaccio
 VERDACCIO_REGISTRY_LOGS=`mktemp`
 nohup npx verdaccio@3.2.0 -c tests/verdaccio.yml &>$VERDACCIO_REGISTRY_LOGS &

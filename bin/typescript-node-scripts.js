@@ -23,7 +23,7 @@ switch (script) {
         const result = spawnSync(
             'node',
             nodeArgs
-                .concat(require.resolve('../scripts/' + script))
+                .concat(require.resolve('../build/scripts/' + script))
                 .concat(args.slice(scriptIndex + 1)),
             {
                 stdio: 'inherit',
