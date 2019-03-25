@@ -1,17 +1,21 @@
 # typescript-node-scripts
+
 [![Build Status](https://travis-ci.com/liangchunn/typescript-node-scripts.svg?branch=master)](https://travis-ci.com/liangchunn/typescript-node-scripts) [![npm](https://img.shields.io/npm/v/typescript-node-scripts.svg)](https://www.npmjs.com/package/typescript-node-scripts) [![npm](https://img.shields.io/npm/dt/typescript-node-scripts.svg)](https://www.npmjs.com/package/typescript-node-scripts) [![install size](https://packagephobia.now.sh/badge?p=typescript-node-scripts)](https://packagephobia.now.sh/result?p=typescript-node-scripts) [![Greenkeeper badge](https://badges.greenkeeper.io/liangchunn/typescript-node-scripts.svg)](https://greenkeeper.io/)
 
 Create Node.js applications based on TypeScript with zero-configuration.
+
 <p align="center">
     <img 
     width="600" src="https://cdn.rawgit.com/liangchunn/typescript-node-scripts/12e1600/.resources/term.svg"/>
 </p>
 
 Inspired by `create-react-app` and Dan Abramov's [The Melting Pot of JavaScript](https://increment.com/development/the-melting-pot-of-javascript/).
+
 - Supports testing, building, and development in watch mode
 - Supports custom TypeScript path mappings, aka `compilerOptions.path`
 
 ## Quick Start Guide
+
 ```sh
 npx typescript-node-scripts create <appName>
 cd <appName>
@@ -20,9 +24,8 @@ yarn start
 
 ## Requirements
 
--   node `>=6.0.0`
--   `process.platform !== 'win32'`
-
+- node `>=8.0.0`
+- `process.platform !== 'win32'`
 
 ## Commands
 
@@ -65,32 +68,39 @@ yarn test --watchAll
 ```
 
 ## Tests
+
 Jest is the main test runner that this package supports.
 
 ### Test files
+
 Everything that matches the globs below will be passed to Jest as a test file:
+
 - `src/**/__tests__/**/*.(j|t)s?(x)`
 - `src/**/?(*.)(spec|test|t).(j|t)s?(x)`
 
 ### Setting up the test framework
+
 You can use `setupTests.ts` in your project root to set up the testing framework before each test.
 
 ### Overriding Jest configuration
+
 You can override the Jest configuration in your `package.json` with the key `jest`.
 
 The following options can be overriden:
+
 - `collectCoverageFrom`
 - `coverageReporters`
 - `coverageThreshold`
 
 ## Custom Module Paths
+
 TNS supports custom module path mappings. A default custom path mapping is provided in `tsconfig.json`
 
 ```json
 {
-    "paths": {
-        "~/*": ["src/*"]
-    }
+  "paths": {
+    "~/*": ["src/*"]
+  }
 }
 ```
 
@@ -107,6 +117,7 @@ import Module from '~/Module'
 ```
 
 ## Source Maps
+
 Source maps are enabled by default and postfixed with `.map` in the `build` and `dist` folders. These files provide accurate source mappings which are helpful when debugging errors and looking at stack traces during runtime.
 
 In order to tell Node to use these source maps, you would need to install `source-map-support`.
@@ -120,12 +131,71 @@ npm i -S source-map-support
 ```
 
 Then, in `src/index.ts`, add:
+
 ```ts
 import 'source-map-support/register'
 ```
 
 ## Monorepo Support
+
 To use `typescript-node-scripts` with a monorepo like lerna + yarn workspaces, you need to add `--monorepo` to the start and build scripts.
 
 Then, you can use `lerna run <start|build> --stream` in your root `package.json`.
 
+## Debugging
+
+### Visual Studio Code
+
+#### Webpack Build
+
+TNS incrementally outputs a single bundle in `build/bundle.js` (via webpack) when running `yarn build`.
+To debug the bundle, add the following into the `configurations` array of your `launch.json` file:
+
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug Webpack Build (via Node)",
+  "protocol": "inspector",
+  "program": "${workspaceFolder}/build/bundle.js"
+}
+```
+
+You can now set breakpoints and run the task in order to debug your build.
+
+#### TypeScript Source via `ts-node`
+
+_This method is **NOT** recommended due to ts-node being quite slow at running and compiling your source code._
+
+First off, you would need to install `ts-node` and `tsconfig-paths`:
+
+```sh
+yarn add ts-node tsconfig-paths --dev
+```
+
+Then add the following into your configuration:
+
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug Source (ts-node)",
+  "protocol": "inspector",
+  "runtimeArgs": ["-r", "ts-node/register", "-r", "tsconfig-paths/register"],
+  "args": ["${workspaceFolder}/src/index.ts"],
+  "env": {
+    "TS_NODE_PROJECT": "./tsconfig.json",
+    "TS_NODE_FILES": "true"
+  }
+}
+```
+
+Next, add the `files` entry into your `tsconfig.json`:
+
+```json
+{
+  "files": ["src"]
+}
+```
+
+You can now use breakpoints and run the build under debug mode.
