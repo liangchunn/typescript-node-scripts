@@ -28,12 +28,13 @@ const createApp = (appName, useYarn) => {
         },
     }
 
-    const packageDependencies = ['typescript-node-scripts']
+    // const packageDependencies = ['typescript-node-scripts']
     const packageDevDependencies = [
         '@types/node',
         '@types/jest',
-        'typescript',
         'tslint',
+        'typescript',
+        'typescript-node-scripts',
     ]
 
     // check if the path exists
@@ -63,22 +64,20 @@ const createApp = (appName, useYarn) => {
     // install package dependencies
     console.log(
         'Installing ' +
-            [...packageDependencies, ...packageDevDependencies]
-                .map(i => chalk.cyan(i))
-                .join(', ')
+            [...packageDevDependencies].map(i => chalk.cyan(i)).join(', ')
     )
 
     let cmd
-    let dependencyArgs
+    // let dependencyArgs
     let devDependencyArgs
 
     if (useYarn) {
         cmd = 'yarnpkg'
-        dependencyArgs = ['add', ...packageDependencies]
+        // dependencyArgs = ['add', ...packageDependencies]
         devDependencyArgs = ['add', ...packageDevDependencies, '--dev']
     } else {
         cmd = 'npm'
-        dependencyArgs = ['install', '--save', ...packageDependencies]
+        // dependencyArgs = ['install', '--save', ...packageDependencies]
         devDependencyArgs = ['install', '--save-dev', ...packageDevDependencies]
     }
 
@@ -99,20 +98,20 @@ const createApp = (appName, useYarn) => {
     }
 
     // install dependencies
-    const dependencyProc = spawn(cmd, dependencyArgs, {
-        stdio: 'inherit',
-        cwd: appPath,
-    })
-    if (dependencyProc.status !== 0) {
-        console.error()
-        console.error(
-            chalk.red('Command'),
-            chalk.redBright(`'${cmd} ${dependencyArgs.join(' ')}'`),
-            chalk.red('failed.')
-        )
-        console.error()
-        process.exit(1)
-    }
+    // const dependencyProc = spawn(cmd, dependencyArgs, {
+    //     stdio: 'inherit',
+    //     cwd: appPath,
+    // })
+    // if (dependencyProc.status !== 0) {
+    //     console.error()
+    //     console.error(
+    //         chalk.red('Command'),
+    //         chalk.redBright(`'${cmd} ${dependencyArgs.join(' ')}'`),
+    //         chalk.red('failed.')
+    //     )
+    //     console.error()
+    //     process.exit(1)
+    // }
 
     // initialize git repo
     try {
