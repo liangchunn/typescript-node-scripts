@@ -129,8 +129,19 @@ export function createCompiler(
 
     // Start the app if there are no errors
     if (!appRunning && !messages.errors.length && !options.noAutoStart) {
+      let appArgs: string[] = []
+      const { argv } = process
+      const argvSeparatorIndex = argv.indexOf('--')
+
+      // if the argv separator is found,
+      // we want to forward the argv after '--' to the actual app
+      if (~argvSeparatorIndex) {
+        appArgs = process.argv.slice(argvSeparatorIndex + 1, argv.length)
+      }
+
       app = spawn('node', [
         path.join(config.output!.path!, config.output!.filename!),
+        ...appArgs,
       ])
 
       if (app.pid > 0) {

@@ -136,6 +136,18 @@ Then, in `src/index.ts`, add:
 import 'source-map-support/register'
 ```
 
+## Forwarding Arguments to Your App
+
+When running in development mode, you can specify all the arguments that you want to forward to your app after the `--` separator in your project's `package.json`:
+
+```json
+{
+  "scripts": {
+    "start": "typescript-node-scripts start --no-collapse -- --arg-for-your-app=true"
+  }
+}
+```
+
 ## Monorepo Support
 
 To use `typescript-node-scripts` with a monorepo like lerna + yarn workspaces, you need to add `--monorepo` to the start and build scripts.
