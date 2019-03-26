@@ -1,3 +1,12 @@
+# [2.0.0-beta.5](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.4...v2.0.0-beta.5) (2019-03-26)
+
+
+### Features
+
+* **argv:** forward argv to spawned app ([f26d370](https://github.com/liangchunn/typescript-node-scripts/commit/f26d370)), closes [#76](https://github.com/liangchunn/typescript-node-scripts/issues/76)
+
+
+
 # [2.0.0-beta.4](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2019-03-26)
 
 
