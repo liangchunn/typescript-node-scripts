@@ -2,7 +2,8 @@ import * as path from 'path'
 import * as fs from 'fs'
 
 const appDirectory = fs.realpathSync(process.cwd())
-const useTemplate = appDirectory === fs.realpathSync(path.join(__dirname, '../..'))
+const useTemplate =
+  appDirectory === fs.realpathSync(path.join(__dirname, '../..'))
 
 function resolveApp(relativePath: string): string {
   return path.resolve(appDirectory, relativePath)
@@ -22,6 +23,7 @@ export const paths = useTemplate
       appSrc: resolveOwn('template/src'),
       appBuild: resolveOwn('template/dist'),
       testsSetup: resolveOwn('template/setupTests.ts'),
+      webpackOverride: resolveOwn('template/webpack.config.override.js'),
       prodBundle: 'bundle.prod.js',
     }
   : {
@@ -33,5 +35,6 @@ export const paths = useTemplate
       appSrc: resolveApp('src'),
       appBuild: resolveApp('dist'),
       testsSetup: resolveApp('setupTests.ts'),
+      webpackOverride: resolveApp('webpack.config.override.js'),
       prodBundle: 'bundle.prod.js',
     }

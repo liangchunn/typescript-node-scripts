@@ -199,3 +199,19 @@ Next, add the `files` entry into your `tsconfig.json`:
 ```
 
 You can now use breakpoints and run the build under debug mode.
+
+## Webpack
+
+### Overriding Webpack Configuration
+
+_This feature is marked as experimental and should not be used in production, unless you know exactly what you're doing_
+
+To override and merge your custom webpack configuration, create a file called `webpack.config.override.js` in your root folder.
+
+This file is then used to be merged into the base configuration that TNS provides, for example:
+
+```js
+module.exports = {
+  mode: 'production' // always force production mode
+}
+```

@@ -83,6 +83,7 @@ export const WebpackDevConfig: webpack.Configuration = {
       watch: paths.appSrc,
       tsconfig: paths.appTsConfig,
       formatter: formatForkTsCheckerMessages,
+      checkSyntacticErrors: true,
     }),
   ],
   optimization: {

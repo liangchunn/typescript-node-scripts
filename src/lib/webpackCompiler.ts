@@ -75,8 +75,7 @@ export function createCompiler(
     if (isInteractive) {
       clearConsole()
     }
-
-    const statsJson = stats.toJson({})
+    const statsJson = stats.toJson({ errors: true, warnings: true })
     const messages = formatWebpackMessages(statsJson)
     const isSuccessful = !messages.errors.length && !messages.warnings.length
 
