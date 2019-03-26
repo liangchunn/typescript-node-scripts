@@ -1,3 +1,12 @@
+# [2.0.0-beta.3](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2019-03-26)
+
+
+### Features
+
+* **webpack:** support config override, fix empty errors ([dbc7186](https://github.com/liangchunn/typescript-node-scripts/commit/dbc7186))
+
+
+
 # [2.0.0-beta.2](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.1...v2.0.0-beta.2) (2019-03-25)
 
 
