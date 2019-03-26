@@ -83,6 +83,7 @@ export const WebpackProdConfig: webpack.Configuration = {
       tsconfig: paths.appTsConfig,
       formatter: formatForkTsCheckerMessages,
       checkSyntacticErrors: true,
+      reportFiles: ['**', '!**/__tests__/**', '!**/?(*.)(spec|test|t).*'],
     }),
   ],
   optimization: {
