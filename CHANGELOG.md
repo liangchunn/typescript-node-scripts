@@ -1,3 +1,12 @@
+# [2.0.0-beta.4](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.3...v2.0.0-beta.4) (2019-03-26)
+
+
+### Features
+
+* **test:** don't check tests when running run/build ([464a06a](https://github.com/liangchunn/typescript-node-scripts/commit/464a06a))
+
+
+
 # [2.0.0-beta.3](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2019-03-26)
 
 
