@@ -10,3 +10,6 @@ template/build/**/*
 template/coverage/**/*
 template/dist/**/*
 vendor/**/*
+docs/**/*
+website/**/*
+docker-compose.yml

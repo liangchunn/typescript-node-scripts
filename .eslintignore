@@ -3,3 +3,4 @@ template/**/*.js
 node_modules/**/*.js
 tests/sink/**/*.js
 build/**/*.js
+website/**/*.js
