@@ -56,7 +56,10 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
-          <img src={`${baseUrl}img/term.svg`} width={600} />
+          <img
+            src="https://camo.githubusercontent.com/d2b82ac367f13457de87d390fe92b5ede1b10a27/68747470733a2f2f63646e2e7261776769742e636f6d2f6c69616e676368756e6e2f747970657363726970742d6e6f64652d736372697074732f313265313630302f2e7265736f75726365732f7465726d2e737667"
+            width={600}
+          />
           <PromoSection>
             <Button href="#try">Try It Out</Button>
             <Button href={docUrl('getting-started.html')}>Documentation</Button>
@@ -96,9 +99,9 @@ class Index extends React.Component {
           {/* TNS makes it easy to create applications with one command, 
           and provides helpful tools like a development server that incrementally compiles your source code, 
           making it blazing fast to develop your application. */}
-          TNS makes it easy to create, build, and test your applications with
-          built-in tooling, like a development server that incrementally
-          compiles your source code.
+          TNS makes it easy to create, build, and test your Node.js applications
+          with built-in tooling, like a development server that incrementally
+          compiles your source code and runs your app.
         </MarkdownBlock>
       </div>
     )
@@ -133,7 +136,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              "TNS shows a preview of what's going wrong in your terminal, and silences other errors that cascade from the current error.",
+              'TNS outputs a prettified error message along with the source of the error, and silences other errors that cascade from the current error.',
             image: `${baseUrl}img/dev-server-error.png`,
             imageAlign: 'left',
             title: 'Distraction-free Error Messages',
