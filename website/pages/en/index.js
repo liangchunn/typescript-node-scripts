@@ -120,7 +120,7 @@ class Index extends React.Component {
           {
             content:
               'TNS provides a development server which compiles your source code incrementally, and then runs your application in the same terminal.',
-            image: `${baseUrl}img/dev-server.svg`,
+            image: `${baseUrl}img/dev-server.png`,
             imageAlign: 'right',
             title: 'Compile and Run',
           },
