@@ -1,5 +1,5 @@
 ---
-id: argv-forwardig
+id: argv-forwarding
 title: Forwarding argv to your App
 ---
 
