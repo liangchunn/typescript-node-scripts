@@ -1,0 +1,11 @@
+{
+  "docs": {
+    "Quick Start": ["getting-started", "commands"],
+    "Guides": ["tests", "custom-module-path", "sourcemaps", "argv-forwarding", "monorepo"],
+    "Debugging": ["debugging-webpack", "debugging-source"],
+    "Advanced": ["webpack-override"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
