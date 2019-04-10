@@ -2,6 +2,7 @@ import * as webpack from 'webpack'
 import nodeExternals from 'webpack-node-externals'
 import tsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import forkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
+import caseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin'
 import { tslintShouldEmitErrors } from './tsLintHelper'
 import { paths } from './paths'
 import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
@@ -85,6 +86,7 @@ export const WebpackProdConfig: webpack.Configuration = {
       checkSyntacticErrors: true,
       reportFiles: ['**', '!**/__tests__/**', '!**/?(*.)(spec|test|t).*'],
     }),
+    new caseSensitivePathsWebpackPlugin(),
   ],
   optimization: {
     nodeEnv: false,
