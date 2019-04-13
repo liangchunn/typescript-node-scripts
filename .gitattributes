@@ -1,1 +1,1 @@
-website/* linguist-vendored
+*.js linguist-language=TypeScript
