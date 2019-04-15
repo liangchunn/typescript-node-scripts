@@ -12,7 +12,7 @@
     "initApp": "node bin/typescript-node-scripts.js create",
     "e2e:ci": "./tests/e2e.sh",
     "e2e:local": "docker build -t tns-docker . && docker run tns-docker",
-    "lint": "eslint .",
+    "lint": "tslint .",
     "commit": "git-cz",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "prepublishOnly": "yarn compile"
@@ -46,7 +46,6 @@
     "ts-loader": "5.3.3",
     "tsconfig-paths-webpack-plugin": "3.2.0",
     "tslint": "5.14.0",
-    "tslint-config-prettier": "1.18.0",
     "tslint-loader": "3.5.4",
     "webpack": "4.29.6",
     "webpack-node-externals": "1.7.2"
@@ -66,11 +65,11 @@
     "commitizen": "^3.0.7",
     "conventional-changelog-cli": "^2.0.12",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^5.15.3",
-    "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-sonarts": "^1.9.0",
     "typescript": "^3.3.4000"
   },
   "peerDependencies": {
@@ -88,7 +87,7 @@
     "linters": {
       "*.js": [
         "prettier --write",
-        "eslint --fix",
+        "tslint --fix",
         "git add"
       ]
     }

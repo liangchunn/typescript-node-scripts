@@ -1,7 +1,7 @@
+import { codeFrameColumns } from '@babel/code-frame'
+import { Chalk } from 'chalk'
 import * as fs from 'fs'
 import * as os from 'os'
-import { Chalk } from 'chalk'
-import { codeFrameColumns } from '@babel/code-frame'
 import { IS_CI } from '../util/env'
 
 /**

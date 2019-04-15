@@ -1,6 +1,6 @@
-import '../injectors/test'
 import * as jest from 'jest'
 import * as path from 'path'
+import '../injectors/test'
 import { paths } from '../lib/paths'
 import { createJestConfig } from './util/createJestConfig'
 const argv = process.argv.slice(2)

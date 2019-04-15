@@ -1,5 +1,5 @@
-import { ChildProcess, spawn, exec } from 'child_process'
 import chalk from 'chalk'
+import { ChildProcess, exec, spawn } from 'child_process'
 import psTree, { hasPS } from 'pstree.remy'
 import { isWindows } from '../util/platform'
 
@@ -38,10 +38,6 @@ export class AppController {
     this.argv = argv
   }
 
-  private setState(state: AppControllerState) {
-    this.state = state
-  }
-
   public async stopApp() {
     return new Promise(resolve => {
       if (this.state.appRunning) {
@@ -71,9 +67,9 @@ export class AppController {
               )
             } else {
               const pids = children.concat(pid).sort()
-              pids.forEach(pid => {
+              pids.forEach(childPid => {
                 // 15 is for SIGTERM
-                exec('kill -15 ' + pid).on('close', closeHandler)
+                exec('kill -15 ' + childPid).on('close', closeHandler)
               })
             }
           })
@@ -91,10 +87,7 @@ export class AppController {
     )
 
     // spawn the process
-    const proc = spawn('node', [
-      this.executablePath,
-      ...this.argv,
-    ]) as ChildProcess
+    const proc = spawn('node', [this.executablePath, ...this.argv])
 
     // attach event listeners
     proc.on('error', e => {
@@ -138,5 +131,9 @@ export class AppController {
       pid: proc.pid.toString(),
       appRunning: true,
     })
+  }
+
+  private setState(state: AppControllerState) {
+    this.state = state
   }
 }

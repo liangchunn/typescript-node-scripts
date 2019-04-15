@@ -2,11 +2,11 @@ process.on('unhandledRejection', err => {
   throw err
 })
 
-import * as fs from 'fs-extra'
-import * as path from 'path'
-import * as os from 'os'
 import chalk from 'chalk'
-import { spawnSync, execSync } from 'child_process'
+import { execSync, spawnSync } from 'child_process'
+import * as fs from 'fs-extra'
+import * as os from 'os'
+import * as path from 'path'
 
 const argv = process.argv.slice(2)
 
@@ -27,7 +27,6 @@ const createApp = (appName: string, useYarn: boolean) => {
     },
   }
 
-  // const packageDependencies = ['typescript-node-scripts']
   const packageDevDependencies = [
     '@types/node',
     '@types/jest',
@@ -67,16 +66,13 @@ const createApp = (appName: string, useYarn: boolean) => {
   )
 
   let cmd
-  // let dependencyArgs
   let devDependencyArgs
 
   if (useYarn) {
     cmd = 'yarnpkg'
-    // dependencyArgs = ['add', ...packageDependencies]
     devDependencyArgs = ['add', ...packageDevDependencies, '--dev']
   } else {
     cmd = 'npm'
-    // dependencyArgs = ['install', '--save', ...packageDependencies]
     devDependencyArgs = ['install', '--save-dev', ...packageDevDependencies]
   }
 

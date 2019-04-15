@@ -1,8 +1,8 @@
-import * as fs from 'fs'
-import filesize from 'filesize'
 import chalk from 'chalk'
+import filesize from 'filesize'
+import * as fs from 'fs'
 
-type FileSizeObjectOutput = {
+interface FileSizeObjectOutput {
   value: number
   symbol: string
 }

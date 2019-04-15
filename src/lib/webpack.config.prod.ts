@@ -1,13 +1,13 @@
+import caseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin'
+import forkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
+import tsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import * as webpack from 'webpack'
 import nodeExternals from 'webpack-node-externals'
-import tsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
-import forkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
-import caseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin'
-import { tslintShouldEmitErrors } from './tsLintHelper'
-import { paths } from './paths'
+import { RuntimeOptions } from '../util/env'
 import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
 import { formatTsLoaderMessages } from './formatTsLoaderMessages'
-import { RuntimeOptions } from '../util/env'
+import { paths } from './paths'
+import { tslintShouldEmitErrors } from './tsLintHelper'
 
 export const WebpackProdConfig: webpack.Configuration = {
   mode: 'production',

@@ -1,9 +1,9 @@
-import * as path from 'path'
 import chalk from 'chalk'
+import * as path from 'path'
 import webpack from 'webpack'
-import { formatWebpackMessages } from './formatWebpackMessages'
-import { clearConsole } from './clearConsole'
 import { TNSOptions } from '../types/TNS'
+import { clearConsole } from './clearConsole'
+import { formatWebpackMessages } from './formatWebpackMessages'
 import { AppController } from './processHandler'
 
 const isInteractive = process.stdout.isTTY
@@ -13,6 +13,7 @@ const appArgs: string[] = ~argvSeparatorIndex
   ? process.argv.slice(argvSeparatorIndex + 1, argv.length)
   : []
 
+// tslint:disable:cognitive-complexity
 export function createCompiler(
   config: webpack.Configuration,
   options: TNSOptions
@@ -34,7 +35,7 @@ export function createCompiler(
     throw err.message
   }
 
-  compiler!.hooks.invalid.tap('compileInvalidate', async () => {
+  compiler.hooks.invalid.tap('compileInvalidate', async () => {
     if (isInteractive) {
       clearConsole()
     }
@@ -45,7 +46,7 @@ export function createCompiler(
     }
   })
 
-  compiler!.hooks.done.tap('compileDone', stats => {
+  compiler.hooks.done.tap('compileDone', stats => {
     if (isInteractive) {
       clearConsole()
     }
@@ -54,11 +55,9 @@ export function createCompiler(
     const isSuccessful = !messages.errors.length && !messages.warnings.length
 
     if (isSuccessful) {
-      console.log(
-        `${chalk.green('Compiled successfully!')} ${chalk.dim(
-          `(${statsJson.time}ms)`
-        )}`
-      )
+      const successMessage = chalk.green('Compiled successfully!')
+      const time = chalk.dim(`(${statsJson.time}ms)`)
+      console.log(`${successMessage} ${time}`)
       console.log()
     }
 
@@ -107,5 +106,5 @@ export function createCompiler(
     }
   })
 
-  return compiler!
+  return compiler
 }

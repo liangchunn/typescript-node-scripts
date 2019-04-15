@@ -1,12 +1,12 @@
 import chalk from 'chalk'
-import webpack from 'webpack'
 import * as path from 'path'
 import * as typescript from 'typescript'
-import { paths } from '../lib/paths'
-import { getBundleSize, diffFileSize } from './util/fileSizeReporter'
+import webpack from 'webpack'
 import { formatWebpackMessages } from '../lib/formatWebpackMessages'
+import { paths } from '../lib/paths'
 import { WebpackProdConfig } from '../lib/webpack.config.prod'
-import { RuntimeOptions, IS_CI } from '../util/env'
+import { IS_CI, RuntimeOptions } from '../util/env'
+import { diffFileSize, getBundleSize } from './util/fileSizeReporter'
 
 const prodBundlePath = path.join(paths.appBuild, paths.prodBundle)
 const sizeBeforeBuild = getBundleSize(prodBundlePath)

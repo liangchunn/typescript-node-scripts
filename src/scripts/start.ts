@@ -1,14 +1,14 @@
-import '../injectors/dev'
-import * as fs from 'fs'
-import * as webpack from 'webpack'
-import * as typescript from 'typescript'
 import chalk from 'chalk'
+import * as fs from 'fs'
 import { merge } from 'lodash'
-import { createCompiler } from '../lib/webpackCompiler'
+import * as typescript from 'typescript'
+import * as webpack from 'webpack'
+import '../injectors/dev'
 import { clearConsole } from '../lib/clearConsole'
-import { WebpackDevConfig } from '../lib/webpack.config.dev'
-import { RuntimeOptions } from '../util/env'
 import { paths } from '../lib/paths'
+import { WebpackDevConfig } from '../lib/webpack.config.dev'
+import { createCompiler } from '../lib/webpackCompiler'
+import { RuntimeOptions } from '../util/env'
 
 const isInteractive = process.stdout.isTTY
 let compiler: webpack.Compiler

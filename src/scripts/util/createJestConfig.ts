@@ -1,8 +1,8 @@
+import chalk from 'chalk'
 import * as fs from 'fs'
 import * as path from 'path'
-import chalk from 'chalk'
 import { paths } from '../../lib/paths'
-const tsconfig = require(paths.appTsConfig)
+const appTsConfig = require(paths.appTsConfig)
 
 /**
  * Transform paths from tsconfig.json to Jest compatible path mappings
@@ -15,16 +15,19 @@ const tsconfig = require(paths.appTsConfig)
  * @returns {object} key:value path mapping for jest
  */
 const transformTsPathsToJestPaths = (tsconfig: any) => {
-  const { paths = {}, baseUrl = '' } = tsconfig.compilerOptions
-  const resolvedBase = path.join('<rootDir>', baseUrl)
-  return Object.keys(paths).reduce(
+  const {
+    paths: tsconfigPaths = {},
+    baseUrl: tsconfigBaseUrl = '',
+  } = tsconfig.compilerOptions
+  const resolvedBase = path.join('<rootDir>', tsconfigBaseUrl)
+  return Object.keys(tsconfigPaths).reduce(
     (acc, key) =>
       key === '*'
         ? acc
         : Object.assign({}, acc, {
             ['^' + key.replace('*', '(.*)') + '$']: path.join(
               resolvedBase,
-              paths[key][0].replace('*', '$1')
+              tsconfigPaths[key][0].replace('*', '$1')
             ),
           }),
     {}
@@ -58,7 +61,7 @@ export const createJestConfig = (
         tsConfig: paths.appTsConfig,
       },
     },
-    moduleNameMapper: transformTsPathsToJestPaths(tsconfig),
+    moduleNameMapper: transformTsPathsToJestPaths(appTsConfig),
   }
 
   if (rootDir) {

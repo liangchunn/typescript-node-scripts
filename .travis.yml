@@ -4,6 +4,11 @@ node_js:
 - 8
 - 10
 - 11
+addons:
+  sonarcloud:
+    organization: "liangchunn-github"
+    token:
+      secure: "Rlk61JB/zCQYYkPV/mcsPZarxoZgOx/SuwRXX2RxUdSbGVxdemfkJJqjjFDoUDtBcC9dvjYC8Yz8pRoE1t6U57jo/+2bVC1itWDAvUh0sw9eSEpKt0Jv4nmxilgCCcTZIT2ZKRd1L86DMDysmN6LnFgdE/7vZ3QlZBWZ2uMwB6fg9SGPreZfVjfSkPCtyqSjTOfR/M0J0nNH2lN2sxBt+8VtlePnAmRx8jzC/zSgYTsyaiPM/ghMdUr1sL/vML7XaUZLIpYqahnO4VDF2kiLia25Ea6lGnMQup1mL5dPtRW6/fyt/kdtx/m2nAMPRltiOAc9EUlCu0DegUfmacJrj+DGlsK5lhOwtw9YTAWibKNImoyh9P/qpxZ+JDGIpkZAMUb2ub4sPyA/2mvWfiSYmJmAgQW5VAJc0cx+ZErE5KQWexXjEH+olzBbwNLZ+EdHPR0q7CcchVohJ3qVks7I6ilgf3BRO/mugtBEAYNS0/kPvRqIe2QgrPJn44h/Q6qKZbfxqarWnMD6UDluyHSM0H4MhixpDatEzDYfaUoQ8fIguIKtB7T+r73G0Kmoyt1KNs5i/RfBU7Wif8zJo1t6UTGVFc4Y6BN1MQJQUcc/KE4srIoHuSXeqFznoz/19/cidT9aELDSRI3q+t6yKsdve5ag4WD5MdXTwRy3YEZEUZk="
 cache:
   yarn: true
   directories:
@@ -16,4 +21,6 @@ install: yarn
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 script:
+- yarn lint
+- sonar-scanner
 - "./tests/e2e.sh"

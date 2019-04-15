@@ -84,7 +84,7 @@ export function formatWebpackMessages(
   json: {
     errors: string[]
     warnings: string[]
-  } /** Webpack's stat output is typed as any*/
+  } // Webpack's stat output is typed as any
 ): {
   errors: string[]
   warnings: string[]
