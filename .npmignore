@@ -13,3 +13,4 @@ vendor/**/*
 docs/**/*
 website/**/*
 docker-compose.yml
+.scannerwork

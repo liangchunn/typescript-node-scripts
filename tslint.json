@@ -15,5 +15,8 @@
     "no-var-requires": false,
     "no-extra-semicolon": false
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "linterOptions": {
+    "exclude": ["template/**/*"]
+  }
 }
