@@ -5,7 +5,7 @@
     "previous": "Previous",
     "tagline": "Create Node.js apps based on TypeScript with zero-configuration",
     "docs": {
-      "argv-forwardig": {
+      "argv-forwarding": {
         "title": "Forwarding argv to your App"
       },
       "commands": {
@@ -19,6 +19,9 @@
       },
       "debugging-webpack": {
         "title": "Debugging your Webpack Build"
+      },
+      "deployment": {
+        "title": "Deploying your App"
       },
       "getting-started": {
         "title": "Getting Started"
