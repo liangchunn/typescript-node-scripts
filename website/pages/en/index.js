@@ -111,7 +111,11 @@ class Index extends React.Component {
         {[
           {
             title: 'Try it Out',
-            content: `Ready to create an app? Run the following command in your terminal: <br/><br/><img src="${baseUrl}img/get-started.png" width="600px"/>`,
+            content: `Ready to create an app? Run the following command in your terminal: 
+              <br/><br/>
+              \`\`\`
+              npx typescript-node-scripts create <my_app>
+              \`\`\``,
           },
         ]}
       </Block>
@@ -124,7 +128,7 @@ class Index extends React.Component {
             content:
               'TNS provides a development server which compiles your source code incrementally, and then runs your application in the same terminal.',
             image: `${baseUrl}img/dev-server.png`,
-            imageAlign: 'right',
+            imageAlign: 'bottom',
             title: 'Compile and Run',
           },
         ]}
@@ -138,7 +142,7 @@ class Index extends React.Component {
             content:
               'TNS outputs a prettified error message along with the source of the error, and silences other errors that cascade from the current error.',
             image: `${baseUrl}img/dev-server-error.png`,
-            imageAlign: 'left',
+            imageAlign: 'bottom',
             title: 'Distraction-free Error Messages',
           },
         ]}
@@ -152,7 +156,7 @@ class Index extends React.Component {
             content:
               'Jest ships out of the box. Run your tests and update your snapshots, all in interactive mode. ',
             image: `${baseUrl}img/test.png`,
-            imageAlign: 'right',
+            imageAlign: 'bottom',
             title: 'Test',
           },
         ]}
