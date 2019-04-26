@@ -29,6 +29,11 @@ const siteConfig = {
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
+  algolia: {
+    apiKey: '1d870f4926b03c186f0eeb96ebf9f5ff',
+    indexName: 'typescript-node-scripts',
+  },
+
   // Used for publishing and more
   projectName: 'typescript-node-scripts',
   organizationName: 'liangchunn',
@@ -43,6 +48,7 @@ const siteConfig = {
       href: 'https://github.com/liangchunn/typescript-node-scripts',
       label: 'GitHub',
     },
+    { search: true },
   ],
 
   // If you have users set above, you add it here:
