@@ -60,7 +60,7 @@
     "@types/lodash": "^4.14.123",
     "@types/node": "^10.12.11",
     "@types/text-table": "^0.2.0",
-    "@types/webpack": "^4.4.27",
+    "@types/webpack": "^4.4.29",
     "@types/webpack-node-externals": "^1.6.3",
     "commitizen": "^3.0.7",
     "conventional-changelog-cli": "^2.0.12",
@@ -70,7 +70,7 @@
     "prettier": "^1.17.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-sonarts": "^1.9.0",
-    "typescript": "^3.4.3"
+    "typescript": "^3.4.5"
   },
   "peerDependencies": {
     "typescript": ">=3.x"
