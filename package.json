@@ -35,7 +35,7 @@
     "chalk": "2.4.2",
     "filesize": "4.1.2",
     "fork-ts-checker-webpack-plugin": "1.2.0",
-    "fs-extra": "7.0.1",
+    "fs-extra": "8.0.0",
     "jest": "24.7.1",
     "lodash": "4.17.11",
     "pstree.remy": "1.1.2",
