@@ -1,3 +1,18 @@
+## [2.0.2](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.1...v2.0.2) (2019-05-16)
+
+
+### Bug Fixes
+
+* **package:** update @babel/core to version 7.4.4 ([14d6c86](https://github.com/liangchunn/typescript-node-scripts/commit/14d6c86))
+* **package:** update @babel/preset-env to version 7.4.4 ([3d6de68](https://github.com/liangchunn/typescript-node-scripts/commit/3d6de68))
+* **package:** update babel-loader to version 8.0.6 ([626964a](https://github.com/liangchunn/typescript-node-scripts/commit/626964a))
+* **package:** update fork-ts-checker-webpack-plugin to version 1.2.0 ([32b1683](https://github.com/liangchunn/typescript-node-scripts/commit/32b1683)), closes [#93](https://github.com/liangchunn/typescript-node-scripts/issues/93)
+* **package:** update fork-ts-checker-webpack-plugin to version 1.3.2 ([28403e7](https://github.com/liangchunn/typescript-node-scripts/commit/28403e7))
+* **package:** update fs-extra to version 8.0.1 ([9cfca52](https://github.com/liangchunn/typescript-node-scripts/commit/9cfca52)), closes [#102](https://github.com/liangchunn/typescript-node-scripts/issues/102)
+* **package:** update webpack to version 4.31.0 ([74bd0d0](https://github.com/liangchunn/typescript-node-scripts/commit/74bd0d0))
+
+
+
 ## [2.0.1](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0...v2.0.1) (2019-04-15)
 
 
