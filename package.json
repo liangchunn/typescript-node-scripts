@@ -38,7 +38,7 @@
     "fs-extra": "8.0.1",
     "jest": "24.7.1",
     "lodash": "4.17.11",
-    "pstree.remy": "1.1.2",
+    "pstree.remy": "1.1.7",
     "strip-ansi": "5.2.0",
     "text-table": "0.2.0",
     "ts-jest": "24.0.2",
