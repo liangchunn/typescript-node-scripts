@@ -1,3 +1,14 @@
+## [2.0.3](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.2...v2.0.3) (2019-06-07)
+
+
+### Bug Fixes
+
+* **package:** update webpack to version 4.32.0 ([574f35e](https://github.com/liangchunn/typescript-node-scripts/commit/574f35e))
+* **package:** upgrade and pin docusaurus to 1.11.0 ([7b39236](https://github.com/liangchunn/typescript-node-scripts/commit/7b39236))
+* **package:** upgrade dependencies ([46c3478](https://github.com/liangchunn/typescript-node-scripts/commit/46c3478))
+
+
+
 ## [2.0.2](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.1...v2.0.2) (2019-05-16)
 
 
@@ -8,6 +19,7 @@
 * **package:** update babel-loader to version 8.0.6 ([626964a](https://github.com/liangchunn/typescript-node-scripts/commit/626964a))
 * **package:** update fork-ts-checker-webpack-plugin to version 1.2.0 ([32b1683](https://github.com/liangchunn/typescript-node-scripts/commit/32b1683)), closes [#93](https://github.com/liangchunn/typescript-node-scripts/issues/93)
 * **package:** update fork-ts-checker-webpack-plugin to version 1.3.2 ([28403e7](https://github.com/liangchunn/typescript-node-scripts/commit/28403e7))
+* **package:** update fork-ts-checker-webpack-plugin to version 1.3.3 ([ebdbe2f](https://github.com/liangchunn/typescript-node-scripts/commit/ebdbe2f))
 * **package:** update fs-extra to version 8.0.1 ([9cfca52](https://github.com/liangchunn/typescript-node-scripts/commit/9cfca52)), closes [#102](https://github.com/liangchunn/typescript-node-scripts/issues/102)
 * **package:** update webpack to version 4.31.0 ([74bd0d0](https://github.com/liangchunn/typescript-node-scripts/commit/74bd0d0))
 
