@@ -1,7 +1,9 @@
 import chalk from 'chalk'
+import * as fs from 'fs'
 import * as path from 'path'
 import * as typescript from 'typescript'
 import webpack from 'webpack'
+import merge from 'webpack-merge'
 import { formatWebpackMessages } from '../lib/formatWebpackMessages'
 import { paths } from '../lib/paths'
 import { WebpackProdConfig } from '../lib/webpack.config.prod'
@@ -12,9 +14,26 @@ const prodBundlePath = path.join(paths.appBuild, paths.prodBundle)
 const sizeBeforeBuild = getBundleSize(prodBundlePath)
 
 const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
+  let compiler: webpack.Compiler
+
   console.log(chalk.cyan('Creating an optimized production build...'))
   console.log(chalk.green('Using TypeScript v' + typescript.version))
-  const compiler = webpack(WebpackProdConfig)
+
+  if (fs.existsSync(paths.webpackOverride)) {
+    console.log(
+      chalk.yellow(
+        '[EXPERIMENTAL] Detected webpack.config.override.js file, merging configuration...'
+      )
+    )
+    const mergedConfig = merge(
+      WebpackProdConfig,
+      require(paths.webpackOverride)
+    )
+    compiler = webpack(mergedConfig)
+  } else {
+    compiler = webpack(WebpackProdConfig)
+  }
+
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err) {
