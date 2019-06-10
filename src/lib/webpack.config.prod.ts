@@ -33,6 +33,7 @@ export const WebpackProdConfig: webpack.Configuration = {
     plugins: [
       new tsconfigPathsPlugin({
         configFile: paths.appTsConfig,
+        logLevel: 'ERROR',
       }),
     ],
   },
