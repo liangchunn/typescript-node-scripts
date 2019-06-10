@@ -1,3 +1,12 @@
+## [2.0.5](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.4...v2.0.5) (2019-06-10)
+
+
+### Features
+
+* **webpack:** emit only errors for tsconfig-paths-webpack-plugin ([7af2490](https://github.com/liangchunn/typescript-node-scripts/commit/7af2490))
+
+
+
 ## [2.0.4](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.3...v2.0.4) (2019-06-07)
 
 
