@@ -1,3 +1,14 @@
+## [2.0.6](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.5...v2.0.6) (2019-07-04)
+
+
+### Bug Fixes
+
+* **package:** update fork-ts-checker-webpack-plugin to version 1.3.7 ([ee83855](https://github.com/liangchunn/typescript-node-scripts/commit/ee83855)), closes [#117](https://github.com/liangchunn/typescript-node-scripts/issues/117)
+* **package:** update fs-extra to version 8.1.0 ([75b4f93](https://github.com/liangchunn/typescript-node-scripts/commit/75b4f93))
+* **package:** update webpack to version 4.35.0 ([3d0ae9c](https://github.com/liangchunn/typescript-node-scripts/commit/3d0ae9c)), closes [#118](https://github.com/liangchunn/typescript-node-scripts/issues/118)
+
+
+
 ## [2.0.5](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.4...v2.0.5) (2019-06-10)
 
 
