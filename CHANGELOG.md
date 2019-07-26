@@ -1,9 +1,12 @@
-## [2.0.7](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.6...v2.0.7) (2019-07-08)
+## [2.0.8](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.6...v2.0.8) (2019-07-26)
 
 
 ### Bug Fixes
 
+* **package:** update @babel/core to version 7.5.0 ([da497fa](https://github.com/liangchunn/typescript-node-scripts/commit/da497fa))
+* **package:** update @babel/preset-env to version 7.5.2 ([1ff6d0d](https://github.com/liangchunn/typescript-node-scripts/commit/1ff6d0d)), closes [#123](https://github.com/liangchunn/typescript-node-scripts/issues/123)
 * **package:** update webpack to version 4.35.3 ([23461f6](https://github.com/liangchunn/typescript-node-scripts/commit/23461f6))
+* **package:** update webpack to version 4.38.0 ([c67fbbf](https://github.com/liangchunn/typescript-node-scripts/commit/c67fbbf)), closes [#129](https://github.com/liangchunn/typescript-node-scripts/issues/129)
 
 
 
@@ -97,16 +100,7 @@
 
 
 
-# [2.0.0-beta.3](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.0-beta.2...v2.0.0-beta.3) (2019-03-26)
-
-
-### Features
-
-* **webpack:** support config override, fix empty errors ([dbc7186](https://github.com/liangchunn/typescript-node-scripts/commit/dbc7186))
-
-
-
-# 2.0.0-beta.2 (2019-03-25)
+# 2.0.0-beta.3 (2019-03-26)
 
 
 
