@@ -1,6 +1,7 @@
-import caseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin'
-import forkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
-import tsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
+import CaseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import * as webpack from 'webpack'
 import nodeExternals from 'webpack-node-externals'
 import { RuntimeOptions } from '../util/env'
@@ -31,7 +32,7 @@ export const WebpackDevConfig: webpack.Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx', '.json'],
     plugins: [
-      new tsconfigPathsPlugin({
+      new TsconfigPathsPlugin({
         configFile: paths.appTsConfig,
         logLevel: 'ERROR',
       }),
@@ -79,7 +80,7 @@ export const WebpackDevConfig: webpack.Configuration = {
     ],
   },
   plugins: [
-    new forkTsCheckerWebpackPlugin({
+    new ForkTsCheckerWebpackPlugin({
       silent: true,
       async: false,
       watch: paths.appSrc,
@@ -88,7 +89,8 @@ export const WebpackDevConfig: webpack.Configuration = {
       checkSyntacticErrors: true,
       reportFiles: ['**', '!**/__tests__/**', '!**/?(*.)(spec|test|t).*'],
     }),
-    new caseSensitivePathsWebpackPlugin(),
+    new CaseSensitivePathsWebpackPlugin(),
+    new CleanWebpackPlugin() as webpack.Plugin,
   ],
   optimization: {
     nodeEnv: false,
