@@ -26,7 +26,7 @@ export const WebpackProdConfig: webpack.Configuration = {
   devtool: 'source-map',
   output: {
     path: paths.appBuild,
-    filename: 'bundle-[hash].prod.js',
+    filename: 'bundle.prod.js',
     libraryTarget: 'commonjs',
   },
   resolve: {
