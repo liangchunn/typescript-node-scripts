@@ -1,4 +1,4 @@
 export default () => {
-  // tslint:disable:no-console
-  console.log("App is running");
-};
+    // eslint-disable-next-line
+    console.log('App is running')
+}

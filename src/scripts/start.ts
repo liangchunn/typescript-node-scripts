@@ -8,12 +8,11 @@ import { clearConsole } from '../lib/clearConsole'
 import { paths } from '../lib/paths'
 import { WebpackDevConfig } from '../lib/webpack.config.dev'
 import { createCompiler } from '../lib/webpackCompiler'
-import { RuntimeOptions } from '../util/env'
+import { RuntimeOptions, IS_INTERACTIVE } from '../util/env'
 
-const isInteractive = process.stdout.isTTY
 let compiler: webpack.Compiler
 
-if (isInteractive) {
+if (IS_INTERACTIVE) {
   clearConsole()
 }
 

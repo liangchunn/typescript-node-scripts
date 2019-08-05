@@ -23,15 +23,19 @@ const createApp = (appName: string, useYarn: boolean) => {
       test: 'typescript-node-scripts test',
       start: 'typescript-node-scripts start',
       build: 'typescript-node-scripts build',
-      lint: 'tslint --project .',
+      lint: "eslint 'src/**/*.{js,ts}'",
     },
   }
 
   const packageDevDependencies = [
     '@types/node',
     '@types/jest',
-    'tslint',
     'typescript',
+    'eslint',
+    'eslint-plugin-import',
+    'babel-eslint',
+    '@typescript-eslint/eslint-plugin',
+    '@typescript-eslint/parser',
     'typescript-node-scripts',
   ]
 

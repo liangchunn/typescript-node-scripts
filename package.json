@@ -12,7 +12,7 @@
     "initApp": "node bin/typescript-node-scripts.js create",
     "e2e:ci": "./tests/e2e.sh",
     "e2e:local": "docker build -t tns-docker . && docker run tns-docker",
-    "lint": "tslint -p .",
+    "lint": "eslint 'src/**/*.ts'",
     "commit": "git-cz",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "prepublishOnly": "yarn compile"
@@ -33,9 +33,10 @@
     "babel-loader": "8.0.6",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chalk": "2.4.2",
-    "clean-webpack-plugin": "^3.0.0",
+    "clean-webpack-plugin": "3.0.0",
+    "eslint-loader": "2.2.1",
     "filesize": "4.1.2",
-    "fork-ts-checker-webpack-plugin": "1.3.7",
+    "fork-ts-checker-webpack-plugin": "1.5.0",
     "fs-extra": "8.1.0",
     "jest": "24.8.0",
     "pstree.remy": "1.1.2",
@@ -44,10 +45,8 @@
     "ts-jest": "24.0.2",
     "ts-loader": "6.0.2",
     "tsconfig-paths-webpack-plugin": "3.2.0",
-    "tslint": "5.17.0",
-    "tslint-loader": "3.5.4",
     "webpack": "4.35.3",
-    "webpack-merge": "^4.2.1",
+    "webpack-merge": "4.2.1",
     "webpack-node-externals": "1.7.2"
   },
   "devDependencies": {
@@ -63,15 +62,20 @@
     "@types/webpack": "^4.4.29",
     "@types/webpack-merge": "^4.1.5",
     "@types/webpack-node-externals": "^1.6.3",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "babel-eslint": "^10.0.2",
     "commitizen": "^3.0.7",
     "conventional-changelog-cli": "^2.0.12",
     "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.17.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-sonarts": "^1.9.0",
-    "typescript": "^3.5.1"
+    "typescript": "3.5.3"
   },
   "peerDependencies": {
     "typescript": ">=3.x"
@@ -88,7 +92,6 @@
     "linters": {
       "*.js": [
         "prettier --write",
-        "tslint --fix",
         "git add"
       ]
     }

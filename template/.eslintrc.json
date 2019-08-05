@@ -2,9 +2,7 @@
     "parser": "babel-eslint",
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier",
-        "prettier/@typescript-eslint"
+        "plugin:@typescript-eslint/recommended"
     ],
     "plugins": [
         "import"
@@ -18,9 +16,6 @@
     "parserOptions": {
         "ecmaVersion": 2018,
         "sourceType": "module"
-    },
-    "rules": {
-        "no-prototype-builtins": "off"
     },
     "overrides": [
         {

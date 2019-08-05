@@ -5,15 +5,14 @@ import { TNSOptions } from '../types/TNS'
 import { clearConsole } from './clearConsole'
 import { formatWebpackMessages } from './formatWebpackMessages'
 import { AppController } from './processHandler'
+import { IS_INTERACTIVE } from '../util/env'
 
-const isInteractive = process.stdout.isTTY
 const { argv } = process
 const argvSeparatorIndex = argv.indexOf('--')
 const appArgs: string[] = ~argvSeparatorIndex
   ? process.argv.slice(argvSeparatorIndex + 1, argv.length)
   : []
 
-// tslint:disable:cognitive-complexity
 export function createCompiler(
   config: webpack.Configuration,
   options: TNSOptions
@@ -36,7 +35,7 @@ export function createCompiler(
   }
 
   compiler.hooks.invalid.tap('compileInvalidate', async () => {
-    if (isInteractive) {
+    if (IS_INTERACTIVE) {
       clearConsole()
     }
     console.log('Compiling...')
@@ -47,7 +46,7 @@ export function createCompiler(
   })
 
   compiler.hooks.done.tap('compileDone', stats => {
-    if (isInteractive) {
+    if (IS_INTERACTIVE) {
       clearConsole()
     }
     const statsJson = stats.toJson({ errors: true, warnings: true })
@@ -95,7 +94,7 @@ export function createCompiler(
       )
       console.log(
         'To ignore, add ' +
-          chalk.yellow('// tslint:disable-next-line') +
+          chalk.yellow('// eslint-disable-next-line') +
           ' to the line before.\n'
       )
     }

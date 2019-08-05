@@ -2,6 +2,7 @@ import chalk from 'chalk'
 import * as fs from 'fs'
 import * as path from 'path'
 import { paths } from '../../lib/paths'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const appTsConfig = require(paths.appTsConfig)
 
 /**
