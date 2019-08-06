@@ -5,11 +5,11 @@ const appDirectory = fs.realpathSync(process.cwd())
 const useTemplate =
   appDirectory === fs.realpathSync(path.join(__dirname, '../..'))
 
-function resolveApp(relativePath: string): string {
+export function resolveApp(relativePath: string): string {
   return path.resolve(appDirectory, relativePath)
 }
 
-function resolveOwn(relativePath: string): string {
+export function resolveOwn(relativePath: string): string {
   return path.resolve(__dirname, '../..', relativePath)
 }
 
@@ -25,6 +25,7 @@ export const paths = useTemplate
       testsSetup: resolveOwn('template/setupTests.ts'),
       webpackOverride: resolveOwn('template/webpack.config.override.js'),
       prodBundle: 'bundle.prod.js',
+      legacyAppTslint: resolveOwn('template/tslint.json'),
     }
   : {
       appPackageJson: resolveApp('package.json'),
@@ -37,4 +38,5 @@ export const paths = useTemplate
       testsSetup: resolveApp('setupTests.ts'),
       webpackOverride: resolveApp('webpack.config.override.js'),
       prodBundle: 'bundle.prod.js',
+      legacyAppTslint: resolveApp('tslint.json'),
     }

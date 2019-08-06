@@ -7,10 +7,23 @@ import { execSync, spawnSync } from 'child_process'
 import * as fs from 'fs-extra'
 import * as os from 'os'
 import * as path from 'path'
+import { yarnAvailable } from './util/yarnAvailable'
 
 const argv = process.argv.slice(2)
 
-const createApp = (appName: string, useYarn: boolean) => {
+const createApp = (useYarn: boolean, appName?: string) => {
+  if (!appName) {
+    console.error(
+      'Please specify the directory you want to create your project:'
+    )
+    console.error(
+      `  ${chalk.cyan('typescript-node-scripts create')} ${chalk.green(
+        '<directory>'
+      )}`
+    )
+    return process.exit(1)
+  }
+
   const appPath = path.join(process.cwd(), appName)
 
   console.log('Creating application ' + chalk.cyan(appName) + '\n')
@@ -156,13 +169,4 @@ const createApp = (appName: string, useYarn: boolean) => {
   console.log()
 }
 
-const yarnAvailable = () => {
-  try {
-    execSync('yarnpkg --version', { stdio: 'ignore' })
-    return true
-  } catch (e) {
-    return false
-  }
-}
-
-createApp(argv[0], yarnAvailable())
+createApp(yarnAvailable(), argv[0])
