@@ -11,6 +11,7 @@ import {
 import { fileExists } from '../../util/fileExists'
 
 const log = createMigrationLogger()
+let loggedInfo = false
 
 async function handlePackageJson() {
   const packageJson = await loadJson(paths.appPackageJson)
@@ -89,6 +90,11 @@ async function handleLinterConfigs() {
         'Renaming existing tslint.json to tslint.json.legacy',
         MIGRATION_OP_TYPE.MODIFY
       )
+      log(
+        'Custom tslint.json detected. You might need to manually port over your configuration, or use a tool like typescript-eslint/tslint-to-eslint-config',
+        MIGRATION_OP_TYPE.INFO
+      )
+      loggedInfo = true
       fs.moveSync(paths.legacyAppTslint, paths.legacyAppTslint + '.legacy')
     }
   }
@@ -134,6 +140,7 @@ async function handleLinterDependencies() {
       'You might want to manually remove them, and add the proper configuration to .eslintrc.json',
       MIGRATION_OP_TYPE.INFO
     )
+    loggedInfo = true
   }
 }
 
@@ -197,6 +204,12 @@ async function main() {
     await handleAddDependencies()
 
     console.log()
+    if (loggedInfo) {
+      log(
+        'There are a few info messages logged above which might need to be addressed',
+        MIGRATION_OP_TYPE.INFO
+      )
+    }
     log(
       'Successfully migrated tslint configuration to eslint configuration',
       MIGRATION_OP_TYPE.DONE
