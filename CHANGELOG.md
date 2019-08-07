@@ -1,3 +1,12 @@
+# [3.0.0-alpha.1](https://github.com/liangchunn/typescript-node-scripts/compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2019-08-07)
+
+
+### Features
+
+* **eslint:** add info for custom tslint.json migration ([f3725fa](https://github.com/liangchunn/typescript-node-scripts/commit/f3725fa))
+
+
+
 # [3.0.0-alpha.0](https://github.com/liangchunn/typescript-node-scripts/compare/v2.0.6...v3.0.0-alpha.0) (2019-08-07)
 
 
