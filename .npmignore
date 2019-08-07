@@ -1,8 +1,10 @@
 tests/**/*
 Dockerfile
 .eslintrc.json
+!template/.eslintrc.json
 .eslintignore
 .prettierrc
+.prettierignore
 .resources
 .dockerignore
 commitlint.config.js
@@ -19,3 +21,5 @@ docker-compose.yml
 sonar-project.properties
 website/package.json
 website/README.md
+yarn-error.log
+.vscode

@@ -20,6 +20,7 @@ const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
   console.log(chalk.green('Using TypeScript v' + typescript.version))
 
   if (fs.existsSync(paths.webpackOverride)) {
+    console.log()
     console.log(
       chalk.yellow(
         '[EXPERIMENTAL] Detected webpack.config.override.js file, merging configuration...'
@@ -81,11 +82,13 @@ build()
         console.log(warnings.join('\n\n'))
 
         console.log(
-          '\nSearch for the keywords to learn more about each warning.'
+          '\nSearch for the ' +
+            chalk.cyan('keywords') +
+            ' to learn more about each warning.'
         )
         console.log(
           'To ignore, add ' +
-            chalk.cyan('// tslint:disable-next-line') +
+            chalk.yellow('// eslint-disable-next-line') +
             ' to the line before.\n'
         )
       }

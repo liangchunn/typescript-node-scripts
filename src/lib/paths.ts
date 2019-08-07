@@ -5,11 +5,11 @@ const appDirectory = fs.realpathSync(process.cwd())
 const useTemplate =
   appDirectory === fs.realpathSync(path.join(__dirname, '../..'))
 
-function resolveApp(relativePath: string): string {
+export function resolveApp(relativePath: string): string {
   return path.resolve(appDirectory, relativePath)
 }
 
-function resolveOwn(relativePath: string): string {
+export function resolveOwn(relativePath: string): string {
   return path.resolve(__dirname, '../..', relativePath)
 }
 
@@ -18,23 +18,25 @@ export const paths = useTemplate
       appPackageJson: resolveOwn('package.json'),
       appIndexJs: resolveOwn('template/src/index.ts'),
       appTsConfig: resolveOwn('template/tsconfig.json'),
-      appTsLint: resolveOwn('template/tslint.json'),
+      appEslint: resolveOwn('template/.eslintrc.json'),
       appDevBundlePath: resolveOwn('template/build'),
       appSrc: resolveOwn('template/src'),
       appBuild: resolveOwn('template/dist'),
       testsSetup: resolveOwn('template/setupTests.ts'),
       webpackOverride: resolveOwn('template/webpack.config.override.js'),
       prodBundle: 'bundle.prod.js',
+      legacyAppTslint: resolveOwn('template/tslint.json'),
     }
   : {
       appPackageJson: resolveApp('package.json'),
       appIndexJs: resolveApp('src/index.ts'),
       appTsConfig: resolveApp('tsconfig.json'),
-      appTsLint: resolveApp('tslint.json'),
+      appEslint: resolveApp('.eslintrc.json'),
       appDevBundlePath: resolveApp('build'),
       appSrc: resolveApp('src'),
       appBuild: resolveApp('dist'),
       testsSetup: resolveApp('setupTests.ts'),
       webpackOverride: resolveApp('webpack.config.override.js'),
       prodBundle: 'bundle.prod.js',
+      legacyAppTslint: resolveApp('tslint.json'),
     }

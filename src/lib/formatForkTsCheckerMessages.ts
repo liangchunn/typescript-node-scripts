@@ -2,7 +2,7 @@ import { codeFrameColumns } from '@babel/code-frame'
 import chalk from 'chalk'
 import * as fs from 'fs'
 import * as os from 'os'
-import { IS_CI } from '../util/env'
+import { IS_CI, IS_INTERACTIVE } from '../util/env'
 
 /**
  * Copied from fTCWP's NormalizedMessage.d.ts
@@ -34,7 +34,7 @@ export function formatForkTsCheckerMessages(
         },
       },
       {
-        highlightCode: process.stdout.isTTY && !IS_CI,
+        highlightCode: IS_INTERACTIVE && !IS_CI,
       }
     )
     return (

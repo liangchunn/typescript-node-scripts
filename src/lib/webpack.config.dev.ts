@@ -8,7 +8,7 @@ import { RuntimeOptions } from '../util/env'
 import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
 import { formatTsLoaderMessages } from './formatTsLoaderMessages'
 import { paths } from './paths'
-import { tslintShouldEmitErrors } from './tsLintHelper'
+import eslintFormatter from './formatters/eslintFormatter'
 
 export const WebpackDevConfig: webpack.Configuration = {
   mode: 'development',
@@ -41,20 +41,19 @@ export const WebpackDevConfig: webpack.Configuration = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(j|t)sx?$/,
         enforce: 'pre',
         use: [
           {
-            loader: require.resolve('tslint-loader'),
+            loader: require.resolve('eslint-loader'),
             options: {
-              emitErrors: tslintShouldEmitErrors(paths.appTsLint),
-              tsConfigFile: paths.appTsConfig,
-              configFile: paths.appTsLint,
-              formatter: 'lintTable',
-              formattersDirectory: __dirname + '/formatters/',
+              formatter: eslintFormatter,
+              configFile: paths.appEslint,
+              emitWarning: true,
             },
           },
         ],
+        include: paths.appSrc,
       },
       {
         test: /\.jsx?$/,

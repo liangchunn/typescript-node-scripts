@@ -1,0 +1,1 @@
+Please see the "Migration Guide" in the documentation in http://liangchunn.github.io/typescript-node-scripts

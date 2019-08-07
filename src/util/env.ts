@@ -13,3 +13,5 @@ export const IS_CI =
   process.env.CI &&
   (typeof process.env.CI !== 'string' ||
     process.env.CI.toLowerCase() !== 'false')
+
+export const IS_INTERACTIVE = process.stdout.isTTY
