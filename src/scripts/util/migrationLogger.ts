@@ -11,7 +11,7 @@ export enum MIGRATION_OP_TYPE {
   ERROR = 'error',
 }
 
-export function migrationLogger() {
+export function createMigrationLogger() {
   function log(message: string, type: MIGRATION_OP_TYPE) {
     let chalkWrapper
     switch (type) {

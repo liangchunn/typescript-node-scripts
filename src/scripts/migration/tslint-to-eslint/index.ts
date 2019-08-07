@@ -4,21 +4,13 @@ import { getFileHash } from './hash'
 import { loadJson, saveJson } from './filesystem'
 import * as fs from 'fs-extra'
 import { spawnSync } from 'child_process'
-import { migrationLogger, MIGRATION_OP_TYPE } from '../../util/migrationLogger'
+import {
+  createMigrationLogger,
+  MIGRATION_OP_TYPE,
+} from '../../util/migrationLogger'
+import { fileExists } from '../../util/fileExists'
 
-const log = migrationLogger()
-
-function fileExists(path: string): Promise<boolean> {
-  return new Promise(resolve => {
-    fs.access(path, fs.constants.F_OK, err => {
-      if (err) {
-        return resolve(false)
-      } else {
-        return resolve(true)
-      }
-    })
-  })
-}
+const log = createMigrationLogger()
 
 async function handlePackageJson() {
   const packageJson = await loadJson(paths.appPackageJson)
