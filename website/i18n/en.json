@@ -26,6 +26,9 @@
       "getting-started": {
         "title": "Getting Started"
       },
+      "migrating-v2-to-v3": {
+        "title": "Migrating from v2 to v3"
+      },
       "monorepo": {
         "title": "Monorepo Support"
       },
@@ -48,6 +51,7 @@
       "Guides": "Guides",
       "Debugging": "Debugging",
       "Advanced": "Advanced",
+      "Migration Guide": "Migration Guide",
       "First Category": "First Category"
     }
   },
