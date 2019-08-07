@@ -12,13 +12,16 @@ Version `3.x.x` of `typescript-node-scripts` will now use ESLint instead of TSLi
 
 ## Automatic Migration via CLI
 
-We've included a migration script so that you can migrate your TSLint configuration to ESLint configuration, and installs the necessary packages to make ESLint work.
+We've included a migration script so that you can migrate your TSLint configuration to ESLint configuration without heavylifting, and installs the necessary base packages to make your project ESLint compatible.
 
 ```sh
+# go to your project root
+cd <app_directory>
+
 # install version 3.x.x of `typescript-node-scripts`
 yarn upgrade typescript-node-scripts@^3.0.0
 
-# in your project directory, run the migration script
+# run the migration script
 npx typescript-node-scripts migration/tslint-to-eslint
 ```
 
