@@ -12,7 +12,7 @@
     "initApp": "node bin/typescript-node-scripts.js create",
     "e2e:ci": "./tests/e2e.sh",
     "e2e:local": "docker build -t tns-docker . && docker run tns-docker",
-    "lint": "eslint 'src/**/*.ts'",
+    "lint": "eslint --ext .js --ext .ts --ext .jsx --ext .tsx tests src",
     "commit": "git-cz",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "prepublishOnly": "yarn compile"
