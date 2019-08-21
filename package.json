@@ -15,7 +15,9 @@
     "lint": "eslint --ext .js --ext .ts --ext .jsx --ext .tsx tests src",
     "commit": "git-cz",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "prepublishOnly": "yarn compile"
+    "prepublishOnly": "yarn compile",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "typescript-node-scripts": "./bin/typescript-node-scripts.js"
@@ -47,7 +49,8 @@
     "tsconfig-paths-webpack-plugin": "3.2.0",
     "webpack": "4.35.3",
     "webpack-merge": "4.2.1",
-    "webpack-node-externals": "1.7.2"
+    "webpack-node-externals": "1.7.2",
+    "snyk": "^1.217.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
@@ -121,5 +124,6 @@
       "lint-staged",
       "prettier"
     ]
-  }
+  },
+  "snyk": true
 }
