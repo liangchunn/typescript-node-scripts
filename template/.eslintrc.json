@@ -2,7 +2,6 @@
     "parser": "babel-eslint",
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
     ],
     "plugins": [
         "import"
@@ -29,6 +28,9 @@
                 "warnOnUnsupportedTypeScriptVersion": true,
                 "project": "./tsconfig.json"
             },
+            "extends": [
+                "plugin:@typescript-eslint/recommended"
+            ],
             "plugins": [
                 "@typescript-eslint"
             ],

@@ -53,9 +53,16 @@ yarn add eslint-config-prettier eslint-plugin-prettier --dev
 ```diff
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
-+       "prettier",
-+       "prettier/@typescript-eslint"
++       "prettier"
     ],
+    "overrides: [
+        {
+            "extends": [
+                "plugin:@typescript-eslint/recommended"
++               "prettier",
++               "prettier/@typescript-eslint"
+            ]
+        }
+    ]
 ```
 

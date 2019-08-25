@@ -122,7 +122,7 @@ async function handleLinterDependencies() {
     ...Object.keys(devDependencies),
     ...Object.keys(dependenecies),
   ]
-  let tslintDependents = []
+  const tslintDependents = []
   for (const dep of allDependencies) {
     if (~dep.indexOf('tslint') && dep !== 'tslint') {
       tslintDependents.push(dep)

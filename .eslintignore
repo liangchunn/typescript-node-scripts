@@ -3,3 +3,5 @@ template/**/*.js
 node_modules/**/*.js
 build/**/*.js
 website/**/*.js
+tests/**/*.ts
+tests/**/*.js

@@ -2,9 +2,7 @@
     "parser": "babel-eslint",
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier",
-        "prettier/@typescript-eslint"
+        "prettier"
     ],
     "plugins": [
         "import"
@@ -34,6 +32,11 @@
                 "warnOnUnsupportedTypeScriptVersion": true,
                 "project": "./tsconfig.json"
             },
+            "extends": [
+                "plugin:@typescript-eslint/recommended",
+                "prettier",
+                "prettier/@typescript-eslint"
+            ],
             "plugins": [
                 "@typescript-eslint"
             ],
@@ -69,7 +72,8 @@
                 "@typescript-eslint/no-useless-constructor": "error",
                 "@typescript-eslint/explicit-function-return-type": "off",
                 "@typescript-eslint/prefer-interface": "off",
-                "@typescript-eslint/no-namespace": "off"
+                "@typescript-eslint/no-namespace": "off",
+                "@typescript-eslint/no-var-requires": "off"
             }
         }
     ]
