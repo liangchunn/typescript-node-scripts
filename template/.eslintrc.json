@@ -1,7 +1,7 @@
 {
     "parser": "babel-eslint",
     "extends": [
-        "eslint:recommended",
+        "eslint:recommended"
     ],
     "plugins": [
         "import"
