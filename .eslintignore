@@ -1,5 +1,6 @@
 lib/formatters/**/*.js
 template/**/*.js
+template/**/*.ts
 node_modules/**/*.js
 build/**/*.js
 website/**/*.js
