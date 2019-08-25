@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v3.0.0-alpha.1...v3.0.0) (2019-08-25)
+
+
+### Bug Fixes
+
+* **eslint:** don't lint template ([42751cf](https://github.com/liangchunn/typescript-node-scripts/commit/42751cf))
+* **eslint:** fix invalid .eslintrc.json in template ([f9c6f57](https://github.com/liangchunn/typescript-node-scripts/commit/f9c6f57))
+* **eslint:** lint tests directory, fix lint issue in tests ([3cea4af](https://github.com/liangchunn/typescript-node-scripts/commit/3cea4af))
+* **eslint:** try fixing eslint issues ([3aed93a](https://github.com/liangchunn/typescript-node-scripts/commit/3aed93a))
+
+
+
 # [3.0.0-alpha.1](https://github.com/liangchunn/typescript-node-scripts/compare/v3.0.0-alpha.0...v3.0.0-alpha.1) (2019-08-07)
 
 
