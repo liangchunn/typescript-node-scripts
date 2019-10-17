@@ -19,7 +19,7 @@ export function createCompiler(
 ): webpack.Compiler {
   let compiler: webpack.Compiler
   const controller = new AppController(
-    path.join(config.output!.path!, config.output!.filename!),
+    path.join(config.output!.path!, config.output!.filename! as string),
     appArgs
   )
 

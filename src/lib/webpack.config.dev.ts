@@ -89,8 +89,8 @@ export const WebpackDevConfig: webpack.Configuration = {
       reportFiles: ['**', '!**/__tests__/**', '!**/?(*.)(spec|test|t).*'],
     }),
     new CaseSensitivePathsWebpackPlugin(),
-    new CleanWebpackPlugin() as webpack.Plugin,
-  ],
+    new CleanWebpackPlugin(),
+  ] as webpack.Plugin[],
   optimization: {
     nodeEnv: false,
   },

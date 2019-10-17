@@ -25,8 +25,16 @@ if (fs.existsSync(paths.webpackOverride)) {
       '[EXPERIMENTAL] Detected webpack.config.override.js file, merging configuration...'
     )
   )
-  const mergedConfig = merge(WebpackDevConfig, require(paths.webpackOverride))
-  compiler = createCompiler(mergedConfig, RuntimeOptions)
+  // TODO: remove `any` once merge() updates to the latest webpack definitions
+  const mergedConfig = merge(
+    WebpackDevConfig as any,
+    require(paths.webpackOverride)
+  )
+  // TODO: remove `webpack.Configuration` once merge() updates to the latest webpack definitions
+  compiler = createCompiler(
+    mergedConfig as webpack.Configuration,
+    RuntimeOptions
+  )
 } else {
   compiler = createCompiler(WebpackDevConfig, RuntimeOptions)
 }

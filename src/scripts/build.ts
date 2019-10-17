@@ -26,11 +26,13 @@ const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
         '[EXPERIMENTAL] Detected webpack.config.override.js file, merging configuration...'
       )
     )
+    // TODO: remove any once merge() updates to the latest webpack definitions
     const mergedConfig = merge(
-      WebpackProdConfig,
+      WebpackProdConfig as any,
       require(paths.webpackOverride)
     )
-    compiler = webpack(mergedConfig)
+    // TODO: remove `webpack.Configuration` once merge() updates to the latest webpack definitions
+    compiler = webpack(mergedConfig as webpack.Configuration)
   } else {
     compiler = webpack(WebpackProdConfig)
   }
