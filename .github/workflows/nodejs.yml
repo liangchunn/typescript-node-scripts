@@ -17,12 +17,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Increase watchers
+      run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
     - name: Install yarn
       run: npm i -g yarn
       shell: bash
-    - name: install project dependencies
+    - name: Install project dependencies
       run: yarn install
-    - name: run e2e script
+    - name: Run e2e
       run: ./tests/e2e.sh
       shell: bash
       env:
