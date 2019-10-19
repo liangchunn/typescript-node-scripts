@@ -24,7 +24,7 @@ jobs:
       run: yarn install
     - name: greenkeeper pre
       run: |
-        yarn global add greenkeeper-lockfile
+        npm i -g greenkeeper-lockfile
         greenkeeper-lockfile-update
     - name: run e2e script
       run: ./tests/e2e.sh
