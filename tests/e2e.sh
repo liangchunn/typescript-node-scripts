@@ -1,12 +1,12 @@
 #!/bin/bash
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
-# test if in docker environment
-# this script should only be running in docker!
-if [ -f /.dockerenv ] || [ -n "${TRAVIS}" ] ; then
-  echo "Detected script running in Docker or Travis CI."
+# test if in docker or CI environment
+# this script should only be running in docker or a CI environment!
+if [ -f /.dockerenv ] || [ -n "${CI}" ] ; then
+  echo "Detected script running in Docker or CI environment."
 else
-  echo "ERR! This script is intended to be used inside Docker only."
+  echo "ERR! This script is intended to be used inside Docker or a CI environment."
   echo "ERR! Run 'yarn e2e:local' instead."
   exit 1
 fi
