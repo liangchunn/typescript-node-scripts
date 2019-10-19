@@ -20,16 +20,10 @@ jobs:
     - name: Install yarn
       run: npm i -g yarn
       shell: bash
-    - name: npm install, build, and test
+    - name: install project dependencies
       run: yarn install
-    - name: greenkeeper pre
-      run: |
-        npm i -g greenkeeper-lockfile
-        greenkeeper-lockfile-update
     - name: run e2e script
       run: ./tests/e2e.sh
       shell: bash
       env:
         CI: true
-    - name: greenkeeper post
-      run: greenkeeper-lockfile-upload
