@@ -64,6 +64,10 @@ yarn build
 exists template/dist/*.js
 CI=true yarn test
 
+# force git user (github actions doesn't seem to support this well)
+git config --global user.email "actions@github.com"
+git config --global user.name "GitHub Actions"
+
 # bump version so that we can 'deploy' to verdaccio
 npm version patch --force
 # publish to verdaccio
