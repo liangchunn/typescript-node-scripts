@@ -42,7 +42,7 @@ yarn compile
 
 # start verdaccio
 VERDACCIO_REGISTRY_LOGS=`mktemp`
-nohup npx verdaccio@3.2.0 -c tests/verdaccio.yml &>$VERDACCIO_REGISTRY_LOGS &
+nohup npx verdaccio@4.3.3 -c tests/verdaccio.yml &>$VERDACCIO_REGISTRY_LOGS &
 # wait for verdaccio to boot
 grep -q 'http address' <(tail -f $VERDACCIO_REGISTRY_LOGS)
 
