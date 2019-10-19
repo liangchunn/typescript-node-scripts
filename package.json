@@ -106,20 +106,5 @@
       "commit-msg": "commitlint -e",
       "pre-commit": "lint-staged"
     }
-  },
-  "greenkeeper": {
-    "ignore": [
-      "@commitlint/cli",
-      "@commitlint/config-conventional",
-      "@types/jest",
-      "@types/node",
-      "@types/text-table",
-      "commitizen",
-      "conventional-changelog-cli",
-      "cz-conventional-changelog",
-      "husky",
-      "lint-staged",
-      "prettier"
-    ]
   }
 }
