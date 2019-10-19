@@ -30,6 +30,6 @@ jobs:
       run: ./tests/e2e.sh
       shell: bash
       env:
+        CI: true
     - name: greenkeeper post
       run: greenkeeper-lockfile-upload
-        CI: true
