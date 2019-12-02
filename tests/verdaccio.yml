@@ -21,7 +21,9 @@ uplinks:
   npmjs:
     url: https://registry.npmjs.org/
     max_fails: 100
-    timeout: 60s
+    timeout: 60
+    agent_options:
+      keepAlive: true
 
 packages:
   '@*/*':
