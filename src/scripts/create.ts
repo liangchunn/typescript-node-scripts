@@ -44,11 +44,11 @@ const createApp = (useYarn: boolean, appName?: string) => {
     '@types/node',
     '@types/jest',
     'typescript',
-    'eslint',
-    'eslint-plugin-import',
-    'babel-eslint',
-    '@typescript-eslint/eslint-plugin',
-    '@typescript-eslint/parser',
+    // 'eslint',
+    // 'eslint-plugin-import',
+    // 'babel-eslint',
+    // '@typescript-eslint/eslint-plugin',
+    // '@typescript-eslint/parser',
     'typescript-node-scripts',
   ]
 
