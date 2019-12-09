@@ -9,6 +9,7 @@ import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
 import { formatTsLoaderMessages } from './formatTsLoaderMessages'
 import { paths } from './paths'
 import eslintFormatter from './formatters/eslintFormatter'
+import eslintConfig from './eslintrc'
 
 export const WebpackDevConfig: webpack.Configuration = {
   mode: 'development',
@@ -47,9 +48,13 @@ export const WebpackDevConfig: webpack.Configuration = {
           {
             loader: require.resolve('eslint-loader'),
             options: {
+              eslintPath: require.resolve('eslint'),
               formatter: eslintFormatter,
               configFile: paths.appEslint,
+              useEslintrc: false,
               emitWarning: true,
+              resolvePluginsRelativeTo: __dirname,
+              baseConfig: eslintConfig
             },
           },
         ],
