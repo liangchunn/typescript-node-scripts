@@ -86,8 +86,6 @@ exists node_modules/typescript-node-scripts
 #========================#
 # Test generated project #
 #========================#
-# run eslint on generated project
-yarn lint
 # build
 yarn build
 # check for build files
