@@ -69,6 +69,12 @@ const createApp = (useYarn: boolean, appName?: string) => {
     path.join(appPath, '.gitignore')
   )
   fs.unlinkSync(path.join(appPath, 'gitignore'))
+  // copy prettierrc
+  fs.copySync(
+    path.join(__dirname, '../../template/prettierrc'),
+    path.join(appPath, '.prettierrc')
+  )
+  fs.unlinkSync(path.join(appPath, 'prettierrc'))
 
   // install package dependencies
   console.log(
