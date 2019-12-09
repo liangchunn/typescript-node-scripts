@@ -50,7 +50,6 @@ export const WebpackDevConfig: webpack.Configuration = {
             options: {
               eslintPath: require.resolve('eslint'),
               formatter: eslintFormatter,
-              configFile: paths.appEslint,
               useEslintrc: false,
               emitWarning: true,
               resolvePluginsRelativeTo: __dirname,
