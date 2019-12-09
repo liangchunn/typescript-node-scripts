@@ -1,41 +1,27 @@
 import chalk from 'chalk'
-import * as fs from 'fs'
 import * as path from 'path'
 import * as typescript from 'typescript'
 import webpack from 'webpack'
-import merge from 'webpack-merge'
 import { formatWebpackMessages } from '../lib/formatWebpackMessages'
 import { paths } from '../lib/paths'
-import { WebpackProdConfig } from '../lib/webpack.config.prod'
 import { IS_CI, RuntimeOptions } from '../util/env'
 import { diffFileSize, getBundleSize } from './util/fileSizeReporter'
+import { checkCustomEslintRequirements } from './util/checkCustomEslintRequirements'
+import { getWebpackConfig } from './util/getWebpackConfig'
+import { checkPrettierrcFile } from './util/checkPrettierrcFile'
 
 const prodBundlePath = path.join(paths.appBuild, paths.prodBundle)
 const sizeBeforeBuild = getBundleSize(prodBundlePath)
 
 const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
-  let compiler: webpack.Compiler
-
   console.log(chalk.cyan('Creating an optimized production build...'))
   console.log(chalk.green('Using TypeScript v' + typescript.version))
+  console.log()
 
-  if (fs.existsSync(paths.webpackOverride)) {
-    console.log()
-    console.log(
-      chalk.yellow(
-        '[EXPERIMENTAL] Detected webpack.config.override.js file, merging configuration...'
-      )
-    )
-    // TODO: remove any once merge() updates to the latest webpack definitions
-    const mergedConfig = merge(
-      WebpackProdConfig as any,
-      require(paths.webpackOverride)
-    )
-    // TODO: remove `webpack.Configuration` once merge() updates to the latest webpack definitions
-    compiler = webpack(mergedConfig as webpack.Configuration)
-  } else {
-    compiler = webpack(WebpackProdConfig)
-  }
+  checkCustomEslintRequirements()
+  checkPrettierrcFile()
+
+  const compiler: webpack.Compiler = webpack(getWebpackConfig('production'))
 
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
