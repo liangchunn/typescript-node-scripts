@@ -7,9 +7,12 @@ By default, TNS emits a main entrypoint in `dist/bundle.prod.js` which is built 
 
 TNS **does not bundle `node_modules`!** Therefore when you deploy your application, the dependencies of your application should be installed first by including `package.json` and `yarn.lock`!
 
+> Make sure your runtime dependencies are included under `dependencies` in `package.json` so that they can be installed in the production build
+
 ## Docker
 
 ### Quick-start guide
+
 Before you deploy your application, make sure you run your build first:
 
 ```sh
@@ -47,5 +50,6 @@ docker run --name my-app my-app
 ```
 
 ### References
-- `docker run`: https://docs.docker.com/engine/reference/run/ 
+
+- `docker run`: https://docs.docker.com/engine/reference/run/
 - `docker build`: https://docs.docker.com/engine/reference/commandline/build/
