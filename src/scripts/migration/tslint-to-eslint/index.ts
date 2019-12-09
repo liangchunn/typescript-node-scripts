@@ -52,15 +52,15 @@ async function handleLinterConfigs() {
   const LEGACY_TSLINT_JSON_HASH =
     '3d6715a3490c843940026a410a0b41fa8c95ba468e93a8bab18fe0a44baada9c'
 
-  const hasTslintFile = await fileExists(paths.__legacy_appTslint)
-  const hasEslintFile = await fileExists(paths.__legacy_appEslint)
+  const hasTslintFile = await fileExists(paths.legacyAppTslint)
+  const hasEslintFile = await fileExists(paths.legacyAppEslint)
   const templateEslintrc = resolveOwn('template/.eslintrc.json')
 
   let shouldAddEslintFile = true
 
   if (hasEslintFile) {
     const sameEslintFile =
-      (await getFileHash(paths.__legacy_appEslint)) ===
+      (await getFileHash(paths.legacyAppEslint)) ===
       (await getFileHash(templateEslintrc))
 
     if (sameEslintFile) {
@@ -72,19 +72,19 @@ async function handleLinterConfigs() {
         MIGRATION_OP_TYPE.MODIFY
       )
       // TODO: possible collision
-      fs.moveSync(paths.__legacy_appEslint, paths.__legacy_appEslint + '.legacy')
+      fs.moveSync(paths.legacyAppEslint, paths.legacyAppEslint + '.legacy')
     }
   }
   if (shouldAddEslintFile) {
     log('Adding .eslintrc.json', MIGRATION_OP_TYPE.WRITE)
-    fs.copyFileSync(templateEslintrc, paths.__legacy_appEslint)
+    fs.copyFileSync(templateEslintrc, paths.legacyAppEslint)
   }
 
   if (hasTslintFile) {
-    const currentTslintHash = await getFileHash(paths.__legacy_appTslint)
+    const currentTslintHash = await getFileHash(paths.legacyAppTslint)
     if (currentTslintHash === LEGACY_TSLINT_JSON_HASH) {
       log('Removing legacy tslint.json', MIGRATION_OP_TYPE.DELETE)
-      fs.unlinkSync(paths.__legacy_appTslint)
+      fs.unlinkSync(paths.legacyAppTslint)
     } else {
       log(
         'Renaming existing tslint.json to tslint.json.legacy',
@@ -95,7 +95,7 @@ async function handleLinterConfigs() {
         MIGRATION_OP_TYPE.INFO
       )
       loggedInfo = true
-      fs.moveSync(paths.__legacy_appTslint, paths.__legacy_appTslint + '.legacy')
+      fs.moveSync(paths.legacyAppTslint, paths.legacyAppTslint + '.legacy')
     }
   }
 }
