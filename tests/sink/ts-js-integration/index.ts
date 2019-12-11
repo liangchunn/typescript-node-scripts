@@ -2,11 +2,11 @@ import * as assert from "assert";
 import * as cjs from "./cjs";
 import esmDefault, {
   readFileSync as ESM_READ_FILE_SYNC,
-  TEST as ESM_TEST,
+  TEST as ESM_TEST
 } from "./cjs";
 import cjsDefault, {
   readFileSync as CJS_READ_FILE_SYNC,
-  TEST as CJS_TEST,
+  TEST as CJS_TEST
 } from "./cjs";
 import * as esm from "./esm";
 
