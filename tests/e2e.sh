@@ -104,3 +104,16 @@ yarn build
 node dist/bundle.prod.js
 # run the test files
 CI=true yarn test
+
+
+#==============================================#
+# Run sink/typescript-3.7 in generated project #
+#==============================================#
+# remove src folder
+rm -rf src/*
+# copy the ts-js-integration files to src
+cp -a "$SCRIPT_DIR/sink/typescript-3.7/." ./src
+# run the build and execute the bundle
+yarn build
+# run the test files
+CI=true yarn test
