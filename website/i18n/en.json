@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Create Node.js apps based on TypeScript with zero-configuration",
     "docs": {
+      "adding-prettier": {
+        "title": "Adding Prettier"
+      },
       "argv-forwarding": {
         "title": "Forwarding argv to your App"
       },
@@ -38,6 +41,9 @@
       "tests": {
         "title": "Testing your Application"
       },
+      "upgrading": {
+        "title": "Upgrading + Changelog"
+      },
       "webpack-override": {
         "title": "Overriding Webpack Configuration"
       }
@@ -51,7 +57,7 @@
       "Guides": "Guides",
       "Debugging": "Debugging",
       "Advanced": "Advanced",
-      "Migration Guide": "Migration Guide",
+      "Upgrading and Changelog": "Upgrading and Changelog",
       "First Category": "First Category"
     }
   },
