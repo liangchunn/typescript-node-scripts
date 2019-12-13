@@ -1,3 +1,21 @@
+# [3.1.0](https://github.com/liangchunn/typescript-node-scripts/compare/v3.0.0...v3.1.0) (2019-12-13)
+
+
+### Bug Fixes
+
+* **package:** move eslint plugins to dependencies ([e838833](https://github.com/liangchunn/typescript-node-scripts/commit/e838833))
+
+
+### Features
+
+* **eslint:** generate .eslintrc for project ([0794693](https://github.com/liangchunn/typescript-node-scripts/commit/0794693))
+* **eslint:** use built in eslint ([dcb4896](https://github.com/liangchunn/typescript-node-scripts/commit/dcb4896))
+* **package:** cleanup, remove usage of mapped paths in template ([4a8050a](https://github.com/liangchunn/typescript-node-scripts/commit/4a8050a))
+* **prettier:** integrate prettier into tns ([f9213d7](https://github.com/liangchunn/typescript-node-scripts/commit/f9213d7))
+* **ts3.7:** try integrating ts3.7 ([10f14e5](https://github.com/liangchunn/typescript-node-scripts/commit/10f14e5))
+
+
+
 # [3.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v3.0.0-alpha.1...v3.0.0) (2019-08-25)
 
 
