@@ -1,7 +1,7 @@
 {
   "docs": {
     "Quick Start": ["getting-started", "commands"],
-    "Guides": ["tests", "deployment", "custom-module-path", "sourcemaps", "argv-forwarding", "monorepo"],
+    "Guides": ["tests", "deployment", "custom-module-path", "sourcemaps", "argv-forwarding", "monorepo", "adding-prettier"],
     "Debugging": ["debugging-webpack", "debugging-source"],
     "Advanced": ["webpack-override"],
     "Migration Guide": ["migrating-v2-to-v3"]

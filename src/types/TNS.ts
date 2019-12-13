@@ -3,5 +3,4 @@ export interface TNSOptions {
   noAutoStart: boolean
   useMonorepo: boolean
   bypassCiWarnings: boolean
-  overrideEslintConfig: boolean
 }

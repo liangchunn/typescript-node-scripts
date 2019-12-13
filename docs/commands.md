@@ -9,12 +9,11 @@ Starts the development server with watch mode and incremental builds. This comma
 
 ### Options
 
-| Argument                   | Description                                                                                        |
-| -------------------------- | -------------------------------------------------------------------------------------------------- |
-| `--no-collapse`            | Expands all the collapsed errors                                                                   |
-| `--no-auto-start`          | Disables auto starting and stopping of the application. By default, it executes `build/bundle.js`. |
-| `--monorepo`               | Enable support for monorepos                                                                       |
-| `--override-eslint-config` | Completely overrides TNS's ESLint configration with user defined `.eslintrc.*` files               |
+| Argument          | Description                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| `--no-collapse`   | Expands all the collapsed errors                                                                   |
+| `--no-auto-start` | Disables auto starting and stopping of the application. By default, it executes `build/bundle.js`. |
+| `--monorepo`      | Enable support for monorepos                                                                       |
 
 ## `yarn build`
 
@@ -24,12 +23,11 @@ Builds a production ready bundle. This minifies all sources into one simple, dis
 
 ### Options
 
-| Argument                   | Description                                                                          |
-| -------------------------- | ------------------------------------------------------------------------------------ |
-| `--no-collapse`            | Expands all the collapsed errors                                                     |
-| `--bypass-ci-warnings`     | Bypass CI warnings being treated as errors.                                          |
-| `--monorepo`               | Enable support for monorepo                                                          |
-| `--override-eslint-config` | Completely overrides TNS's ESLint configration with user defined `.eslintrc.*` files |
+| Argument               | Description                                 |
+| ---------------------- | ------------------------------------------- |
+| `--no-collapse`        | Expands all the collapsed errors            |
+| `--bypass-ci-warnings` | Bypass CI warnings being treated as errors. |
+| `--monorepo`           | Enable support for monorepo                 |
 
 ## `yarn test`
 
