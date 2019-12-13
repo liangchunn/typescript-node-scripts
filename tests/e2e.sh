@@ -92,6 +92,12 @@ yarn build
 exists dist/*.js
 CI=true yarn test
 
+#=======================#
+# Prepare sink tsconfig #
+#=======================#
+rm -rf ./tsconfig.json
+cp "$SCRIPT_DIR/sink/tsconfig.json" ./tsconfig.json
+
 #=================================================#
 # Run sink/ts-js-integration in generated project #
 #=================================================#
