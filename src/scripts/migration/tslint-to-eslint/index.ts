@@ -53,14 +53,14 @@ async function handleLinterConfigs() {
     '3d6715a3490c843940026a410a0b41fa8c95ba468e93a8bab18fe0a44baada9c'
 
   const hasTslintFile = await fileExists(paths.legacyAppTslint)
-  const hasEslintFile = await fileExists(paths.legacyAppEslint)
+  const hasEslintFile = await fileExists(paths.appEslint)
   const templateEslintrc = resolveOwn('template/.eslintrc.json')
 
   let shouldAddEslintFile = true
 
   if (hasEslintFile) {
     const sameEslintFile =
-      (await getFileHash(paths.legacyAppEslint)) ===
+      (await getFileHash(paths.appEslint)) ===
       (await getFileHash(templateEslintrc))
 
     if (sameEslintFile) {
@@ -72,12 +72,12 @@ async function handleLinterConfigs() {
         MIGRATION_OP_TYPE.MODIFY
       )
       // TODO: possible collision
-      fs.moveSync(paths.legacyAppEslint, paths.legacyAppEslint + '.legacy')
+      fs.moveSync(paths.appEslint, paths.appEslint + '.legacy')
     }
   }
   if (shouldAddEslintFile) {
     log('Adding .eslintrc.json', MIGRATION_OP_TYPE.WRITE)
-    fs.copyFileSync(templateEslintrc, paths.legacyAppEslint)
+    fs.copyFileSync(templateEslintrc, paths.appEslint)
   }
 
   if (hasTslintFile) {

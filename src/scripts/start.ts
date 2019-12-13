@@ -4,9 +4,7 @@ import '../injectors/dev'
 import { clearConsole } from '../lib/clearConsole'
 import { createCompiler } from '../lib/webpackCompiler'
 import { RuntimeOptions, IS_INTERACTIVE } from '../util/env'
-import { checkCustomEslintRequirements } from './util/checkCustomEslintRequirements'
 import { getWebpackConfig } from './util/getWebpackConfig'
-import { checkPrettierrcFile } from './util/checkPrettierrcFile'
 
 if (IS_INTERACTIVE) {
   clearConsole()
@@ -15,9 +13,6 @@ if (IS_INTERACTIVE) {
 console.log(chalk.cyan('Starting the development server...'))
 console.log(chalk.green('Using TypeScript v' + typescript.version))
 console.log()
-
-checkCustomEslintRequirements()
-checkPrettierrcFile()
 
 const compiler = createCompiler(getWebpackConfig('development'), RuntimeOptions)
 

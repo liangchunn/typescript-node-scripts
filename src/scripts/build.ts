@@ -6,9 +6,7 @@ import { formatWebpackMessages } from '../lib/formatWebpackMessages'
 import { paths } from '../lib/paths'
 import { IS_CI, RuntimeOptions } from '../util/env'
 import { diffFileSize, getBundleSize } from './util/fileSizeReporter'
-import { checkCustomEslintRequirements } from './util/checkCustomEslintRequirements'
 import { getWebpackConfig } from './util/getWebpackConfig'
-import { checkPrettierrcFile } from './util/checkPrettierrcFile'
 
 const prodBundlePath = path.join(paths.appBuild, paths.prodBundle)
 const sizeBeforeBuild = getBundleSize(prodBundlePath)
@@ -17,9 +15,6 @@ const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
   console.log(chalk.cyan('Creating an optimized production build...'))
   console.log(chalk.green('Using TypeScript v' + typescript.version))
   console.log()
-
-  checkCustomEslintRequirements()
-  checkPrettierrcFile()
 
   const compiler: webpack.Compiler = webpack(getWebpackConfig('production'))
 

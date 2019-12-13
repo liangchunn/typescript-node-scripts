@@ -1,12 +1,10 @@
 import * as webpack from 'webpack'
-import eslint from 'eslint'
 import CaseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import nodeExternals from 'webpack-node-externals'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
-import eslintConfig from './eslintrc'
 import eslintFormatter from './formatters/eslintFormatter'
 import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
 import { formatTsLoaderMessages } from './formatTsLoaderMessages'
@@ -57,23 +55,9 @@ export const createWebpackConfig = (
               options: {
                 eslintPath: require.resolve('eslint'),
                 formatter: eslintFormatter,
-                useEslintrc: false,
+                configFile: paths.appEslint,
                 emitWarning: true,
                 resolvePluginsRelativeTo: __dirname,
-                ignore: RuntimeOptions.overrideEslintConfig,
-                baseConfig: (() => {
-                  if (RuntimeOptions.overrideEslintConfig) {
-                    const eslintCli = new eslint.CLIEngine({})
-                    try {
-                      return eslintCli.getConfigForFile(paths.appIndexJs)
-                    } catch (e) {
-                      console.error(e)
-                      process.exit(1)
-                    }
-                  } else {
-                    return eslintConfig
-                  }
-                })(),
               },
             },
           ],
