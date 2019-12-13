@@ -1,9 +1,9 @@
 export type OptChainType = {
   a?: {
     b?: {
-      c: number
-    }
-  }
+      c: number;
+    };
+  };
 }
 
 export function f(arg: OptChainType) {
