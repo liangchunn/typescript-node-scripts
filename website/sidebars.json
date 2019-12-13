@@ -4,7 +4,7 @@
     "Guides": ["tests", "deployment", "custom-module-path", "sourcemaps", "argv-forwarding", "monorepo", "adding-prettier"],
     "Debugging": ["debugging-webpack", "debugging-source"],
     "Advanced": ["webpack-override"],
-    "Migration Guide": ["migrating-v2-to-v3"]
+    "Upgrading and Changelog": ["upgrading"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
