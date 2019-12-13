@@ -3,7 +3,6 @@ id: commands
 title: Commands Reference
 ---
 
-
 ## `yarn start`
 
 Starts the development server with watch mode and incremental builds. This command generates a bundle which is located at `build/bundle.js`.
@@ -20,7 +19,7 @@ Starts the development server with watch mode and incremental builds. This comma
 
 Builds a production ready bundle. This minifies all sources into one simple, distributable `dist/bundle.prod.js` alongside `dist/bundle.prod.js.map` which is ideal for Docker builds.
 
-This command does not bundle any dependencies which is `require`-d or `import`-ed from `node_modules`!
+**This command does not bundle any dependencies which is `require`-d or `import`-ed from `node_modules`!**
 
 ### Options
 

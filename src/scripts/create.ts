@@ -33,10 +33,9 @@ const createApp = (useYarn: boolean, appName?: string) => {
     main: 'src/index.ts',
     private: true,
     scripts: {
-      test: 'typescript-node-scripts test',
       start: 'typescript-node-scripts start',
       build: 'typescript-node-scripts build',
-      lint: "eslint 'src/**/*.{js,ts}'",
+      test: 'typescript-node-scripts test',
     },
   }
 
@@ -44,11 +43,6 @@ const createApp = (useYarn: boolean, appName?: string) => {
     '@types/node',
     '@types/jest',
     'typescript',
-    'eslint',
-    'eslint-plugin-import',
-    'babel-eslint',
-    '@typescript-eslint/eslint-plugin',
-    '@typescript-eslint/parser',
     'typescript-node-scripts',
   ]
 
@@ -108,22 +102,6 @@ const createApp = (useYarn: boolean, appName?: string) => {
     console.error()
     process.exit(1)
   }
-
-  // install dependencies
-  // const dependencyProc = spawn(cmd, dependencyArgs, {
-  //     stdio: 'inherit',
-  //     cwd: appPath,
-  // })
-  // if (dependencyProc.status !== 0) {
-  //     console.error()
-  //     console.error(
-  //         chalk.red('Command'),
-  //         chalk.redBright(`'${cmd} ${dependencyArgs.join(' ')}'`),
-  //         chalk.red('failed.')
-  //     )
-  //     console.error()
-  //     process.exit(1)
-  // }
 
   // initialize git repo
   try {

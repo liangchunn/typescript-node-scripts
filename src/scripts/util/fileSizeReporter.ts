@@ -44,15 +44,11 @@ export const diffFileSize = (
     return `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (+0 B)`
   } else if (diff.value > 0) {
     return chalk.yellow(
-      `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (+${
-        diff.value
-      } ${diff.symbol})`
+      `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (+${diff.value} ${diff.symbol})`
     )
   } else {
     return chalk.green(
-      `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (${
-        diff.value
-      } ${diff.symbol})`
+      `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (${diff.value} ${diff.symbol})`
     )
   }
 }

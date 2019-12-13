@@ -86,13 +86,17 @@ exists node_modules/typescript-node-scripts
 #========================#
 # Test generated project #
 #========================#
-# run eslint on generated project
-yarn lint
 # build
 yarn build
 # check for build files
 exists dist/*.js
 CI=true yarn test
+
+#=======================#
+# Prepare sink tsconfig #
+#=======================#
+rm -rf ./tsconfig.json
+cp "$SCRIPT_DIR/sink/tsconfig.json" ./tsconfig.json
 
 #=================================================#
 # Run sink/ts-js-integration in generated project #
@@ -104,5 +108,18 @@ cp -a "$SCRIPT_DIR/sink/ts-js-integration/." ./src
 # run the build and execute the bundle
 yarn build
 node dist/bundle.prod.js
+# run the test files
+CI=true yarn test
+
+
+#==============================================#
+# Run sink/typescript-3.7 in generated project #
+#==============================================#
+# remove src folder
+rm -rf src/*
+# copy the ts-js-integration files to src
+cp -a "$SCRIPT_DIR/sink/typescript-3.7/." ./src
+# run the build and execute the bundle
+yarn build
 # run the test files
 CI=true yarn test
