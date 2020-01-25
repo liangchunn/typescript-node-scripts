@@ -40,7 +40,7 @@ export const createWebpackConfig = (
       plugins: [
         new TsconfigPathsPlugin({
           configFile: paths.appTsConfig,
-          logLevel: 'ERROR',
+          silent: true,
         }),
       ],
     },
@@ -90,7 +90,6 @@ export const createWebpackConfig = (
       new ForkTsCheckerWebpackPlugin({
         silent: true,
         async: false,
-        watch: paths.appSrc,
         tsconfig: paths.appTsConfig,
         formatter: formatForkTsCheckerMessages,
         checkSyntacticErrors: true,
