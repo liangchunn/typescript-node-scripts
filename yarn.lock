@@ -1078,10 +1078,12 @@
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
-"@types/filesize@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@types/filesize/-/filesize-4.1.0.tgz#da49e71ccb6bf5b024ced2bcad30528a8eebd46d"
-  integrity sha512-PsogPt8wYP5406gh7hscvg3jdcEGeeHeG+qGpwSK3wUTgiT2WvKbT8la/SxSglfLTqxJcLwPcXvhenNGOAdHuw==
+"@types/filesize@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/filesize/-/filesize-5.0.0.tgz#c6c252b5b514a5d1948bc9bcb76f4f780570c481"
+  integrity sha512-zgn1Kmm6VfqruG9STpwpZiSnpzHjF9hlvHVw+5hhM20xRCOIgjxnXJxOoLuZ/aWS6v/M5d6fvXFbbVQfBe4cMg==
+  dependencies:
+    filesize "*"
 
 "@types/fs-extra@^8.0.0":
   version "8.0.1"
@@ -3505,6 +3507,11 @@ file-entry-cache@^5.0.1:
   integrity sha512-bCg29ictuBaKUwwArK4ouCaqDgLZcysCFLmM/Yn/FDoqndh/9vNuQfXRDvTuXKLxfD/JtZQGKFT8MGcJBK644g==
   dependencies:
     flat-cache "^2.0.1"
+
+filesize@*:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.1.0.tgz#e81bdaa780e2451d714d71c0d7a4f3238d37ad00"
+  integrity sha512-LpCHtPQ3sFx67z+uh2HnSyWSLLu5Jxo21795uRDuar/EOuYWXib5EmPaGIBuSnRqH2IODiKA2k5re/K9OnN/Yg==
 
 filesize@6.0.1:
   version "6.0.1"
