@@ -1,3 +1,12 @@
+# [3.2.0-alpha.6](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.5...v3.2.0-alpha.6) (2020-11-17)
+
+
+### Bug Fixes
+
+* **eslint:** fix incorrect usage of configFile for loader ([d24666e](https://github.com/liangchunn/typescript-node-scripts/commit/d24666e9288223a633851c2ea72dcfc30d71aaf8))
+
+
+
 # [3.2.0-alpha.5](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.4...v3.2.0-alpha.5) (2020-11-17)
 
 
