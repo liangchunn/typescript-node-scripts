@@ -73,7 +73,9 @@ export const createWebpackConfig = (
         eslintPath: require.resolve('eslint'),
         formatter: 'stylish',
         emitWarning: true,
-      }),
+        resolvePluginsRelativeTo: __dirname,
+        configFile: paths.appEslint,
+      } as any),
       new ForkTsCheckerWebpackPlugin({
         async: false,
         typescript: {
