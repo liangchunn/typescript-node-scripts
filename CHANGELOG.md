@@ -1,3 +1,12 @@
+# [3.2.0-alpha.5](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.4...v3.2.0-alpha.5) (2020-11-17)
+
+
+### Bug Fixes
+
+* **eslint:** use configFile and resolvePluginsRelativeTo again ([4b76daa](https://github.com/liangchunn/typescript-node-scripts/commit/4b76daa049421b808773532b8a33db15ec22a9db))
+
+
+
 # [3.2.0-alpha.4](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.3...v3.2.0-alpha.4) (2020-11-17)
 
 
