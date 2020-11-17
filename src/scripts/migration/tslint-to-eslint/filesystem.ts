@@ -15,7 +15,7 @@ export function loadJson(path: string): Promise<any> {
   })
 }
 
-export function saveJson(path: string, data: object): Promise<true> {
+export function saveJson(path: string, data: unknown): Promise<true> {
   return new Promise((resolve, reject) => {
     fs.writeFile(path, JSON.stringify(data, null, 2), err => {
       if (err) {
