@@ -77,7 +77,7 @@ export const createJestConfig = (
   ]
 
   if (overrides) {
-    supportedOverrides.forEach(key => {
+    supportedOverrides.forEach((key) => {
       if (overrides.hasOwnProperty(key)) {
         ;(config as any)[key] = overrides[key]
         delete overrides[key]
@@ -89,10 +89,10 @@ export const createJestConfig = (
         chalk.red(
           '\n' +
             'typescript-node-scripts only supports overriding these Jest options: \n\n' +
-            supportedOverrides.map(key => '  ' + chalk.bold(key)).join('\n') +
+            supportedOverrides.map((key) => '  ' + chalk.bold(key)).join('\n') +
             '\n\n' +
             'These Jest options in your package.json are not supported: \n\n' +
-            leftoverOverrides.map(key => '  ' + chalk.bold(key)).join('\n') +
+            leftoverOverrides.map((key) => '  ' + chalk.bold(key)).join('\n') +
             '\n\n'
         )
       )

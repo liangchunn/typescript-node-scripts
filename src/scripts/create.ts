@@ -1,4 +1,4 @@
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err
 })
 
@@ -73,7 +73,7 @@ const createApp = (useYarn: boolean, appName?: string) => {
   // install package dependencies
   console.log(
     'Installing ' +
-      [...packageDevDependencies].map(i => chalk.cyan(i)).join(', ')
+      [...packageDevDependencies].map((i) => chalk.cyan(i)).join(', ')
   )
 
   let cmd

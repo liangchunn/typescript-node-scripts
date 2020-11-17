@@ -19,7 +19,7 @@ function formatMessage(rawMessage: any): string {
   let lines = message.split('\n')
 
   // Remove webpack errors/warnings
-  lines = lines.filter(line => !/Module [A-z ]+\(from/.test(line))
+  lines = lines.filter((line) => !/Module [A-z ]+\(from/.test(line))
 
   // remove extra file path if exists
   // webpack somehow inserts a relative path into the messages, so we
@@ -29,10 +29,10 @@ function formatMessage(rawMessage: any): string {
   }
 
   // remove webpack @ stack
-  lines = lines.filter(line => line.indexOf(' @ ') !== 0)
+  lines = lines.filter((line) => line.indexOf(' @ ') !== 0)
 
   // Transform 'Parsing error' to 'Syntax error'
-  lines = lines.map(line => {
+  lines = lines.map((line) => {
     const parseError = /Line (\d+):(?:(\d+):)?\s*Parsing error: (.+)$/.exec(
       line
     )
@@ -98,10 +98,10 @@ export function formatWebpackMessages(
 } {
   const errors = json.errors
     .map((message: string) => formatMessage(message))
-    .filter(message => message !== '')
+    .filter((message) => message !== '')
   const warnings = json.warnings
     .map((message: string) => formatMessage(message))
-    .filter(message => message !== '')
+    .filter((message) => message !== '')
 
   return {
     errors,

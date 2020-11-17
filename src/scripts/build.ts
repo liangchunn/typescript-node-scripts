@@ -76,7 +76,7 @@ build()
         )
       }
     },
-    err => {
+    (err) => {
       console.log(chalk.red('Failed to compile.\n'))
       console.log(err.message)
       console.log()
@@ -92,7 +92,7 @@ build()
     )
     console.log()
   })
-  .catch(err => {
+  .catch((err) => {
     if (err && err.message) {
       console.log(err.message)
     }

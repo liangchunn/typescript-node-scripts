@@ -17,7 +17,7 @@ console.log()
 const compiler = createCompiler(getWebpackConfig('development'), RuntimeOptions)
 
 // start the webpack watchers
-compiler.watch({}, err => {
+compiler.watch({}, (err) => {
   if (err) {
     throw err
   }
