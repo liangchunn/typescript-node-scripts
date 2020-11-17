@@ -1,3 +1,12 @@
+# [3.2.0-alpha.2](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.1...v3.2.0-alpha.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* **webpack5:** fix config problem and mitigate typing issue ([292b6a8](https://github.com/liangchunn/typescript-node-scripts/commit/292b6a81a56ac61083b88249537d6e4e3e3dc733))
+
+
+
 # [3.2.0-alpha.1](https://github.com/liangchunn/typescript-node-scripts/compare/v3.1.2...v3.2.0-alpha.1) (2020-11-17)
 
 
