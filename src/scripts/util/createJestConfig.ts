@@ -59,7 +59,7 @@ export const createJestConfig = (
     globals: {
       NODE_ENV: 'test',
       'ts-jest': {
-        tsConfig: paths.appTsConfig,
+        tsconfig: paths.appTsConfig,
       },
     },
     moduleNameMapper: transformTsPathsToJestPaths(appTsConfig),
