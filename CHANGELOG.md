@@ -1,3 +1,12 @@
+# [3.2.0-alpha.3](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.2...v3.2.0-alpha.3) (2020-11-17)
+
+
+### Bug Fixes
+
+* **typescript:** install ~4.x version of typescript on create ([34fa6d4](https://github.com/liangchunn/typescript-node-scripts/commit/34fa6d46bd3cc66564bd2a60e3e98ec9d25339fd))
+
+
+
 # [3.2.0-alpha.2](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.1...v3.2.0-alpha.2) (2020-11-17)
 
 
