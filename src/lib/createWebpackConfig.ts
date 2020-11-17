@@ -6,7 +6,7 @@ import nodeExternals from 'webpack-node-externals'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 import eslintFormatter from './formatters/eslintFormatter'
-import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
+// import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
 import { formatTsLoaderMessages } from './formatTsLoaderMessages'
 import { paths } from './paths'
 import { RuntimeOptions } from '../util/env'
@@ -27,7 +27,7 @@ export const createWebpackConfig = (
               modulesFromFile: true,
             }
           : undefined
-      ),
+      ) as any,
     ],
     devtool: isDev ? 'cheap-eval-source-map' : 'source-map',
     output: {
@@ -88,17 +88,15 @@ export const createWebpackConfig = (
     },
     plugins: [
       new ForkTsCheckerWebpackPlugin({
-        silent: true,
         async: false,
-        watch: paths.appSrc,
-        tsconfig: paths.appTsConfig,
-        formatter: formatForkTsCheckerMessages,
-        checkSyntacticErrors: true,
-        reportFiles: ['**', '!**/__tests__/**', '!**/?(*.)(spec|test|t).*'],
+        typescript: {
+          configFile: paths.appTsConfig,
+        },
+        formatter: 'codeframe',
       }),
       new CaseSensitivePathsWebpackPlugin(),
       new CleanWebpackPlugin(),
-    ] as webpack.Plugin[],
+    ] as webpack.WebpackPluginInstance[],
     optimization: {
       nodeEnv: false,
     },

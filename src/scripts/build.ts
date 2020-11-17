@@ -23,7 +23,7 @@ const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
       if (err) {
         return reject(err)
       }
-      const messages = formatWebpackMessages(stats.toJson())
+      const messages = formatWebpackMessages(stats!.toJson())
       if (messages.errors.length) {
         if (messages.errors.length > 1 && !RuntimeOptions.noCollapse) {
           messages.errors.length = 1
@@ -50,7 +50,7 @@ const build = (): Promise<{ stats: webpack.Stats; warnings: string[] }> => {
       }
 
       return resolve({
-        stats,
+        stats: stats!,
         warnings: messages.warnings,
       })
     })

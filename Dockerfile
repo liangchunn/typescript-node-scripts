@@ -1,4 +1,4 @@
-FROM node:8.15.0
+FROM node:10
 WORKDIR /usr/src/typescript-node-scripts
 COPY . .
 CMD ["./tests/e2e.sh"]
