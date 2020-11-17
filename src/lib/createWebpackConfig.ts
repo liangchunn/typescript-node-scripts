@@ -29,7 +29,7 @@ export const createWebpackConfig = (
           : undefined
       ) as any,
     ],
-    devtool: isDev ? 'cheap-eval-source-map' : 'source-map',
+    devtool: isDev ? 'eval-cheap-source-map' : 'cheap-source-map',
     output: {
       path: isDev ? paths.appDevBundlePath : paths.appBuild,
       filename: isDev ? 'bundle.js' : 'bundle.prod.js',
@@ -40,7 +40,7 @@ export const createWebpackConfig = (
       plugins: [
         new TsconfigPathsPlugin({
           configFile: paths.appTsConfig,
-          logLevel: 'ERROR',
+          silent: true,
         }),
       ],
     },

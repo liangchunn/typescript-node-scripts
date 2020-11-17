@@ -6,9 +6,14 @@ const friendlySyntaxErrorLabel = 'Syntax error:'
  * Formats webpack messages into a nicer looking, human friendly format.
  * Heavily adopted from:
  * https://github.com/facebook/create-react-app/blob/master/packages/react-dev-utils/formatWebpackMessages.js
+ *
+ * TODO: fix typing of any, could be error from webpack or loader, so we might want to format it differently
  * @param message
  */
-function formatMessage(message: string): string {
+function formatMessage(rawMessage: any): string {
+  let message =
+    (rawMessage.moduleId || rawMessage.file) + '\n' + rawMessage.message
+
   let lines = message.split('\n')
 
   // Remove webpack errors/warnings
