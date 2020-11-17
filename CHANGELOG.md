@@ -1,3 +1,12 @@
+# [3.2.0-alpha.4](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.3...v3.2.0-alpha.4) (2020-11-17)
+
+
+### Features
+
+* **eslint:** migrate to new webpack eslint plugin ([34f462b](https://github.com/liangchunn/typescript-node-scripts/commit/34f462bd6ebaf3951ec72873a194bf555a55d293))
+
+
+
 # [3.2.0-alpha.3](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.2...v3.2.0-alpha.3) (2020-11-17)
 
 
