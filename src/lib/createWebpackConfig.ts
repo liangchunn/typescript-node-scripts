@@ -62,7 +62,6 @@ export const createWebpackConfig = (
           loader: require.resolve('ts-loader'),
           options: {
             transpileOnly: true,
-            experimentalWatchApi: isDev ? true : undefined,
             errorFormatter: formatTsLoaderMessages,
           },
         },
@@ -71,10 +70,11 @@ export const createWebpackConfig = (
     plugins: [
       new ESLintPlugin({
         eslintPath: require.resolve('eslint'),
+        extensions: ['js', 'ts', 'jsx', 'tsx'],
         formatter: 'stylish',
         emitWarning: true,
         resolvePluginsRelativeTo: __dirname,
-        configFile: paths.appEslint,
+        overrideConfigFile: paths.appEslint,
       } as any),
       new ForkTsCheckerWebpackPlugin({
         async: false,

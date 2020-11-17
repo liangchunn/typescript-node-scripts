@@ -11,8 +11,10 @@ const friendlySyntaxErrorLabel = 'Syntax error:'
  * @param message
  */
 function formatMessage(rawMessage: any): string {
-  let message =
-    (rawMessage.moduleId || rawMessage.file) + '\n' + rawMessage.message
+  const fileName = rawMessage.moduleId || rawMessage.file
+  let message = fileName
+    ? `${fileName}\n${rawMessage.message}`
+    : `${rawMessage.message}`
 
   let lines = message.split('\n')
 
