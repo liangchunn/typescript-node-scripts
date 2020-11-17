@@ -1,3 +1,20 @@
+# [3.2.0-alpha.7](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.6...v3.2.0-alpha.7) (2020-11-17)
+
+
+### Bug Fixes
+
+* **jest:** use tsconfig instead of tsConfig ([08e851c](https://github.com/liangchunn/typescript-node-scripts/commit/08e851c60a81f12c92071608ea6c988f64bdf3cf))
+* **prettier:** fix formatting issue and command issue ([ab49b6c](https://github.com/liangchunn/typescript-node-scripts/commit/ab49b6cffec00757fdc8a8b44329f2baf7ca1a5a))
+
+
+### Features
+
+* **actions:** add node 15.x into workflow support ([8a070c8](https://github.com/liangchunn/typescript-node-scripts/commit/8a070c82e27fd2113ea73dc9b50b2a18cc2354a2))
+* **deps:** upgrade dev dependencies ([a25315c](https://github.com/liangchunn/typescript-node-scripts/commit/a25315c9797551124147e125b06db636c3c8d6dd))
+* **eslint:** remove return type requirement rule ([1d1b4c1](https://github.com/liangchunn/typescript-node-scripts/commit/1d1b4c1e1597787021e8862dbc8005165b2d2b4b))
+
+
+
 # [3.2.0-alpha.6](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.5...v3.2.0-alpha.6) (2020-11-17)
 
 
