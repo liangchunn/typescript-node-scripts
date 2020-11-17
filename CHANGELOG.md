@@ -1,3 +1,7 @@
+# [3.2.0-alpha.1](https://github.com/liangchunn/typescript-node-scripts/compare/v3.1.2...v3.2.0-alpha.1) (2020-11-17)
+
+
+
 ## [3.1.2](https://github.com/liangchunn/typescript-node-scripts/compare/v3.1.1...v3.1.2) (2020-03-12)
 
 
