@@ -1,9 +1,39 @@
 import chalk from 'chalk'
 import * as fs from 'fs'
+import * as path from 'path'
 import { paths } from '../../lib/paths'
-import { pathsToModuleNameMapper } from 'ts-jest/utils'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const appTsConfig = require(paths.appTsConfig)
+
+/**
+ * Transform paths from tsconfig.json to Jest compatible path mappings
+ * Transforms
+ *   "@_util/*": ["src/_util/*"]
+ * into
+ *   "@_util/(.*)": "<rootdir>/src/_util/$1"
+ * excluding global *
+ * @param {json} config
+ * @returns {object} key:value path mapping for jest
+ */
+const transformTsPathsToJestPaths = (tsconfig: any) => {
+  const {
+    paths: tsconfigPaths = {},
+    baseUrl: tsconfigBaseUrl = '',
+  } = tsconfig.compilerOptions
+  const resolvedBase = path.join('<rootDir>', tsconfigBaseUrl)
+  return Object.keys(tsconfigPaths).reduce(
+    (acc, key) =>
+      key === '*'
+        ? acc
+        : Object.assign({}, acc, {
+            ['^' + key.replace('*', '(.*)') + '$']: path.join(
+              resolvedBase,
+              tsconfigPaths[key][0].replace('*', '$1')
+            ),
+          }),
+    {}
+  )
+}
 
 export const createJestConfig = (
   rootDir: string,
@@ -32,12 +62,7 @@ export const createJestConfig = (
         tsconfig: paths.appTsConfig,
       },
     },
-    moduleNameMapper:
-      appTsConfig.baseUrl && appTsConfig.paths
-        ? pathsToModuleNameMapper(appTsConfig.paths, {
-            prefix: '<rootDir>/',
-          })
-        : null,
+    moduleNameMapper: transformTsPathsToJestPaths(appTsConfig),
   }
 
   if (rootDir) {
