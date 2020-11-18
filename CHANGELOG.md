@@ -1,3 +1,12 @@
+# [3.2.0-alpha.8](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.7...v3.2.0-alpha.8) (2020-11-18)
+
+
+### Features
+
+* **jest:** use ts-jest's pathsToModuleNameMapper ([b5f6d67](https://github.com/liangchunn/typescript-node-scripts/commit/b5f6d6705ec4eeb2fe6723e89944e583a5c5642c))
+
+
+
 # [3.2.0-alpha.7](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.6...v3.2.0-alpha.7) (2020-11-17)
 
 
