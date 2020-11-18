@@ -1,3 +1,12 @@
+# [3.2.0-alpha.9](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.8...v3.2.0-alpha.9) (2020-11-18)
+
+
+### Features
+
+* **jest:** check for baseUrl and paths before mapping modules ([d412be9](https://github.com/liangchunn/typescript-node-scripts/commit/d412be958fcd662e274ebdc5f74c9812711e75d1))
+
+
+
 # [3.2.0-alpha.8](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.7...v3.2.0-alpha.8) (2020-11-18)
 
 
