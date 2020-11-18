@@ -1,3 +1,30 @@
+# [3.2.0-alpha.10](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.9...v3.2.0-alpha.10) (2020-11-18)
+
+
+### Reverts
+
+* **jest:** revert jesst changes ([1a7c2d3](https://github.com/liangchunn/typescript-node-scripts/commit/1a7c2d3fc29a71870f179561ddb4fdcc9192c5a2))
+
+
+
+# [3.2.0-alpha.9](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.8...v3.2.0-alpha.9) (2020-11-18)
+
+
+### Features
+
+* **jest:** check for baseUrl and paths before mapping modules ([d412be9](https://github.com/liangchunn/typescript-node-scripts/commit/d412be958fcd662e274ebdc5f74c9812711e75d1))
+
+
+
+# [3.2.0-alpha.8](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.7...v3.2.0-alpha.8) (2020-11-18)
+
+
+### Features
+
+* **jest:** use ts-jest's pathsToModuleNameMapper ([b5f6d67](https://github.com/liangchunn/typescript-node-scripts/commit/b5f6d6705ec4eeb2fe6723e89944e583a5c5642c))
+
+
+
 # [3.2.0-alpha.7](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.6...v3.2.0-alpha.7) (2020-11-17)
 
 
