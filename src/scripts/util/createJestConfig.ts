@@ -32,9 +32,12 @@ export const createJestConfig = (
         tsconfig: paths.appTsConfig,
       },
     },
-    moduleNameMapper: pathsToModuleNameMapper(appTsConfig.paths, {
-      prefix: '<rootDir>/',
-    }),
+    moduleNameMapper:
+      appTsConfig.baseUrl && appTsConfig.paths
+        ? pathsToModuleNameMapper(appTsConfig.paths, {
+            prefix: '<rootDir>/',
+          })
+        : null,
   }
 
   if (rootDir) {
