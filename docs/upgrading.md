@@ -5,6 +5,17 @@ title: Upgrading + Changelog
 
 # Upgrading TNS + Changelog
 
+## `3.x.x` to `4.x.x`
+
+TNS `4.x.x` supports **TypeScript >=3.3.1 <4.1.0** and supports **webpack 5**
+
+Simply upgrade the package to get all the latest features:
+
+```sh
+# install version 4.x.x of `typescript-node-scripts`
+yarn upgrade typescript-node-scripts@^4.0.0
+```
+
 ## `3.0.x` to `3.1.x`
 
 TNS `3.1.x` supports **TypeScript 3.7** with its new language features.
