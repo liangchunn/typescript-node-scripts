@@ -24,3 +24,5 @@ website/README.md
 yarn-error.log
 .vscode
 .github
+.husky
+MIGRATING.md

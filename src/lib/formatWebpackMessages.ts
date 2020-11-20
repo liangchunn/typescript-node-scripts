@@ -6,13 +6,20 @@ const friendlySyntaxErrorLabel = 'Syntax error:'
  * Formats webpack messages into a nicer looking, human friendly format.
  * Heavily adopted from:
  * https://github.com/facebook/create-react-app/blob/master/packages/react-dev-utils/formatWebpackMessages.js
+ *
+ * TODO: fix typing of any, could be error from webpack or loader, so we might want to format it differently
  * @param message
  */
-function formatMessage(message: string): string {
+function formatMessage(rawMessage: any): string {
+  const fileName = rawMessage.moduleId || rawMessage.file
+  let message = fileName
+    ? `${fileName}\n${rawMessage.message}`
+    : `${rawMessage.message}`
+
   let lines = message.split('\n')
 
   // Remove webpack errors/warnings
-  lines = lines.filter(line => !/Module [A-z ]+\(from/.test(line))
+  lines = lines.filter((line) => !/Module [A-z ]+\(from/.test(line))
 
   // remove extra file path if exists
   // webpack somehow inserts a relative path into the messages, so we
@@ -22,10 +29,10 @@ function formatMessage(message: string): string {
   }
 
   // remove webpack @ stack
-  lines = lines.filter(line => line.indexOf(' @ ') !== 0)
+  lines = lines.filter((line) => line.indexOf(' @ ') !== 0)
 
   // Transform 'Parsing error' to 'Syntax error'
-  lines = lines.map(line => {
+  lines = lines.map((line) => {
     const parseError = /Line (\d+):(?:(\d+):)?\s*Parsing error: (.+)$/.exec(
       line
     )
@@ -91,10 +98,10 @@ export function formatWebpackMessages(
 } {
   const errors = json.errors
     .map((message: string) => formatMessage(message))
-    .filter(message => message !== '')
+    .filter((message) => message !== '')
   const warnings = json.warnings
     .map((message: string) => formatMessage(message))
-    .filter(message => message !== '')
+    .filter((message) => message !== '')
 
   return {
     errors,

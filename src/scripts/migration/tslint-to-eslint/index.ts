@@ -172,7 +172,7 @@ async function handleAddDependencies() {
   }
 
   log(
-    'Installing ' + [...devDependencies].map(i => chalk.green(i)).join(', '),
+    'Installing ' + [...devDependencies].map((i) => chalk.green(i)).join(', '),
     MIGRATION_OP_TYPE.INSTALL
   )
 

@@ -45,7 +45,7 @@ export function createCompiler(
     }
   })
 
-  compiler.hooks.done.tap('compileDone', stats => {
+  compiler.hooks.done.tap('compileDone', (stats) => {
     if (IS_INTERACTIVE) {
       clearConsole()
     }

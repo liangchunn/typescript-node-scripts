@@ -39,7 +39,7 @@ export class AppController {
   }
 
   public async stopApp() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       if (this.state.appRunning) {
         console.log('Sending SIGTERM signal to app...')
 
@@ -67,7 +67,7 @@ export class AppController {
               )
             } else {
               const pids = children.concat(pid).sort()
-              pids.forEach(childPid => {
+              pids.forEach((childPid) => {
                 // 15 is for SIGTERM
                 exec('kill -15 ' + childPid).on('close', closeHandler)
               })
@@ -90,7 +90,7 @@ export class AppController {
     const proc = spawn('node', [this.executablePath, ...this.argv])
 
     // attach event listeners
-    proc.on('error', e => {
+    proc.on('error', (e) => {
       console.log(chalk.red('Failed to start app: ' + e.message))
       this.setState({
         appRunning: false,

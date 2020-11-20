@@ -4,9 +4,8 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
 import nodeExternals from 'webpack-node-externals'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
 
-import eslintFormatter from './formatters/eslintFormatter'
-import { formatForkTsCheckerMessages } from './formatForkTsCheckerMessages'
 import { formatTsLoaderMessages } from './formatTsLoaderMessages'
 import { paths } from './paths'
 import { RuntimeOptions } from '../util/env'
@@ -27,9 +26,9 @@ export const createWebpackConfig = (
               modulesFromFile: true,
             }
           : undefined
-      ),
+      ) as any,
     ],
-    devtool: isDev ? 'cheap-eval-source-map' : 'source-map',
+    devtool: isDev ? 'eval-cheap-source-map' : 'cheap-source-map',
     output: {
       path: isDev ? paths.appDevBundlePath : paths.appBuild,
       filename: isDev ? 'bundle.js' : 'bundle.prod.js',
@@ -40,29 +39,12 @@ export const createWebpackConfig = (
       plugins: [
         new TsconfigPathsPlugin({
           configFile: paths.appTsConfig,
-          logLevel: 'ERROR',
+          silent: true,
         }),
       ],
     },
     module: {
       rules: [
-        {
-          test: /\.(j|t)sx?$/,
-          enforce: 'pre',
-          use: [
-            {
-              loader: require.resolve('eslint-loader'),
-              options: {
-                eslintPath: require.resolve('eslint'),
-                formatter: eslintFormatter,
-                configFile: paths.appEslint,
-                emitWarning: true,
-                resolvePluginsRelativeTo: __dirname,
-              },
-            },
-          ],
-          include: paths.appSrc,
-        },
         {
           test: /\.jsx?$/,
           include: paths.appSrc,
@@ -80,25 +62,30 @@ export const createWebpackConfig = (
           loader: require.resolve('ts-loader'),
           options: {
             transpileOnly: true,
-            experimentalWatchApi: isDev ? true : undefined,
             errorFormatter: formatTsLoaderMessages,
           },
         },
       ],
     },
     plugins: [
+      new ESLintPlugin({
+        eslintPath: require.resolve('eslint'),
+        extensions: ['js', 'ts', 'jsx', 'tsx'],
+        formatter: 'stylish',
+        emitWarning: true,
+        resolvePluginsRelativeTo: __dirname,
+        overrideConfigFile: paths.appEslint,
+      } as any),
       new ForkTsCheckerWebpackPlugin({
-        silent: true,
         async: false,
-        watch: paths.appSrc,
-        tsconfig: paths.appTsConfig,
-        formatter: formatForkTsCheckerMessages,
-        checkSyntacticErrors: true,
-        reportFiles: ['**', '!**/__tests__/**', '!**/?(*.)(spec|test|t).*'],
+        typescript: {
+          configFile: paths.appTsConfig,
+        },
+        formatter: 'codeframe',
       }),
       new CaseSensitivePathsWebpackPlugin(),
       new CleanWebpackPlugin(),
-    ] as webpack.Plugin[],
+    ] as webpack.WebpackPluginInstance[],
     optimization: {
       nodeEnv: false,
     },

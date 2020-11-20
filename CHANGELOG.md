@@ -1,3 +1,100 @@
+# [4.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.10...v4.0.0) (2020-11-20)
+
+
+
+# [3.2.0-alpha.10](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.9...v3.2.0-alpha.10) (2020-11-18)
+
+
+### Reverts
+
+* **jest:** revert jesst changes ([1a7c2d3](https://github.com/liangchunn/typescript-node-scripts/commit/1a7c2d3fc29a71870f179561ddb4fdcc9192c5a2))
+
+
+
+# [3.2.0-alpha.9](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.8...v3.2.0-alpha.9) (2020-11-18)
+
+
+### Features
+
+* **jest:** check for baseUrl and paths before mapping modules ([d412be9](https://github.com/liangchunn/typescript-node-scripts/commit/d412be958fcd662e274ebdc5f74c9812711e75d1))
+
+
+
+# [3.2.0-alpha.8](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.7...v3.2.0-alpha.8) (2020-11-18)
+
+
+### Features
+
+* **jest:** use ts-jest's pathsToModuleNameMapper ([b5f6d67](https://github.com/liangchunn/typescript-node-scripts/commit/b5f6d6705ec4eeb2fe6723e89944e583a5c5642c))
+
+
+
+# [3.2.0-alpha.7](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.6...v3.2.0-alpha.7) (2020-11-17)
+
+
+### Bug Fixes
+
+* **jest:** use tsconfig instead of tsConfig ([08e851c](https://github.com/liangchunn/typescript-node-scripts/commit/08e851c60a81f12c92071608ea6c988f64bdf3cf))
+* **prettier:** fix formatting issue and command issue ([ab49b6c](https://github.com/liangchunn/typescript-node-scripts/commit/ab49b6cffec00757fdc8a8b44329f2baf7ca1a5a))
+
+
+### Features
+
+* **actions:** add node 15.x into workflow support ([8a070c8](https://github.com/liangchunn/typescript-node-scripts/commit/8a070c82e27fd2113ea73dc9b50b2a18cc2354a2))
+* **deps:** upgrade dev dependencies ([a25315c](https://github.com/liangchunn/typescript-node-scripts/commit/a25315c9797551124147e125b06db636c3c8d6dd))
+* **eslint:** remove return type requirement rule ([1d1b4c1](https://github.com/liangchunn/typescript-node-scripts/commit/1d1b4c1e1597787021e8862dbc8005165b2d2b4b))
+
+
+
+# [3.2.0-alpha.6](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.5...v3.2.0-alpha.6) (2020-11-17)
+
+
+### Bug Fixes
+
+* **eslint:** fix incorrect usage of configFile for loader ([d24666e](https://github.com/liangchunn/typescript-node-scripts/commit/d24666e9288223a633851c2ea72dcfc30d71aaf8))
+
+
+
+# [3.2.0-alpha.5](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.4...v3.2.0-alpha.5) (2020-11-17)
+
+
+### Bug Fixes
+
+* **eslint:** use configFile and resolvePluginsRelativeTo again ([4b76daa](https://github.com/liangchunn/typescript-node-scripts/commit/4b76daa049421b808773532b8a33db15ec22a9db))
+
+
+
+# [3.2.0-alpha.4](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.3...v3.2.0-alpha.4) (2020-11-17)
+
+
+### Features
+
+* **eslint:** migrate to new webpack eslint plugin ([34f462b](https://github.com/liangchunn/typescript-node-scripts/commit/34f462bd6ebaf3951ec72873a194bf555a55d293))
+
+
+
+# [3.2.0-alpha.3](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.2...v3.2.0-alpha.3) (2020-11-17)
+
+
+### Bug Fixes
+
+* **typescript:** install ~4.x version of typescript on create ([34fa6d4](https://github.com/liangchunn/typescript-node-scripts/commit/34fa6d46bd3cc66564bd2a60e3e98ec9d25339fd))
+
+
+
+# [3.2.0-alpha.2](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.1...v3.2.0-alpha.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* **webpack5:** fix config problem and mitigate typing issue ([292b6a8](https://github.com/liangchunn/typescript-node-scripts/commit/292b6a81a56ac61083b88249537d6e4e3e3dc733))
+
+
+
+# [3.2.0-alpha.1](https://github.com/liangchunn/typescript-node-scripts/compare/v3.1.2...v3.2.0-alpha.1) (2020-11-17)
+
+
+
 ## [3.1.2](https://github.com/liangchunn/typescript-node-scripts/compare/v3.1.1...v3.1.2) (2020-03-12)
 
 
