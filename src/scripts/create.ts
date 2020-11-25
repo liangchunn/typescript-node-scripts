@@ -42,7 +42,7 @@ const createApp = (useYarn: boolean, appName?: string) => {
   const packageDevDependencies = [
     '@types/node',
     '@types/jest',
-    'typescript@~4.0.5',
+    'typescript@~4.1.2',
     'typescript-node-scripts',
   ]
 
