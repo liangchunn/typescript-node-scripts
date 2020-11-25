@@ -39,7 +39,7 @@ export class AppController {
   }
 
   public async stopApp() {
-    return new Promise((resolve) => {
+    return new Promise<void>((resolve) => {
       if (this.state.appRunning) {
         console.log('Sending SIGTERM signal to app...')
 
