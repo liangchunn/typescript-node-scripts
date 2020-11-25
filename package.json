@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/code-frame": "7.10.4",
-    "@babel/core": "7.12.8",
+    "@babel/core": "7.12.9",
     "@babel/preset-env": "7.12.1",
     "@typescript-eslint/eslint-plugin": "4.8.2",
     "@typescript-eslint/parser": "4.8.1",
