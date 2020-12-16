@@ -44,7 +44,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-webpack-plugin": "2.4.1",
     "filesize": "6.1.0",
-    "fork-ts-checker-webpack-plugin": "6.0.5",
+    "fork-ts-checker-webpack-plugin": "6.0.7",
     "fs-extra": "9.0.1",
     "jest": "26.6.3",
     "pstree.remy": "1.1.8",
