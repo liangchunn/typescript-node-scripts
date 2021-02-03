@@ -28,7 +28,7 @@
   "repository": "https://github.com/liangchunn/typescript-node-scripts",
   "license": "MIT",
   "dependencies": {
-    "@babel/code-frame": "7.10.4",
+    "@babel/code-frame": "7.12.13",
     "@babel/core": "7.12.10",
     "@babel/preset-env": "7.12.11",
     "@typescript-eslint/eslint-plugin": "4.10.0",
