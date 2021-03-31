@@ -1,6 +1,12 @@
 import chalk from 'chalk'
+import { StatsCompilation } from 'webpack'
 
 const friendlySyntaxErrorLabel = 'Syntax error:'
+
+type D = Exclude<StatsCompilation['errors'], undefined>
+type ArrayType<T> = T extends Array<infer U> ? U : never
+// Not exported by webpack
+type StatsError = ArrayType<D>
 
 /**
  * Formats webpack messages into a nicer looking, human friendly format.
@@ -10,7 +16,7 @@ const friendlySyntaxErrorLabel = 'Syntax error:'
  * TODO: fix typing of any, could be error from webpack or loader, so we might want to format it differently
  * @param message
  */
-function formatMessage(rawMessage: any): string {
+function formatMessage(rawMessage: StatsError): string {
   const fileName = rawMessage.moduleId || rawMessage.file
   let message = fileName
     ? `${fileName}\n${rawMessage.message}`
@@ -88,20 +94,19 @@ function formatMessage(rawMessage: any): string {
 }
 
 export function formatWebpackMessages(
-  json: {
-    errors: string[]
-    warnings: string[]
-  } // Webpack's stat output is typed as any
+  json: StatsCompilation
 ): {
   errors: string[]
   warnings: string[]
 } {
-  const errors = json.errors
-    .map((message: string) => formatMessage(message))
-    .filter((message) => message !== '')
-  const warnings = json.warnings
-    .map((message: string) => formatMessage(message))
-    .filter((message) => message !== '')
+  const errors =
+    json.errors
+      ?.map((error) => formatMessage(error))
+      .filter((message) => message !== '') ?? []
+  const warnings =
+    json.warnings
+      ?.map((warning) => formatMessage(warning))
+      .filter((message) => message !== '') ?? []
 
   return {
     errors,

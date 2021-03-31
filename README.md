@@ -25,8 +25,7 @@ yarn start
 
 ## Requirements
 
-- node `>=8.0.0`
-- `process.platform !== 'win32'`
+- node `>=10.12.0`
 
 ## Documentation
 

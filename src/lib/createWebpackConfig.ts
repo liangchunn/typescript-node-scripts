@@ -40,7 +40,7 @@ export const createWebpackConfig = (
         new TsconfigPathsPlugin({
           configFile: paths.appTsConfig,
           silent: true,
-        }),
+        }) as any,
       ],
     },
     module: {
