@@ -1,3 +1,13 @@
+# [4.1.0](https://github.com/liangchunn/typescript-node-scripts/compare/v4.0.0...v4.1.0) (2021-03-31)
+
+
+### Features
+
+* **processhandler:** add void type in promise type ([1031628](https://github.com/liangchunn/typescript-node-scripts/commit/103162809750d1d35938c67f1e4b2875e45ca236))
+* **typescript:** support typescript <4.2.0 ([2998c8e](https://github.com/liangchunn/typescript-node-scripts/commit/2998c8e2395764c0b3d27ee8810406bfedaa1d4f))
+
+
+
 # [4.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v3.2.0-alpha.10...v4.0.0) (2020-11-20)
 
 
