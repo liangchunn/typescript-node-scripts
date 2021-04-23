@@ -1,3 +1,12 @@
+# [5.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v4.1.0...v5.0.0) (2021-04-23)
+
+
+### Bug Fixes
+
+* **eslint:** upgrade eslint config for prettier ([6b64b84](https://github.com/liangchunn/typescript-node-scripts/commit/6b64b8410da38c8ebcc1ff0fb66ba0e5b7c5c152))
+
+
+
 # [4.1.0](https://github.com/liangchunn/typescript-node-scripts/compare/v4.0.0...v4.1.0) (2021-03-31)
 
 
