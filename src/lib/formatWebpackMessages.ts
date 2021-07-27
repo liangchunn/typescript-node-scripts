@@ -93,9 +93,7 @@ function formatMessage(rawMessage: StatsError): string {
   return message.trim()
 }
 
-export function formatWebpackMessages(
-  json: StatsCompilation
-): {
+export function formatWebpackMessages(json: StatsCompilation): {
   errors: string[]
   warnings: string[]
 } {

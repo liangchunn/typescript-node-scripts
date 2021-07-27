@@ -16,10 +16,8 @@ const appTsConfig = require(paths.appTsConfig)
  * @returns {object} key:value path mapping for jest
  */
 const transformTsPathsToJestPaths = (tsconfig: any) => {
-  const {
-    paths: tsconfigPaths = {},
-    baseUrl: tsconfigBaseUrl = '',
-  } = tsconfig.compilerOptions
+  const { paths: tsconfigPaths = {}, baseUrl: tsconfigBaseUrl = '' } =
+    tsconfig.compilerOptions
   const resolvedBase = path.join('<rootDir>', tsconfigBaseUrl)
   return Object.keys(tsconfigPaths).reduce(
     (acc, key) =>

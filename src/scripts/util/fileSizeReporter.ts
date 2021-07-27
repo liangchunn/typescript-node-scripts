@@ -23,22 +23,22 @@ export const diffFileSize = (
   if (!sizeAfterBuild) {
     return ''
   }
-  const afterBuildFormatted: FileSizeObjectOutput = (filesize(sizeAfterBuild, {
+  const afterBuildFormatted: FileSizeObjectOutput = filesize(sizeAfterBuild, {
     base: 10,
     output: 'object',
-  }) as unknown) as FileSizeObjectOutput
+  }) as unknown as FileSizeObjectOutput
   if (!sizeBeforeBuild) {
     return chalk.green(
       `${afterBuildFormatted.value} ${afterBuildFormatted.symbol}`
     )
   }
-  const diff: FileSizeObjectOutput = (filesize(
+  const diff: FileSizeObjectOutput = filesize(
     sizeAfterBuild - sizeBeforeBuild,
     {
       base: 10,
       output: 'object',
     }
-  ) as unknown) as FileSizeObjectOutput
+  ) as unknown as FileSizeObjectOutput
 
   if (diff.value === 0) {
     return `${afterBuildFormatted.value} ${afterBuildFormatted.symbol} (+0 B)`
