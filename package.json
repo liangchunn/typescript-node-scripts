@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^12.1.1",
+    "@commitlint/config-conventional": "^14.1.0",
     "@types/babel-code-frame": "^6.20.4",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.5",
     "@types/eslint": "^7.2.10",
