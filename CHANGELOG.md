@@ -1,3 +1,12 @@
+# [5.0.0-beta.0](https://github.com/liangchunn/typescript-node-scripts/compare/v5.0.0...v5.0.0-beta.0) (2021-11-29)
+
+
+### Features
+
+* **deps:** upgrade dependencies and fix issues ([0c35752](https://github.com/liangchunn/typescript-node-scripts/commit/0c357524385e6c2b00f52612c5f6ba40ae51985e))
+
+
+
 # [5.0.0](https://github.com/liangchunn/typescript-node-scripts/compare/v4.1.0...v5.0.0) (2021-04-23)
 
 
