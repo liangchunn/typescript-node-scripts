@@ -25,13 +25,12 @@ export function createCompiler(
 
   try {
     compiler = webpack(config)
-  } catch (err) {
+  } catch (err: any) {
     console.log(chalk.red('Failed to compile.'))
     console.log()
     console.log(err.message || err)
     console.log()
     process.exit(1)
-    throw err.message
   }
 
   compiler.hooks.invalid.tap('compileInvalidate', async () => {

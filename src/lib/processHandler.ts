@@ -124,13 +124,15 @@ export class AppController {
     proc.stdout.pipe(process.stdout)
     proc.stderr.pipe(process.stderr)
 
-    console.log(chalk.green('App started!'))
+    if (proc.pid) {
+      console.log(chalk.green('App started!'))
 
-    this.setState({
-      proc,
-      pid: proc.pid.toString(),
-      appRunning: true,
-    })
+      this.setState({
+        proc,
+        pid: proc.pid.toString(),
+        appRunning: true,
+      })
+    }
   }
 
   private setState(state: AppControllerState) {

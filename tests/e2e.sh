@@ -68,6 +68,9 @@ CI=true yarn test
 git config --global user.email "actions@github.com"
 git config --global user.name "GitHub Actions"
 
+echo "node_modules/" > .gitignore
+git init && git add . && git commit -m "feat(package): fake commit"
+
 # bump version so that we can 'deploy' to verdaccio
 npm version patch --force
 # publish to verdaccio

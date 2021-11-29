@@ -214,7 +214,7 @@ async function main() {
       'Successfully migrated tslint configuration to eslint configuration',
       MIGRATION_OP_TYPE.DONE
     )
-  } catch (e) {
+  } catch (e: any) {
     console.log()
     log(
       'Uh oh, something went wrong. Please open an issue if this problem persists.',
