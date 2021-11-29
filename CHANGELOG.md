@@ -1,3 +1,7 @@
+## [5.0.1](https://github.com/liangchunn/typescript-node-scripts/compare/v5.0.0-beta.0...v5.0.1) (2021-11-29)
+
+
+
 # [5.0.0-beta.0](https://github.com/liangchunn/typescript-node-scripts/compare/v5.0.0...v5.0.0-beta.0) (2021-11-29)
 
 
