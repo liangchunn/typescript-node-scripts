@@ -57,7 +57,7 @@
     "webpack-node-externals": "3.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
+    "@commitlint/cli": "^16.0.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@types/babel-code-frame": "^6.20.5",
     "@types/case-sensitive-paths-webpack-plugin": "^2.1.6",
