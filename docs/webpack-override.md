@@ -14,3 +14,14 @@ module.exports = {
   mode: 'production' // always force production mode
 }
 ```
+
+If you need to conditionally apply changes based on the build environment, simply export a function that takes in `isDev` as the first parameter:
+
+
+```js
+module.exports = (isDev) => {
+  return {
+    devtool: isDev ? 'eval-cheap-module-source-map' : 'source-map',
+  }
+}
+```

@@ -17,10 +17,21 @@ export function getWebpackConfig(
   const baseConfig = createWebpackConfig(environment)
   if (fs.existsSync(paths.webpackOverride)) {
     console.log(chalk.cyan('• Using merged webpack.config.override.js'))
-    return merge(
-      baseConfig as any,
-      require(paths.webpackOverride)
-    ) as webpack.Configuration
+    const customConfig: (isDev: boolean) => any = require(paths.webpackOverride)
+    if (typeof customConfig === 'function') {
+      return merge(
+        baseConfig as any,
+        customConfig(environment === 'development')
+      ) as webpack.Configuration
+    } else if (typeof customConfig === 'object') {
+      return merge(
+        baseConfig as any,
+        require(paths.webpackOverride)
+      ) as webpack.Configuration
+    } else {
+      console.log(chalk.red('Failed to parse webpack.config.override.js'))
+      process.exit(1)
+    }
   } else {
     return baseConfig
   }

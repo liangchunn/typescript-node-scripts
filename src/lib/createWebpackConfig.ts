@@ -28,7 +28,7 @@ export const createWebpackConfig = (
           : undefined
       ) as any,
     ],
-    devtool: isDev ? 'eval-cheap-source-map' : 'cheap-source-map',
+    devtool: isDev ? 'eval-cheap-module-source-map' : 'source-map',
     output: {
       path: isDev ? paths.appDevBundlePath : paths.appBuild,
       filename: isDev ? 'bundle.js' : 'bundle.prod.js',
