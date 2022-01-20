@@ -1,3 +1,12 @@
+# [5.1.0](https://github.com/liangchunn/typescript-node-scripts/compare/v5.0.1...v5.1.0) (2022-01-20)
+
+
+### Features
+
+* **config:** update source map support, support fn in custom webpack config ([03fc333](https://github.com/liangchunn/typescript-node-scripts/commit/03fc333a2295635ae7c526766e12d1339ec70f13))
+
+
+
 ## [5.0.1](https://github.com/liangchunn/typescript-node-scripts/compare/v5.0.0-beta.0...v5.0.1) (2021-11-29)
 
 
